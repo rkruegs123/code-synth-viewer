@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Code Synth Viewer</title>
+    <title>CodeSynthViewer</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
 
     <link rel="stylesheet" href="css/jquery-ui.css" />
     <script src="js/seedrandom.min.js"></script>
 
-    <link href="./style1.css" rel="stylesheet"/>
     <link href="./solarized.css" rel="stylesheet"/>
-    <link href="./xq-light.css" rel="stylesheet"/>
-    <link href="./xq-dark.css" rel="stylesheet"/>
     <link href="./blackboard.css" rel="stylesheet"/>
     <script type="text/javascript" src="stim_final.json"></script>
 
@@ -36,14 +33,6 @@
 
     function add(a, b) {
         return a + b;
-    }
-
-    function fillArray(value, len) {
-      var arr = [];
-      for (var i = 0; i < len; i++) {
-        arr.push(value);
-      }
-      return arr;
     }
 
     // Returns a random number between min (inclusive) and max (exclusive)
@@ -100,7 +89,6 @@
         //Math.seedrandom('hello.');
         //plus_delays = 
         plus_delays = getRandsThatSumTo(data.num_stim, data.num_stim * 5000) // average of 5s per fixation
-        //plus_delays = fillArray(5000, data.num_stim)
         console.log("printing plus_delays...")
         console.log(plus_delays);
 

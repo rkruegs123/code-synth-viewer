@@ -1,4 +1,4 @@
-# Code Synth Viewer -- ICSE 2020
+# CodeSynthViewer -- ICSE 2020
 
 The software used for conducting experiments as described in "Neurological Divide: An fMRI Study of Code and Prose Writing" at ICSE 2020. This repository permits both the reproduction of our usage of this software, as well as the adaptation of this software for similar uses.
 
@@ -6,21 +6,33 @@ The software used for conducting experiments as described in "Neurological Divid
 
 * fix all the node stuff. Just look up ryan-fmri. Why do we need the node_modules directory? Do we? Ask Kevin about this.
 
-## Mush
-
-The important files are pilot.js and pilot.html. The usage of pilot.js is the following
-
-node pilot.js [PARTICIPANT ID] [CATEGORY]
-
-Category ranges from 0-3 (0: Fill in the blank prose, 1: Open response prose, 2: Fill in the blank code, 3: Open response code). Could you guys test the implementation and tell me if you see any problems or have any suggestions? You can do so via the following:
-
-1. node pilot.js 20 [CATEGORY]
-2. Open pilot.html in any web browser other than Firefox (easily configurable, but right now it is not set up for Firefox)
-3. Hit the equals sign (the message that the fMRI machine will send when it starts scanning)
-
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+General usage for CodeSynthViewer involvesa node back-end and a web-based front-end, most easily viewed locally in a web browser. General usage requires the following steps:
+
+1. Start the backend, specifying the participant ID (used for a random number generator seed as well as for naming output files/directories) and the category (unique to the user's experimental design). Both are positive integers.
+2. Open the interface in a web browser
+3. Hit the designated key to start the experiment. We used the "=" sign for our purposes, but this can be easily configured.
+
+To start the server, use
+
+``node server.js [PARTICIPANT-ID] [CATEGORY]``
+
+Then, open ``presenter.html`` in a web-browser. Lastly, press the designated start key.
+
+To replicate our experiments with a random ordering (i.e., random participant ID = 99), use the following commands:
+
+* ``node server.js 99 [0-3]``
+* ``open presenter.html``
+* Press the enter key
+
+Note that our study used four different categories of stimuli, and each experiment can be run separately by selecting one of [0-3] as the category ID. In our study, the category IDs correspond to the following categories (FITB = Fill in the Blank, LR = Long Response):
+
+0. Prose, FITB
+1. Prose, LR
+2. Code, FITB
+3. Code, LR
+
 
 ### Prerequisites
 
@@ -74,30 +86,11 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [CodeMirror](http://www.codemirror.net) - The code editor in the browser
+* [Node](https://www.nodejs.org) - Dependency Management
 
 ## Authors
 
 * **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
