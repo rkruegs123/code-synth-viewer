@@ -24,7 +24,7 @@ To replicate our experiments with a random ordering (i.e., random participant ID
 
 * ``node server.js 99 [0-3]``
 * ``open presenter.html``
-* Press the enter key
+* Press the "=" key
 
 Note that our study used four different categories of stimuli, and each experiment can be run separately by selecting one of [0-3] as the category ID. In our study, the category IDs correspond to the following categories (FITB = Fill in the Blank, LR = Long Response):
 
