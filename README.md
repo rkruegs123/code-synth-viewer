@@ -1,6 +1,6 @@
 # CodeSynthViewer -- ICSE 2020
 
-The software used for conducting experiments as described in "Neurological Divide: An fMRI Study of Code and Prose Writing" at ICSE 2020. This repository permits both the reproduction of our usage of this software, as well as the adaptation of this software for similar uses.
+The software used for conducting experiments as described in "Neurological Divide: An fMRI Study of Prose and Code Writing" at [ICSE 2020](https://conf.researchr.org/home/icse-2020). This repository permits both the reproduction of our usage of this software, as well as the adaptation of this software for similar uses.
 
 ## TODO Before Submission
 
@@ -26,13 +26,14 @@ To replicate our experiments with a random ordering (i.e., random participant ID
 * ``open presenter.html``
 * Press the "=" key
 
-Note that our study used four different categories of stimuli, and each experiment can be run separately by selecting one of [0-3] as the category ID. In our study, the category IDs correspond to the following categories (FITB = Fill in the Blank, LR = Long Response):
+Note that we used four different categories of stimuli in our study. Each experiment can be run separately by selecting one of [0-3] as the category ID. In our study, the category IDs correspond to the following categories (FITB = Fill in the Blank, LR = Long Response):
 
 0. Prose, FITB
 1. Prose, LR
 2. Code, FITB
 3. Code, LR
 
+The stimuli can be found in ```stim_final.json``` and are defined in this order.
 
 ### Prerequisites
 
@@ -60,29 +61,9 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Configurability
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+This software is made public to make possible both (1) the reproduction and validation of our results and experimental protocol, as well as (2) the adaptation of this software for similar studies of software engineering activities with medical imaging. The following instructions provide details on how one can adapt this software for the needs of similar studies.
 
 ## Built With
 
