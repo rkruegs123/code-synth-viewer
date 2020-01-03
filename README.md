@@ -1,6 +1,10 @@
-# Project Title
+# Code Synth Viewer -- ICSE 2020
 
-One Paragraph of project description goes here
+The software used for conducting experiments as described in "Neurological Divide: An fMRI Study of Code and Prose Writing" at ICSE 2020. This repository permits both the reproduction of our usage of this software, as well as the adaptation of this software for similar uses.
+
+## TODO Before Submission
+
+* fix all the node stuff. Just look up ryan-fmri. Why do we need the node_modules directory? Do we? Ask Kevin about this.
 
 ## Mush
 

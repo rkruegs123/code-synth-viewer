@@ -23,39 +23,22 @@ const now=(unit)=>{
  }
 }
 
-// Participant ID must be set
-if (!process.argv[2]) {
-  console.log("FAILURE - id is not set")
-  process.exit(1);
-}
-// Stimuli category must be set
-else if (!process.argv[3]) {
-  console.log("FAILURE - category is not set")
-}
-
-// Check type of participant ID
-if (!participant_id) {
-  console.log("FAILURE - participant_id not numeric type")
-  process.exit(1)
-}
-
-// Check that stim category is in bounds
-if (stim_category < 0 || stim_category > 3) {
-  console.log("FAILURE - category must be in range 0-3")
-  process.exit(1)
-}
-
-var NUM_STIMULI = 1
-var stimuli_times = Array(30000,60000);
+// Store and Check Command Line Arguments
 var participant_id = Number(process.argv[2])
 var stim_category = Number(process.argv[3]) // 0 is A, 1 is B, 2 is X, 3 is Y
 
-
-// Set number of stimuli according to actegory
-if (stim_category == 0 || stim_category == 2) {
-  NUM_STIMULI = 17;
-} else { // stim_category == 1 || stim_category == 3
-  NUM_STIMULI = 9;
+if (process.argv.length != 4) {
+  console.log("FAILURE - not enough arguments providd")
+  process.exit(1);
+} else if (!(participant_id >= 0)) {
+  console.log("FAILURE - id is not set")
+  process.exit(1);
+} else if (!(stim_category >= 0)) {
+  console.log("FAILURE - category is not set")
+  process.exit(1)
+} else if (stim_category < 0 || stim_category > 3) {
+  console.log("FAILURE - category must be in range 0-3")
+  process.exit(1)
 }
 
 // Initialize output files
@@ -66,7 +49,14 @@ var fd = fs.createWriteStream(keystrokes_file, {flags: 'a'});
 var fd_answers = fs.createWriteStream(answers_file, {flags: 'a'});
 var date = new Date();
 
-// list of integers corresponding to the order in which stimuli appear to the participant
+
+// Set number of stimuli according to category
+var NUM_STIMULI = 9 // stim_category == 1 || stim_category == 3
+if (stim_category == 0 || stim_category == 2) {
+  NUM_STIMULI = 17;
+}
+
+// Populate list of integers corresponding to the order in which stimuli appear to the participant
 // This list eventually gets shuffled
 var shuffledStimuli = [];
 
@@ -74,15 +64,15 @@ for (var i = 0; i < NUM_STIMULI; i++) {
   shuffledStimuli.push(i);
 }
 
-
+// Variables for tracking stimuli
 var stim_index = -1;
 var sequence = [];
 
-var time_index = 1;
-
-if (stim_category == 0 || stim_category == 2) { // if FITB
-  time_index = 0; // set to thirty for whole run
-} // else, will be 60s
+// Choose the appropriate length of stimuli presentation based on category type
+stimuli_time = 30000
+if (stim_category == 1 || stim_category == 3) {
+  stimuli_time = 60000
+}
 
 
 /* Start is triggered by a keyboard "=" from controller */
@@ -120,7 +110,6 @@ app.get('/nextstim', function ( request, response ) {
       should_stop = 1;
     }
     
-    var time = stimuli_times[time_index]
     var new_index = -1
 
     // If we haven't reached the number of stimuli, get index of next stimuli
@@ -133,7 +122,7 @@ app.get('/nextstim', function ( request, response ) {
       index: new_index, 
       category: stim_category,
       stop: should_stop,
-      time: time,
+      time: stimuli_time,
       number_stim: stim_index
     });
 

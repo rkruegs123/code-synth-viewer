@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>fMRI Codesynth Stimuli</title>
+    <title>Code Synth Viewer</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
 
@@ -129,7 +129,7 @@
         if (!has_started) {
           console.log("has not started")
           // event.keyCode = "=" -- 61 on Firefox, 187 otherwise
-          if (event.keyCode == 61) {
+          if (event.keyCode == 187) {
             console.log("equals sign detected")
             var the_url ="http://localhost:3000/start";
             $.ajax(
