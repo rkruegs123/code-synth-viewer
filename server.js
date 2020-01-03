@@ -75,9 +75,9 @@ if (stim_category == 1 || stim_category == 3) {
 }
 
 
-/* Start is triggered by a keyboard "=" from controller */
+// Triggered by a "=" key press from the front-end
 app.get('/start', function( request, response) {
-    // shuffle stimuli ordering
+    // Shuffle stimuli ordering
     console.log("receiving start call... shuffling...")
     sequence = shuff.shuffle(shuffledStimuli, participant_id);
     console.log("shuffled...printing sequence...")
@@ -85,6 +85,8 @@ app.get('/start', function( request, response) {
     fd_answers.write(csv_header);
 });
 
+// Returns the participant ID and number of stimuli
+// Used by the front-end for random number generator seeding as well as generation of rest times
 app.get('/get_part_id', function( request, response) {
   var data = JSON.stringify({ 
     id: participant_id,
@@ -96,12 +98,11 @@ app.get('/get_part_id', function( request, response) {
   response.end(data);
 })
 
+// Core interface. Returns the INDEX of the next stimuli per the shuffled list.
 app.get('/nextstim', function ( request, response ) {
-
-    // "load" the next stimulus information
     console.log("Getting next stimulus")
 
-    // Increment stimuli
+    // Increment index
     stim_index = stim_index + 1
 
     // Check if we have reached the number of stimuli
@@ -126,7 +127,7 @@ app.get('/nextstim', function ( request, response ) {
       number_stim: stim_index
     });
 
-    // Log new stimulus
+    // Log repsonse
     console.log(data);
     response.header("Access-Control-Allow-Origin", "*");
     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,    Accept");
@@ -134,7 +135,7 @@ app.get('/nextstim', function ( request, response ) {
 
 });
 
-
+// Interface to write a participant's answer to file
 app.get('/write_answer', function ( request, response ) {
     var area = request.query.area;
     var prompt = request.query.prompt;
@@ -146,7 +147,7 @@ app.get('/write_answer', function ( request, response ) {
     console.log("Writing to csv...")
     var csv_line = participant_id + ',' + stim_category + ',' + now('milli') + ',' + prompt + ',' + area + ',' + index + ',' + prev_delay + ',' + stim_time +'\n'
     fd_answers.write(csv_line);
-    console.log(csv_line)
+    // console.log(csv_line)
 
     var data = JSON.stringify({ 
       success: "Success", 
@@ -158,9 +159,8 @@ app.get('/write_answer', function ( request, response ) {
 
 });
 
-
+// Interface to write a keystroke to file
 app.get('/keystroke', function ( request, response ) {
-    // Record every keystroke in keystrokes file
     var key = request.query.key;
 
     fd.write(now('milli') + ", " + key + "\n");
@@ -173,9 +173,9 @@ app.get('/keystroke', function ( request, response ) {
     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     response.end(data);
 
-}
-);
+});
 
+// Interface to write "new stimulus" to the keystroke file when we begin a new stimulus
 app.get('/keystroke_stim_marker', function (request, response) {
   var key = request.query.key;
 
