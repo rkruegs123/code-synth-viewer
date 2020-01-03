@@ -18,9 +18,11 @@
     	width:100%;
     	height:100%;
     }
+
     #question {
     	font-size:36px;
     }
+
     .CodeMirror {
     	font-size:36px;
     }
@@ -28,9 +30,14 @@
 
   <script type = "text/javascript">
 
-    // Print the stimuli to consol
+    // Print the loaded stimuli to console
+    console.log("Loaded stimuli:")
     console.log(stimuli)
 
+    var min_rest_time = 0.3
+    var max_rest_time = 0.9
+
+    // Helper function
     function add(a, b) {
         return a + b;
     }
@@ -40,11 +47,12 @@
         return Math.random() * (max - min) + min;
     }
 
+    // Returns num_rands values that sum to val. Used for generating variable rest times between stimuli
     function getRandsThatSumTo(num_rands, val) {
       var rands = [];
       var i;
       for (i = 0; i < num_rands; i++) {
-        rands[i] = getRandomArbitrary(0.3, 0.9);
+        rands[i] = getRandomArbitrary(min_rest_time, max_rest_time);
       }
       var sum = rands.reduce(add, 0);
       var to_return = [];
@@ -54,23 +62,23 @@
       return to_return;
     }
 
-    /* FIXME, create array of random ints from 2000 to 10000*/
     var plusDelay = 0;
     var has_started = false;
     var stopped = true;
     var record_keystrokes = false;
-    console.log("Should be 21 vals that add to 90");
-    var plus_delays = []
+    var rest_times = []
     var curr_index = -1
+    var avg_rest_time = 5000;
 
     window.onload = function () {
 
+      // Instantiate CodeMirror object
       var editableCodeMirror = CodeMirror.fromTextArea(document.getElementById('codesnippet_editable'), {
           lineNumbers: true,
           matchBrackets: true,
           autoCloseBrackets: true,
-          mode: "text/plain",
-          theme: "blackboard",
+          mode: "text/plain", // determines the syntax highlighting scheme
+          theme: "blackboard", // determines coloring. Each theme is accompanied by a CSS file. We chose blackboard.
           lineWrapping: true,
           autofocus: true
       });
@@ -78,47 +86,38 @@
       editableCodeMirror.setOption("theme", "blackboard");
       editableCodeMirror.setOption("mode", "text/plain");
 
-
+      // Seed the random number generator with the participant ID
+      // Then, populate rest times
       $.ajax({
         type: "GET",
         url: "http://localhost:3000/get_part_id",
         dataType: "json"
       }).done (function (data) {
-        console.log("Creating plus delays...")
+        console.log("Populating rest times...")
         Math.seedrandom((data.id).toString());
-        //Math.seedrandom('hello.');
-        //plus_delays = 
-        plus_delays = getRandsThatSumTo(data.num_stim, data.num_stim * 5000) // average of 5s per fixation
-        console.log("printing plus_delays...")
-        console.log(plus_delays);
-
+        rest_times = getRandsThatSumTo(data.num_stim, data.num_stim * avg_rest_time)
+        console.log("Rest times:")
+        console.log(rest_times);
       });
 
     };
 
-    $.fn.setCursorPosition = function(pos) {
-        if ($(this).get(0).setSelectionRange) {
-            $(this).get(0).setSelectionRange(pos, pos);
-        } else if ($(this).get(0).createTextRange) {
-            var range = $(this).get(0).createTextRange();
-            range.collapse(true);
-            range.moveEnd('character', pos);
-            range.moveStart('character', pos);
-            range.select();
-        }
-    }
+    $(document).ready(function() {
 
-
-
-    // record all keystrokes + time
-    $(document).ready(function() { 
+      // Method called upon keystroke detection
+      // Once the start key has been pressed, record all keystrokes.
+      // Stop recording keystrokes after experiment is done
       $(document).keydown(function(event) {
-        console.log("detecting keystroke")
+        // console.log("Detected keystroke")
+
+        // If the experiment has not started, check if the pressed key was the start key
         if (!has_started) {
-          console.log("has not started")
-          // event.keyCode = "=" -- 61 on Firefox, 187 otherwise
+          console.log("Has not started")
+          // key code corresponds to "=" -- 61 on Firefox, 187 otherwise
+
+          // If start key detected, start the experiment. Triggers first call to displayNextStimulus
           if (event.keyCode == 187) {
-            console.log("equals sign detected")
+            console.log("Start key detected")
             var the_url ="http://localhost:3000/start";
             $.ajax(
               { url: the_url, complete: function() {} }
@@ -128,6 +127,8 @@
             startTimer();
           }
         } else if (!stopped) {
+
+          // If the experiment has been started and has not yet completed, record the keystroke
           if (record_keystrokes) {
             console.log("recording keystroke")
             var my_url ="http://localhost:3000/keystroke?key="+event.which;
@@ -135,33 +136,35 @@
               { url: my_url, complete: function() {} }
             );
           }
-        } 
+        }
       });
-      // prepare fixation focal relax
+
+      // Prepare fixation focal relax
       $("#plus_img").width($(window).width());
       $("#plus_img").height($(window).height());
       $("#plus_img").show();
-
       $('#codesnippet_editable').focus();
       $("#textarea_div").height($(window).height() - 100);
       $("#codesnippet_editable").css("height", "100%");
     });
 
 
-
+    // Enum for clarity
     const Categories = Object.freeze({
-      ProseWritingA: 0,
-      ProseWritingB: 1,
-      CodeWritingX: 2,
-      CodeWritingY:  3
+      ProseWritingFITB: 0,
+      ProseWritingLR: 1,
+      CodeWritingFITB: 2,
+      CodeWritingLR:  3
     });
 
     var stimulus_time = 30000
     var counter = 0;
     var remember_category = 0;
 
-    function displayNextStimuli() {
-      console.log("Displaying next stimuli...")
+    // Core function -- handles the current stimulus and communicates with the server to retrieve the next one
+    // The server handles the logic of when the experiment is over (when we have met NUM_STIMULI). This function also handles said decision.
+    function displayNextStimulus() {
+      console.log("Displaying next stimulus...")
 
       // Get Code Mirror Object
       var editor = $('.CodeMirror')[0].CodeMirror;
@@ -192,10 +195,9 @@
         dataType: "json"
       }).done (function (data) {
 
+        // Handle server's determination on whether or not the experiment is over
         if (data.stop) {
-          // Server will check bounds... if finished category, keep fixation shown...
-          // ... and don't make next call to DisplayNextStimuli
-          console.log("Server says we should stop")
+          // If we finished the current experiment (i.e., the current category), keep the fixation cross shown AND don't make another displayNextStimulus call
           console.log("You have completed this section")
           $("#plus_img").show();
           $("#plus_img").hide();
@@ -208,24 +210,28 @@
           element.appendChild(para);
           stopped = true;
           counter = 0;
-        } else {  // If we should not stop
+        } else {  // Continue with the experiment if we should not stop
 
-          //console.log(plus_delays)
-          plusDelay = plus_delays[counter]
+          // Get the next rest time
+          plusDelay = rest_times[counter]
+
+          // If it is the first stimulus, add the designated amount of time
           if (data.number_stim == 0) {
-            plusDelay += 10000 // add 10s to first plus delay of category
+            first_stim_buffer = 10000  // add 10s to first plus delay of category
+            plusDelay += first_stim_buffer
           }
-          console.log("Plus delay is", plusDelay)
+          console.log("Rest time is", plusDelay)
 
           stimulus_time = data.time;
-          console.log(stimulus_time)
+          // console.log(stimulus_time)
           
-
+          // Notify the server that we are starting a new stimulus for keystroke-recording purposes
           var stim_marker_url ="http://localhost:3000/keystroke_stim_marker";
           $.ajax(
             { url: stim_marker_url, complete: function() {} }
           );
 
+          // Show the fixation cross for plusDelay amount of time
           $("#plus_img").show().delay(plusDelay).queue(
             function(n) {
                 $(this).hide(); 
@@ -239,42 +245,38 @@
             }
           );
 
-          // Per above, queue next call to DNS
+          // Queue the next call to displayNextStimulus to be aligned with the fixation cross timing (via plusDelay)
           $(document).delay(stimulus_time + plusDelay).queue(
             function(n) {
-              displayNextStimuli();
+              displayNextStimulus();
               n();
             }
           );
           
-          // FIXME - could refactor to below:
-          // stimulu s= stimuli[data.category]
-          // and then set CM mode based on category
-          var stimulus;
+          // Get contents of next stimulus contents from GET request
+          stimulus = stimuli[data.category][data.index]
+          console.log(stimulus);
+
+          // Save the stimulus details for when we want to write the participant's answer to file
           curr_index = data.index;
           remember_category = data.category;
-          if (data.category == Categories.ProseWritingA) {
-            stimulus = stimuli[0][data.index];
-            console.log("category a");
+
+          // Set the CodeMirror syntax highlighting for the stimulus
+          // Permits multiple styles of stimuli in a single experimental block
+          if (data.category == Categories.ProseWritingFITB || data.category == Categories.ProseWritingLR) {
             editor.setOption("mode", "text/plain");
-          } else if (data.category == Categories.ProseWritingB) {
-            stimulus = stimuli[1][data.index];
-            console.log("category b");
-            editor.setOption("mode", "text/plain");
-          } else if (data.category == Categories.CodeWritingX) {
-            stimulus = stimuli[2][data.index];
-            console.log("category c");
-            editor.setOption("mode", "text/x-c++src");
           } else {
-            stimulus = stimuli[3][data.index];
-            console.log("category d");
             editor.setOption("mode", "text/x-c++src");
           }
-          console.log(stimulus);
+
+          // Replace the HTML contents with the new stimulus
           document.getElementById("question").innerHTML = stimulus.prompt;
           editor.setValue(stimulus.text);
           
           editor.focus()
+
+          // Place the cursor in the position associated with the new stimulus
+          // Each stimulus includes information on where to place the cursor
           editor.setCursor({line: stimulus.line, ch: stimulus.character})
 
           editor.refresh();
@@ -284,11 +286,12 @@
       );        
     }
 
+    // Function called to trigger the beginning of the expeirment (via first call to displayNextStimulus) 
     function startTimer() {
-      console.log("Starting timer...")
+      console.log("Starting timer")
       var editor = $('.CodeMirror')[0].CodeMirror;
       editor.focus()
-      displayNextStimuli()
+      displayNextStimulus()
     }
 
   </script>
