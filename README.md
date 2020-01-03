@@ -89,7 +89,17 @@ Adapting this software for one's own purposes likely also involves adjusting the
 
 ### Timing
 
+Similar to updating the number of stimuli with ```NUM_STIMULI``` on the server-side, the time duration of each stimulus is handled by the server side. The time duration of each stimulus is chosen on a per-category basis, and having different timings within a category is not currently supported. The time-per-stimulus is determined on the server-side and stored in the variable ```stimulus_time```. Timings are stored in ms (e.g., 30s = 30,000 ms). 
+
+As before, the current code can be understood in the context of our own study. Participants had 30s to complete FITB tasks and 60s to complete LR tasks. The section of code beginning with ```if (stim_category == 1 || stim_category == 3) {``` is a small example of logic to determine the time-per-stimulus based on the category number.
+
+In addition to the time-per-stimulus, various other timing aspects of the software can be adjusted:
+* Average Rest Time: Between each stimulus, a fixation cross is shown to the participant for a variable amount of time. While the exact amount of time is variable, you can set an average amount of time per rest period by changing the value of ```avg_rest_time``` in ```presenter.html```. The current value is set to 5s (5000 ms).
+* First Stimulus Buffer: In our experiment, we wanted a buffer of 10s at the beginning of the experiment upon pressing the start key. In other words, pressing the start key prompoted a 10s countdown to the experiment. You can adjust this countdown by changing the value of ```first_stim_buffer``` in ```presenter.html``` (or set it to 0 for no buffer).
+
 ### Text Editor
+
+### Start Key
 
 ## Output
 
