@@ -91,6 +91,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* Ryan Krueger - ryankrue@umich.edu
+* Kevin Leach - kjleach@umich.edu
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See our [ICSE 2020 paper](www.fixme.org) for a full list of study authors.
