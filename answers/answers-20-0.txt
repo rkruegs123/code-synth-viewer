@@ -1,0 +1,5 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+20,0,757085015.323678,Fill in the blanks below,Muriel was so fond of her dog that their brief ____separation____ left her not just saddened, but in a state of sorrow.,17,5000,30000
+20,0,757150034.529848,Fill in the blanks below,The progress of the disease is subtle; it ____spreads____ stealthily without any symptoms in the early stages.,20,5000,60000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+20,0,757226958.120102,Fill in the blanks below,Muriel was so fond of her dog that their brief ____second____ left her not just saddened, but in a state of sorrow.,17,5000,30000

@@ -1,0 +1,10 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+111,1,2768432953.652713,What would happen if everyone lived in space? (e.g., What type of houses would they live in? What type of clothing would they wear?),,8,13945.903970938803,6000
+111,1,2768443757.53518,Is it more important to be able to work with a group of people on a team or to work independently? Explain.,,4,4791.855018539138,6000
+111,1,2768456822.625928,Some people enjoy change, and they look forward to new experiences. Others like their lives to stay the same, and they do not change their usual habits. Compare these two approaches to life.,,7,7046.5757098223,6000
+111,1,2768466669.222155,Some people believe that university students should be required to attend classes. Others believe that going to classes should be optional for students. Which point of view do you agree with, and why?,,0,3836.7282436974047,6000
+111,1,2768478056.355929,Some people prefer to spend time with one or two close friends. Others choose to spend time with a large number of friends. Compare the advantages of each choice.,,5,5371.823589244196,6000
+111,1,2768489294.443523,Should a city try to preserve its old, historic buildings or destroy them and replace them with modern buildings? Explain.,,1,5223.879641845771,6000
+111,1,2768501705.770217,Some people prefer to plan activities for their free time very carefully. Others choose not to make any plans at all for their free time. Compare the benefits of planning free-time activities with the benefits of not making plans.,,6,6400.143056179354,6000
+111,1,2768511357.660246,Some universities require students to take classes in many subjects. Other universities require students to specialize in one subject. Which is better? Explain.,,3,3640.555667488462,6000
+111,1,2768522107.762798,Do you agree or disagree with the following statement? The best way to travel is in a group led by a tour guide. Explain.,,2,4742.53510224457,6000

@@ -1,0 +1,86 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+55,0,1231990034.102442,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.,15,2402.6668496604025
+55,0,1232025120.667391,Fill in the blanks below,Designed as a gathering place, the new student lounge was appropriately appointed with tables, chairs, and even sofas where ______ could assemble comfortably
+ HELLOOO I AM HERE 
+.,19,5062.968876187725
+55,0,1232060116.683517,Fill in the blanks below,The lectures on quantum physics were invariably dull; the lecturer ____ his ill-prepared material in a manner guaranteed to send even the most ardent student to sleep
+ HELLOOO I AM HERE 
+.,2,4961.588665640207
+55,0,1232095059.648059,Fill in the blanks below,The new vaccine is effective in preventing certain forms of pneumonia and should, therefore, be more widely ______ in order to prevent outbreaks of the disease
+ HELLOOO I AM HERE 
+.,12,4494.164921164356
+55,0,1232129100.114814,Fill in the blanks below,Architects define a physical structure as a set of materials ______ in such a way that these materials can resist the downward pull of gravity
+ HELLOOO I AM HERE 
+.,7,3388.967441691328
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+55,0,1232406822.831719,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.,15,2402.6668496604025
+55,0,1232472050.227384,Fill in the blanks below,Designed as a gathering place, the new student lounge was appropriately appointed with tables, chairs, and even sofas where ______ could assemble comfortably
+ HELLOOO I AM HERE 
+.,19,5062.968876187725
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+55,0,1233480613.674962,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.,15,2402.6668496604025
+55,0,1233520767.564668,Fill in the blanks below,Designed as a gathering place, the new student lounge was appropriately appointed with tables, chairs, and even sofas where ______ could assemble comfortably
+ HELLOOO I AM HERE 
+.,19,5062.968876187725
+55,0,1233580726.800942,Fill in the blanks below,The lectures on quantum physics were invariably dull; the lecturer ____ his ill-prepared material in a manner guaranteed to send even the most ardent student to sleep
+ HELLOOO I AM HERE 
+.,2,4961.588665640207
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+55,0,1233683832.120579,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.,15,2402.6668496604025
+55,0,1233743990.50913,Fill in the blanks below,Designed as a gathering place, the new student lounge was appropriately appointed with tables, chairs, and even sofas where ______ could assemble comfortably
+ HELLOOO I AM HERE 
+.,19,5062.968876187725
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+55,0,1234084567.681791,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.,15,2402.6668496604025
+55,0,1234144724.70712,Fill in the blanks below,Designed as a gathering place, the new student lounge was appropriately appointed with tables, chairs, and even sofas where ______ could assemble comfortably
+ HELLOOO I AM HERE 
+.,19,5062.968876187725
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+55,0,1234457996.985118,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.,15,2402.6668496604025
+55,0,1234518157.964089,Fill in the blanks below,Designed as a gathering place, the new student lounge was appropriately appointed with tables, chairs, and even sofas where ______ could assemble comfortably
+ HELLOOO I AM HERE 
+.,19,5062.968876187725
+55,0,1234578117.931578,Fill in the blanks below,The lectures on quantum physics were invariably dull; the lecturer ____ his ill-prepared material in a manner guaranteed to send even the most ardent student to sleep
+ HELLOOO I AM HERE 
+.,2,4961.588665640207
+55,0,1234637155.414097,Fill in the blanks below,The new vaccine is effective in preventing certain forms of pneumonia and should, therefore, be more widely ______ in order to prevent outbreaks of the disease
+ HELLOOO I AM HERE 
+.,12,4494.164921164356
+55,0,1234693968.731187,Fill in the blanks below,Architects define a physical structure as a set of materials ______ in such a way that these materials can resist the downward pull of gravity
+ HELLOOO I AM HERE 
+.,7,3388.967441691328
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+55,0,1235046041.527934,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.,15,2402.6668496604025
+55,0,1235092039.18304,Fill in the blanks below,Designed as a gathering place, the new student lounge was appropriately appointed with tables, chairs, and even sofas where ______ could assemble comfortably
+ HELLOOO I AM HERE 
+.,19,5062.968876187725
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+55,0,1258232174.409845,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.,15,2402.6668496604025
+55,0,1258277316.409786,Fill in the blanks below,Designed as a gathering place, the new student lounge was appropriately appointed with tables, chairs, and even sofas where ______ could assemble comfortably
+ HELLOOO I AM HERE 
+.,19,5062.968876187725
+55,0,1258322316.668483,Fill in the blanks below,The lectures on quantum physics were invariably dull; the lecturer ____ his ill-prepared material in a manner guaranteed to send even the most ardent student to sleep
+ HELLOOO I AM HERE 
+.,2,4961.588665640207
+55,0,1258366868.318411,Fill in the blanks below,The new vaccine is effective in preventing certain forms of pneumonia and should, therefore, be more widely ______ in order to prevent outbreaks of the disease
+ HELLOOO I AM HERE 
+.,12,4494.164921164356
+55,0,1258410319.954108,Fill in the blanks below,Architects define a physical structure as a set of materials ______ in such a way that these materials can resist the downward pull of gravity
+ HELLOOO I AM HERE 
+.,7,3388.967441691328

@@ -1,0 +1,376 @@
+<!-- More Risky One -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>fMRI Stimuli</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script>
+
+    <link href="./style1.css" rel="stylesheet"/>
+    <link href="./solarized.css" rel="stylesheet"/>
+    <link href="./xq-light.css" rel="stylesheet"/>
+    <link href="./xq-dark.css" rel="stylesheet"/>
+    <link href="./blackboard.css" rel="stylesheet"/>
+    <script type="text/javascript" src="stim_final.json"></script>
+
+
+
+<script type = "text/javascript">
+
+function add(a, b) {
+    return a + b;
+}
+
+/**
+ * Returns a random number between min (inclusive) and max (exclusive)
+ */
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+/**
+ * Returns a random integer between min (inclusive) and max (inclusive)
+ * Using Math.round() will give you a non-uniform distribution!
+ */
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandsThatSumTo(num_rands, val) {
+  var rands = [];
+  var i;
+  for (i = 0; i < num_rands; i++) {
+    rands[i] = getRandomArbitrary(0.3, 0.9);
+  }
+  var sum = rands.reduce(add, 0);
+  var to_return = [];
+  for (i = 0; i < num_rands; i++) {
+    to_return[i] = rands[i]/sum * val;
+  }
+  return to_return;
+}
+
+
+    /* FIXME, create array of random ints from 2000 to 10000*/
+    var plusDelay = 0;
+    var has_started = false;
+    var stopped = true;
+    var record_keystrokes = false;
+    console.log("Should be 21 vals that add to 90");
+    var plus_delays = []
+    var curr_index = -1
+
+  window.onload = function () {
+
+    var editableCodeMirror = CodeMirror.fromTextArea(document.getElementById('codesnippet_editable'), {
+        lineNumbers: true,
+        matchBrackets: true,
+        mode: "text/plain",
+        theme: "blackboard",
+        lineWrapping: true
+    });
+    editableCodeMirror.setSize(null, $(window).height()-200);
+    editableCodeMirror.setOption("theme", "blackboard");
+    editableCodeMirror.setOption("mode", "text/plain");
+
+
+    $.ajax({
+      type: "GET",
+      url: "http://localhost:3000/get_part_id",
+      dataType: "json"
+    }).done (function (data) {
+      console.log("Creating plus delays...")
+      Math.seedrandom((data.id).toString());
+      //Math.seedrandom('hello.');
+      plus_delays = getRandsThatSumTo(21, 90 * 1000)
+      console.log("printing plus_delays...")
+      console.log(plus_delays);
+
+    });
+
+};
+
+
+$.fn.setCursorPosition = function(pos) {
+    if ($(this).get(0).setSelectionRange) {
+        $(this).get(0).setSelectionRange(pos, pos);
+    } else if ($(this).get(0).createTextRange) {
+        var range = $(this).get(0).createTextRange();
+        range.collapse(true);
+        range.moveEnd('character', pos);
+        range.moveStart('character', pos);
+        range.select();
+    }
+}
+
+
+
+      // record all keystrokes + time
+      $(document).ready(function() { 
+        $(document).keydown(function(event) {
+          console.log("detecting keystroke")
+          if (!has_started) {
+            console.log("has not started")
+            /* event.keyCode = "=" 61 on Firefox, 187 on everything else */
+            if (event.keyCode == 187) {
+              console.log("equals sign detected")
+              var the_url ="http://localhost:3000/start";
+              $.ajax(
+                { url: the_url, complete: function() {} }
+              );
+              has_started = true;
+              stopped = false;
+              // displayNextStimuli();
+              startTimer();
+            }
+          } else if (!stopped) {
+            if (record_keystrokes) {
+              console.log("recording keystroke")
+              var my_url ="http://localhost:3000/keystroke?key="+event.which;
+              $.ajax(
+                { url: my_url, complete: function() {} }
+              );
+            }
+          } 
+        });
+        // prepare plus focal relax thing
+        $("#plus_img").width($(window).width());
+        $("#plus_img").height($(window).height());
+        $("#plus_img").show();
+        // $("#plus_img").show().delay(plusDelay).queue(function(n) {$(this).hide(); n();});
+//        $("#codesnippet_editable").delay(plusDelay).
+
+    $('#codesnippet_editable').focus();
+    $('#codesnippet_editable').setCursorPosition(10);
+    
+        $("#textarea_div").height($(window).height()-100);
+        $("#codesnippet_editable").css("height", "100%");
+
+
+      });
+
+
+
+          const Categories = Object.freeze({
+            ProseWritingA: 0,
+            ProseWritingB: 1,
+            CodeWritingX: 2,
+            CodeWritingY:  3
+          });
+
+          var stimulus_time = 30000
+          var counter = 0;
+          var remember_category = 0;
+
+          function displayNextStimuli() {
+              console.log("Displaying next stimuli...")
+
+              // Get Code Mirror Object
+              var editor = $('.CodeMirror')[0].CodeMirror;
+              var cm = editor.getWrapperElement();
+              
+              // Hide Code Mirror object and make sure not recording keystrokes
+              $(cm).readOnly = true;
+              $(cm).hide();
+              record_keystrokes = false;
+
+              // Record previous answer (regardless of if we should stop!)
+              var text = editor.getValue();
+              var prompt = document.getElementById('question').innerHTML;
+              if (prompt != "Loading..." && counter != 0) {
+                var query = "http://localhost:3000/write_answer?area=" + encodeURIComponent(text) + "&prompt=" + encodeURIComponent(prompt) + "&index=" + curr_index + "&prev_delay=" + plusDelay + "&stimulus_time=" + stimulus_time;
+                $.ajax({
+                  type: "GET",
+                  url: query,
+                  dataType: "json"
+                });
+              }
+
+              // Get Random Delay
+              //plusDelay = getRandomInt(2, 10) * 1000
+              console.log(plus_delays)
+              plusDelay = plus_delays[counter]
+              console.log("Plus delay is", plusDelay)
+
+
+              // Make GET request for new stimuli
+              var next_stim_query = "http://localhost:3000/nextstim"
+              $.ajax({
+                type: "GET",
+                url: next_stim_query,
+                dataType: "json"
+              }).done (function (data) {
+
+                
+
+                if (data.stop) {
+                  // Server will check bounds... if finished category, keep fixation shown...
+                  // ... and don't make next call to DisplayNextStimuli
+                  console.log("Server says we should stop")
+                  console.log("You have completed this section")
+                  //$(cm).hide();
+                  //$(this).hide();
+                  //editor.refresh();
+                  $("#plus_img").show();
+                  $("#plus_img").hide();
+                  $("#question").hide();
+                  var para = document.createElement("p");
+                  var node = document.createTextNode("You have completed section: " + remember_category);
+                  para.appendChild(node);
+
+                  var element = document.getElementById("over");
+                  element.appendChild(para);
+                  stopped = true;
+                  counter = 0;
+                } else {  // If we should not stop...
+                  stimulus_time = data.time;
+                  console.log(stimulus_time)
+
+                  var reading_time = 10000;
+
+                  if (stimulus_time == 20000) {
+
+                    // Display fixation for calculated random time, then show CM for remaining
+                    $("#plus_img").show().delay(plusDelay).queue(
+                      function(n) {
+                          $(this).hide();
+                          counter += 1;
+                          n();
+                      }
+                    );
+                    
+                    console.log("plusDelay + reading_time is", plusDelay + reading_time)
+                    $(document).delay(plusDelay + reading_time).queue(
+                      function(n) {
+                        $(cm).readOnly = false;
+                        $(cm).show();
+                        record_keystrokes = true;
+                        editor.refresh();
+                        n();
+                      }
+                    );
+
+                    // Per above, queue next call to DNS
+                    console.log("plusDelay + reading_time + stimulus_time is", plusDelay + reading_time + stimulus_time)
+                    $(document).delay(stimulus_time).queue(
+                      function(n) {
+                        console.log("Getting next stimuli...")
+                        displayNextStimuli();
+                        n();
+                      }
+                    );
+                  } else {
+                    $("#plus_img").show().delay(plusDelay).queue(
+                      function(n) {
+                          $(this).hide(); 
+                          $(cm).readOnly = false;
+                          $(cm).show();
+                          editor.refresh();
+                          console.log("Setting to true")
+                          record_keystrokes = true;
+                          counter += 1;
+                          n();
+                      }
+                    );
+
+                    // Per above, queue next call to DNS
+                    $(document).delay(stimulus_time + plusDelay).queue(
+                      function(n) {
+                        displayNextStimuli();
+                        n();
+                      }
+                    );
+                  }
+
+                  $('#codesnippet_editable').setCursorPosition(10);
+
+                  // FIXME - could refactor to below:
+                  // stimulu s= stimuli[data.category]
+                  // and then set CM mode based on category
+                  var stimulus;
+                  curr_index = data.index;
+                  remember_category = data.category;
+                  if (data.category == Categories.ProseWritingA) {
+                    stimulus = stimuli[0][data.index];
+                    console.log("category a");
+                    editor.setOption("mode", "text/plain");
+                  } else if (data.category == Categories.ProseWritingB) {
+                    stimulus = stimuli[1][data.index];
+                    console.log("category b");
+                    editor.setOption("mode", "text/plain");
+                  } else if (data.category == Categories.CodeWritingX) {
+                    stimulus = stimuli[2][data.index];
+                    console.log("category c");
+                    editor.setOption("mode", "text/x-c++src");
+                  } else {
+                    stimulus = stimuli[3][data.index];
+                    console.log("category d");
+                    editor.setOption("mode", "text/x-c++src");
+                  }
+                  console.log(stimulus);
+                  document.getElementById("question").innerHTML = stimulus.prompt;
+                  editor.setValue(stimulus.text);
+                  editor.focus()
+                  editor.setCursor({line: 0, ch: 10})
+
+                  var data = " HELLOOO I AM HERE "
+                  var doc = editor.getDoc();
+                  var cursor = doc.getCursor(); // gets the line number in the cursor position
+                  var line = doc.getLine(cursor.line); // get the line contents
+                  var pos = { // create a new object to avoid mutation of the original selection
+                      line: cursor.line,
+                      ch: line.length - 1 // set the character position to the end of the line
+                      //line: 0,
+                      //ch: 10
+                  }
+                  doc.replaceRange('\n'+data+'\n', pos); // adds a new line
+
+
+                  //editor.replaceSelection("INSERTED HERE", "start")
+                  editor.refresh();
+                }
+              });        
+          }
+
+          function startTimer() {
+              console.log("Starting timer...")
+              displayNextStimuli()
+
+          }
+
+</script>
+</head>
+<body>
+  <script>
+    // startTimer();
+  </script>
+  <p id="question">Loading...</p>
+  <link rel="stylesheet" href="http://codemirror.net/lib/codemirror.css">
+  <script src="http://codemirror.net/lib/codemirror.js"></script>
+  <script src="http://codemirror.net/addon/edit/matchbrackets.js"></script>
+  <script src="http://codemirror.net/addon/edit/continuecomment.js"></script>
+  <script src="http://codemirror.net/mode/javascript/javascript.js"></script>
+  <script src="http://codemirror.net/mode/clike/clike.js"></script>  
+
+<div>
+    
+<textarea rows="4" cols="50" name="codesnippet_editable" id="codesnippet_editable">
+Please wait
+
+</textarea>
+<div id="rest_div" style="display: none;" align="center">
+  <p style="color:red;font-size:256px;">+</p>
+</div>
+
+</div>
+  <div id="plus_img"
+  style="position:absolute;top:-50px;height:1200px;left:0px;z-index:1000;font-size:1024px;color:red;text-align:center;
+  background-color:white;vertical-align:middle;">+
+  
+  </div>
+  <div id="over"></div>
+
+</body>
+</html>

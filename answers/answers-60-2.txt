@@ -1,0 +1,61 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+60,2,614447527.754083,Complete the code to swap the values of integers x and y,int x = 15
+ HELLOOO I AM HERE 
+;
+int y = 20;
+int temp;
+temp = x;
+/* YOUR CODE HERE */
+y = temp;
+,20,3044.8827145852856,60000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+60,2,614510392.795139,Declare the necessary variable in inPositive() such that the function returns true if num1 is positive, and false otherwise,bool isPositive (int num1) 
+ HELLOOO I AM HERE 
+{
+	/* YOUR CODE HERE */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	if (num1 > 0) {
+		positive = true;
+	} else {
+		positive = false;
+	}
+}
+,7,2846.536675763679,60000
+60,2,614546630.641912,Complete the following code so that it reads in a value for x from standard in and prints it to standard out,int k
+ HELLOOO I AM HERE 
+;
+
+/* YOUR CODE HERE */
+
+ cout << x << endl;
+,15,6206.474508213249,20000
+60,2,614582378.489904,Given a char variable c that has already been declared, write a logical expression such that the code repeatedly reads in a value from standard input into c until a 'y' or 'n' has been entered,while (/* YOUR CODE HERE */) 
+ HELLOOO I AM HERE 
+{
+	 cin >> c;
+}
+,13,4356.230731901876,20000
+60,2,614618430.878591,Given the function triple that returns 3 times the value of an double, update the call to triple such that it prints 9 times the value of double x (hint: you may have to make another call to triple),double x = rand()
+ HELLOOO I AM HERE 
+;
+cout << triple(/* YOUR CODE HERE */);
+,4,4325.115637107556,20000

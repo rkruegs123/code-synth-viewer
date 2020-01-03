@@ -1,0 +1,57 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id
+50,0,204179194.781822,Describe how you know if it is hot or cold outside?,// Provide answer below (ex. sensory information, visual cues)
+
+,0
+50,0,204211166.401191,Fill in the blanks below,The wall and floor decorations created by Indian housewives are usually short-lived, remaining hours, days, or at most, weeks before being worn off by human activity or weather and ______ by new designs.,1
+50,0,204243174.960814,Fill in the blanks below,The progress of the disease is subtle ; it _____ stealthily without any symptoms in the early stages.,3
+50,0,204283181.668099,Fill in the blanks below,Architects define a physical structure as a set of materials ______ in such a way that these materials can resist the downward pull of gravity.,4
+50,0,204318206.036507,Fill in the blanks below,Just when the senator's opponent had captured the lead in popularity polls, public opinion -------; as a result, the incumbent senator regained her front-runner position.,2
+50,1,204357200.72909,Fill in the blanks below,In their day to day decision making, many senior managers do not _____ the rational model favored by orthodox management experts, but rather rely on intuitive processes that often appear irrational and rebellious.,0
+50,1,204396209.476889,Describe how you know if it is hot or cold outside,,1
+50,1,204433216.589428,Describe the steps you take when you get dressed in the morning.,,3
+50,1,204467228.548238,Explain your walking path from your house to the nearest student center or dining hall, using street names and other details when possible.,,4
+50,1,204505239.018956,Describe the process of swapping an old, used mattress for a new one,,2
+50,2,204545248.068197,In complete sentences and to the best of your knowledge, list the steps that occur when you prepare pasta,,0
+50,2,204582258.580936,Add a private variable to the class Player to store their average points per game, as a double called average_points_per_game.,Class Player {
+public:
+	string name;
+	int number;
+private:
+
+};,1
+50,2,204616267.571652,Complete the condition in the if statement to check if the random integer x is even or odd,if (/* YOUR CODE HERE */) {
+	cout << "Number is even!" << endl;
+} else {
+	cout << "Number is odd!" << endl;,3
+50,2,204655296.334436,Complete the function definition for the function equals() that returns true if the two integer parameters are equal, and false otherwise,bool equals(int val_1, int val_2) {
+	if (/* YOUR CODE HERE */) {
+		return /* YOUR CODE HERE */
+	} else {
+		return /* YOUR CODE HERE */
+	}
+}
+,4
+50,2,204687287.778236,Complete the function definition so that the function returnLargest() returns the larger of its two parameters, x and y,int returnLargest(int x, int y) {
+	// TODO
+},2
+50,3,204727295.239735,Complete the code to swap the values of integers x and y,int x = 15;
+int y = 20;
+int temp;
+temp = x;
+/* YOUR CODE HERE */
+y = temp;
+,0
+50,3,204761307.208068,Write a function declaration for a function getBirthday that takes in a string name as a parameter and returns an integer,,1
+50,3,204793315.421586,Write the definition of a function times_two that takes in an integer x as a parameter and returns the value times two,,3
+50,3,204826331.452399,Write a for loop that prints the values 1 through 10,,4
+50,3,204864339.406375,Write a program that declares a string variable name and read a value into it from standard in.,,2
+50,0,204900346.780894,Write an if/else statement that assigns true to the variable adult if the variable age is greater than 18; otherwise assign false to adult,,0
+50,0,204935357.529633,Fill in the blanks below,The wall and floor decorations created by Indian housewives are usually short-lived, remaining hours, days, or at most, weeks before being worn off by human activity or weather and ______ by new designs.,1
+participant-id,category,timestamp,prompt,answer,stimulus-id
+50,0,205015487.83225,Loading...,Please wait
+
+,0
+50,0,205053481.987159,Fill in the blanks below,The wall and floor decorations created by Indian housewives are usually short-lived, remaining hours, days, or at most, weeks before being worn off by human activity or weather and ______ by new designs.
+
+a;ldskjal;sdfjla;fads;lfkjad;f
+als;dkfjaryanryankevinyuwatercomputer,1

@@ -1,0 +1,4 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+20,1,758755614.294685,Many teachers assign homework to students every day. Do you think that daily homework is necessary for students? Explain.,Is ,17,5000,3000
+20,1,758766624.316726,Do you agree or disagree with the following statement? The best way to travel is in a group led by a tour guide. Explain.,Is this [ going to be okay?],20,5000,6000
+20,1,758774639.208186,If you could change one important thing about your country, what would you change? Use reasons and specific examples to support your answer.,oh boy,3,5000,3000

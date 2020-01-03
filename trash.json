@@ -1,0 +1,497 @@
+/* STIMULI FROM BELOW */
+// https://ac.els-cdn.com/S1877042810009778/1-s2.0-S1877042810009778-main.pdf?_tid=c1bc4904-3661-4e5d-bd5c-492975d1c82a&acdnat=1521138601_271386bb96aa9b62d20c16c65ba4e79f
+
+var stimuli = [
+     /* CATEGORY A */
+	 [
+		{
+			"prompt": "Fill in the blank below",
+			"text": "To reach Simonville, the traveller needs to drive with extreme caution along the windy curves of the ________ road that climbs steeply to the summit.",
+			"line": 0,
+			"character": 105 
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "The admiral rescinded her ________ to attack when she saw the white flag raised by the enemy sailors; she was relieved that she could bring an end to the hostilities.",
+			"line": 0,
+			"character": 30
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Architects define a physical structure as a set of materials arranged in such a way that these materials can resist the downward ________ of gravity.",
+			"line": 0,
+			"character": 133
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "In frigid regions a ________ of ice under the soil surface prevents water from sinking deep into the soil, and so the water floods the land, helping to create bog and swamp conditions.",
+			"line": 0,
+			"character": 24
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "The library's ________ is a trove of Asian American historical documents, including rare materials about race relations.",
+			"line": 0,
+			"character": 18
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Brian was so fond of his dog that their brief ________ left him not just saddened, but in a state of sorrow.",
+			"line": 0,
+			"character": 50
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Since the foreign correspondent was accustomed to completing his ________ under tumultuous conditions, the commotion of the subway at rush hour presented no impediment to his creativity.",
+			"line": 0,
+			"character": 69
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "In addition to evaluating ________ of resumes and references, some employers want to supplement the hiring process by employing graphologists to study applicants' handwriting for character analysis.",
+			"line": 0,
+			"character": 30
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "New York fashion designer Anna Sui creates eclectic ________ that represent an amalgam of playful, 1970's funky style fused with an edgy, urban sensibility.",
+			"line": 0,
+			"character": 56
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "The magician's adroitness astonished us; her deft performance proved the old saying that the ________ is quicker than the eye.",
+			"line": 0,
+			"character": 97
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "The lectures on quantum physics were invariably dull; the lecturer ________ his ill-prepared material in a manner guaranteed to send even the most ardent student to sleep.",
+			"line": 0,
+			"character": 71
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Elinor tried to counteract her negative feelings, but only ________ in intensifying them.",
+			"line": 0,
+			"character": 63
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "The progress of the disease is subtle; it ________ stealthily without any symptoms in the early stages.",
+			"line": 0,
+			"character": 46
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Using detailed observations made by ancient astronomers in China, Korea, and Japan to complement data ________ by modern instruments, scientists can establish precisely when a particular star exploded.",
+			"line": 0,
+			"character": 106
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Shalani was not bothered by the unrelenting criticism and paid no ________ even when her best friend talked against her.",
+			"line": 0,
+			"character": 59
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Over the years the anthropologist's opinions had ossified: he refused to tolerate new ideas and nothing could ________ his mind.",
+			"line": 0,
+			"character": 114
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Once his integrity had been challenged, the mayoral candidate was quick both to dismiss these attacks and to ________ counterattacks.",
+			"line": 0,
+			"character": 113
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "The architect advised ________ down the old structure, since he did not consider it sufficiently robust to withstand the heavy winds of the tropical storm the peninsula was expecting.",
+			"line": 0,
+			"character": 26
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Because he had decided not to glorify himself through the sales of his new product, the inventor anonymously ________ all profits to charity.",
+			"line": 0,
+			"character": 113
+		},
+		{
+			"prompt": "Fill in the blank below",
+			"text": "Angered that the book arrived in the mail in such a shabby condition, Elliot insisted that the bookseller ________ it with a new copy.",
+			"line": 0,
+			"character": 110
+		}
+	],
+    /* CATEGORY B */
+	[
+		{
+			"prompt": "Do you agree or disagree with the following statement? Universities should give the same amount of money to their students' sports activities as they give to their university libraries. Use specific reasons and examples to support your opinion.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Some people believe that university students should be required to attend classes. Others believe that going to classes should be optional for students. Which point of view do you agree with, and why?",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Choose one of the following transportation vehicles and explain why you think it has changed people's lives. (automobiles, bicycles, airplanes)",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Should a city try to preserve its old, historic buildings or destroy them and replace them with modern buildings? Explain.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Many teachers assign homework to students every day. Do you think that daily homework is necessary for students? Explain.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Do you agree or disagree with the following statement? The best way to travel is in a group led by a tour guide. Explain.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Some universities require students to take classes in many subjects. Other universities require students to specialize in one subject. Which is better? Explain.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Is it more important to be able to work with a group of people on a team or to work independently? Explain.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Some people prefer to spend time with one or two close friends. Others choose to spend time with a large number of friends. Compare the advantages of each choice.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Some people prefer to plan activities for their free time very carefully. Others choose not to make any plans at all for their free time. Compare the benefits of planning free-time activities with the benefits of not making plans.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Some people enjoy change, and they look forward to new experiences. Others like their lives to stay the same, and they do not change their usual habits. Compare these two approaches to life.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Do you agree or disagree with the following statement? People behave differently when they wear different clothes. Use specific examples to support your answer.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Some high schools require all students to wear school uniforms. Other high schools permit students to decide what to wear to school. Which of these two school policies do you think is better?  Explain.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Do you agree or disagree with the following statement? It is better to be a member of a group than to be the leader of a group. Explain.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Do you think that a college education is necessary for success? Explain.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "What would happen if everyone lived in space? (e.g., What type of houses would they live in? What type of clothing would they wear?)",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "If you grew taller than trees, how would your life change?",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Some people prefer to live in places that have the same weather or climate all year long. Others like to live in areas where the weather changes several times a year. Which do you prefer? Use specific reasons and examples to support your choice.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Some people believe that success in life comes from taking risks or chances. Others believe that success results from careful planning. In your opinion, what does success come from? Use specific reasons and examples to support your answer.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Why do you think some people pick on others?",
+			"text": "",
+			"line": 0,
+			"character": 0
+		}
+	],
+    /* CATEGORY X */
+	[
+		{
+			"prompt": "Using two statements, complete the definition of the function swapints that is passed two int variables. The function returns nothing but exchanges the values of the two variables.",
+			"text": "void swapints(int &a, int &b){\n\tint temp = a;\n\t/* YOUR CODE HERE */\n\t\n}\n",
+			"line": 3,
+			"character": 1
+		},
+		{
+			"prompt": "Write a function addOne that adds 1 to its integer reference parameter. The function returns nothing.",
+			"text": "void addOne (int& x) {\n\t/* YOUR CODE HERE */\n\t\n}\n",
+			"line": 2,
+			"character": 1
+		},
+		{
+			"prompt": "Complete the definition of the function absoluteValue such that it receives an integer parameter and returns the absolute value of the parameter's value.",
+			"text": "int absoluteValue(int num1) {\n\t/* YOUR CODE HERE */\n\t\n\tabsoluteValue = abs(num1);\n\treturn absoluteValue;\n}\n",
+			"line": 2,
+			"character": 1
+		},
+		{
+			"prompt": "Complete the for loop such that it prints the odd integers 11 through 121 inclusive, separated by spaces.",
+			"text": "for (int i = 11; i <= 121; /* YOUR CODE HERE */) {\n\tcout << i << \" \";\n}\n",
+			"line": 0,
+			"character": 47
+		},
+		{
+			"prompt": "Complete the definition of a function isSenior, that receives an integer parameter and returns true if the parameter's value is greater or equal to 65, and false otherwise.",
+			"text": "bool isSenior(int age) {\n\t/* YOUR CODE HERE */\n\t\n}\n",
+			"line": 2,
+			"character": 1
+		},
+		{
+			"prompt": "Write a for loop that prints the integers 1 through 40, separated by spaces or new lines. You may use only one variable, count which has already been declared as an integer.",
+			"text": "for (/* YOUR CODE HERE */) {\n\tcout << count << \" \";\n}\n",
+			"line": 0,
+			"character": 25
+		},
+		{
+			"prompt": "Write the definition of a function min that has two int parameters and returns the smaller.",
+			"text": "int min (int num1, int num2) {\n\t/* YOUR CODE HERE */\n\t}\n",
+			"line": 2,
+			"character": 1
+		},
+		{
+			"prompt": "Given an int variable k that has already been declared, use a  for loop to print a single line consisting of 97 asterisks. Use no variables other than k.",
+			"text": "for (/* YOUR CODE HERE */){\n\tcout << \"*\";\n}\n",
+			"line": 0,
+			"character": 25
+		},
+		{
+			"prompt": "Complete the assignment of the variable isFailing such that it is set to true if exam_score is less than 50, and false otherwise",
+			"text": "int exam_score;\ncin >> exam_score;\nbool isFailing = /* YOUR CODE HERE */;\nif (isFailing) {\n\tcout << \"You failed!\" << endl;\n} else {\n\tcout << \"You passed!\" << endl;\n}\n",
+			"line": 2,
+			"character": 37
+		},
+		{
+			"prompt": "Using one expression, complete the function notDivisibleByThree that returns false if x is divisible by three, and true otherwise",
+			"text": "bool notDivisibleByThree(int x){\n\treturn /*YOUR CODE HERE*/;\n}\n",
+			"line": 1,
+			"character": 26
+		},
+		{
+			"prompt": "Given that an array of int named a has been declared with 12 elements and that the integer variable k holds a value between 0 and 6. Assign 9 to the element just after a[k].",
+			"text": "a[/* YOUR CODE HERE */] = 9;",
+			"line": 0,
+			"character": 22
+		},
+		{
+			"prompt": "Complete the if/else statement such that it assigns true to the variable fever if the variable temperature is greater than 98.6; otherwise it assigns false to fever.",
+			"text": "if (temperature > 98.6) {\n\t/* YOUR CODE HERE */\n\t\n} else {\n\tfever = false;\n}\n",
+			"line": 2,
+			"character": 1
+		},
+		{
+			"prompt": "Complete the implementation of a function named useGas of the class GasTank that accepts an integer parameter gasValue and subtracts value from the integer member variable total. The function returns nothing.",
+			"text": "void GasTank::useGas(int gasValue) {\n\t/* YOUR CODE HERE */\n\t\n}\n",
+			"line": 2,
+			"character": 1
+		},
+		{
+			"prompt": "Complete the definition of a function max that has three int parameters and returns the largest.",
+			"text": "int max(int x,int y,int z) {\n\tif (x > z && x > y) {\n\t\treturn x;\n\t} else if (/*YOUR CODE HERE*/) {\n\t\treturn y;\n\t} else {\n\t\treturn z;\n\t}\n}\n",
+			"line": 3,
+			"character": 30
+		},
+		{
+			"prompt": "Complete the implementation of a function equalsFive() that accepts one parameter, int x, and returns true if the value equals 5 and false otherwise",
+			"text": "bool equalsFive(int x) {\n\tif (/* YOUR CODE HERE */) {\n\t\treturn true;\n\t} else {\n\t\treturn false;\n\t}\n}\n",
+			"line": 3,
+			"character": 0
+		},
+		{
+			"prompt": "Given two 3x5 2D arrays of integer, x1 and x2, write the code needed to copy every value from x1 to its corresponding element in x2.",
+			"text": "for(int i = 0; i < 3; i++){\n\tfor(int j = 0; j < 5; j++){\n\t\t/* YOUR CODE HERE */\n\t\t\n\t}\n}\n",
+			"line": 3,
+			"character": 2
+		},
+		{
+			"prompt": "You are given a 6x8 (6 rows, 8 columns) array of integers, x, already initialized and three integer variables: max, i and j. Write the necessary code so that max will have the largest value in the array x.",
+			"text": "max = x[0][0];\nfor(i = 0; i < 6; i++){\n\tfor(j = 0; j < 8; j++){\n\t\tif(/* YOUR CODE HERE */){\n\t\t\tmax = x[i][j];\n\t\t}\n\t}\n}\n",
+			"line": 3,
+			"character": 25
+		},
+		{
+			"prompt": "Complete the switch statement to output \"Moo!\" when the value of animal is \"cow\"",
+			"text": "switch(animal) {\n\tcase \"pig\":\n\t\tcout << \"Oink!\" << endl;\n\t\tbreak;\n\tcase \"hen\":\n\tcout << \"Cluck!\" << endl;\n\t\tbreak;\n\t/* YOUR CODE HERE */\n\t\n\n}\n",
+			"line": 8,
+			"character": 1
+		},
+		{
+			"prompt": "Given two initialized 2x3 (2 rows, 3 columns) arrays of integers, x1 and x2, complete the code such that the boolean value x1Rules is true if and only if every element in x1 is bigger than its corresponding element in x2, and is false otherwise.",
+			"text": "x1Rules = true;\nfor(int i = 0; i < 2; i++) {\n\tfor(int j = 0; j < 3; j++) {\n\t\tif (/* YOUR CODE HERE */) {\n\t\t\tx1Rules=false;\n\t\t}\n\t}\n}\n",
+			"line": 3,
+			"character": 24
+		},
+		{
+			"prompt": "Write the definition of a function firstEqualsLast that checks if the first character of one string is the same as the last character of a second string",
+			"text": "bool firstEqualsLast(string a, string b) {\n\t/* YOUR CODE HERE */\n\t\n}\n",
+			"line": 2,
+			"character": 1
+		}
+	],
+    /* CATEGORY Y */
+	[
+		{
+			"prompt": "Clunker Motors Inc. is recalling all vehicles in its Extravagant line from model years 1999-2002. Given an int variable modelYear and a string modelName, print \"RECALL\" if modelYear and modelName match the recal details",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Given an integer variable x, write a loop that reads values into x from standard in until the same value is read twice in a row",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Given integer variables score1 and score2 that have been declared and initialized, update the integer variables player1Wins, player2Wins, and numTies accordingly.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Given a 2D array my_board with 3 rows and 3 columns, write nested for loops to print its contents, row by row, to standard out",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Write a statement that toggles the value of the bool variable onOffSwitch. That is, if onOffSwitch is false, itsvalue is changed to true; if onOffSwitch is true, its value is changed to false.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Write the definition of a function isPositive, that receives an integer parameter and returns true if the parameteris positive, and false otherwise.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Implement a function sum_values accepts a vector of integer values and returns the sum of these values.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Implement a function is_sorted that accepts a vector of integer values and returns true if it is non-decreasing, and false otherwise",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Given a string, s, and an integer, x, update s such that its characters are shifted by x. Ex. s = \"cd\", x = 1. Loop results in s = \"de\"",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Given an integer value, x, with three digits (ex. 378), store each digit in separate integer variables called ones_place, tens_place, and hundreds_place",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Given integer variables amount and total both initialized to 0, write a loop that reads in values for amount from standard in and adds them to total until total is greater than 100.",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Write a function numVowels that accepts a string and returns the number of vowels it contains (a, e, i, o, u, y)",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Implement a function isEven that accepts an integer parameter x and returns true if x is even, and false otherwise",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Given two variables that have been declared and initialized, string s and map<char, int> num_letter, use num_letter to store the number of times a given character is in the string s",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Implement a function addTen() that accepts an integer parameter x and returns the value of x incremented by 10",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Implement a function containsDuplicate that accepts a vector of integers and returns true if it contains a duplicate element, and false otherwise",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Implement a function secondGreatest that accepts a vector of integers and returns the second greatest element in the vector",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Implement a function addValues that accepts two integers, lo and hi, and adds the integers between lo and hi (inclusive). Return this sum in an integer variable result. ",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Implement a function isPalindrome that accepts a string s and returns true if it is a palindrome (reads the same forward as backwards), and false otherwise",
+			"text": "",
+			"line": 0,
+			"character": 0
+		},
+		{
+			"prompt": "Implement a function countdown() that accepts an integer n as a parameter and counts down from n, printing each number to standard output, separated by a space. After reaching n, print \"liftoff!\"",
+			"text": "",
+			"line": 0,
+			"character": 0
+		}
+	]
+];

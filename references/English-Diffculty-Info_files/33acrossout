@@ -1,0 +1,5 @@
+
+(function(){try{var p,s,w=window.top;w.Tynt=w.Tynt||[];
+w.Tynt.push('st!cu','aDhAmS354r5i1Kacwqm_6r');s=w.document.createElement('script');
+p=w.location.protocol;s.src=(p==='https:'?p:'http:')+'//cdn.tynt.com/afx.js';
+(w.document.getElementsByTagName('head')[0]).appendChild(s);}catch(e){}})();

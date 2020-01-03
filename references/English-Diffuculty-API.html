@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://www.twinword.com/api/language-scoring.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+
+    <title>Language Scoring API - Twinword Inc.</title>
+
+    <meta name="description" content="What&#39;s the difficulty level of this article? Evaluate the difficulty level of a word, sentence, or paragraph and compare it with another.">
+
+    <meta name="keywords" content="natural language processing,API,artificial intelligence,lemmatizer,topic tagging,sentiment analysis,category recommendation">
+
+    <link rel="canonical" href="https://www.twinword.com/api/language-scoring.php">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="https://www.twinword.com/main/images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Twinword">
+    <link rel="apple-touch-icon-precomposed" href="https://www.twinword.com/api/apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="/main/images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#00B2EC">
+
+    <!-- GA tracking code should be in the <head> section of your page. -->
+    <script src="./English-Diffuculty-API_files/1620656541545267" async=""></script><script async="" src="./English-Diffuculty-API_files/fbevents.js"></script><script async="" src="./English-Diffuculty-API_files/analytics.js"></script><script>
+        (function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-28766854-1","auto");ga("send","pageview");ga("create","UA-69113821-1","auto","unifiedTracker");ga("unifiedTracker.send","pageview");
+var trackOutboundLink=function(a){ga("send","event","outbound","click",a,1)};
+    </script>
+
+    <style>
+      @charset "utf-8";body{padding:0;margin:0;overflow-x:hidden;background-color:#f7f7f7}div.pageContainer{position:relative;box-sizing:border-box;padding:0;margin:0 auto;width:-moz-calc(100% - 10px);width:-webkit-calc(100% - 10px);width:calc(100% - 10px);overflow-x:hidden;background-color:#f7f7f7}div.foldContainer{position:relative;box-sizing:border-box;width:100%;overflow-x:hidden;overflow-y:hidden}div.contentContainer{position:relative;box-sizing:border-box;padding:0;margin:auto;max-width:1080px}div.safeContainer{position:relative;box-sizing:border-box;padding:0}@media only screen and (max-width:799px){div.safeContainer{margin:0 30px 0 30px;width:-moz-calc(100% - 60px);width:-webkit-calc(100% - 60px);width:calc(100% - 60px)}}@media only screen and (min-width:800px){div.safeContainer{margin:0 50px 0 50px;width:-moz-calc(100% - 100px);width:-webkit-calc(100% - 100px);width:calc(100% - 100px)}}div.sectionHeader{position:relative;box-sizing:border-box;padding:0 0 25px 0;margin:0;width:100%;color:#222}span.sectionHeaderTitle{font-family:'Roboto Slab';font-weight:normal}span.sectionHeaderSubtitle{font-family:'Roboto';font-weight:normal}@media only screen and (max-width:799px){div.sectionHeader{text-align:center}span.sectionHeaderTitle{font-size:26px}span.sectionHeaderSubtitle{font-size:20px}}@media only screen and (min-width:800px){div.sectionHeader{text-align:left}span.sectionHeaderTitle{font-size:30px}span.sectionHeaderSubtitle{font-size:24px}}div.sectionNavContainer{position:absolute;bottom:15px;right:0;box-sizing:border-box;min-width:20px;font-size:30px}a.sectionNavIcon{color:inherit;text-decoration:none}div.sectionDesc{position:relative;box-sizing:border-box;padding:30px 0 30px 0;margin:0;font-family:'Roboto';font-size:14px;font-weight:normal;line-height:1.7em}div.sectionBody{position:relative;box-sizing:border-box;padding:30px 0 30px 0;margin:0;font-family:'Roboto';font-size:14px;font-weight:normal;line-height:1.7em}body[data-site="korea"] div.sectionHeader{font-family:Tahoma}body[data-site="korea"] div.sectionBody{font-family:Arial,sans-serif;font-size:18px;line-height:1.7em}body[data-site="korea"] div.sectionBody p img.right{float:right;margin-left:30px;max-width:60%;border:1px solid #eee}body[data-site="korea"] div.sectionBody div.imageContainer{margin:30px auto;width:90%;text-align:center}body[data-site="korea"] div.sectionBody div.imageContainer img{width:100%;border:1px solid #eee}body[data-site="korea"]{font-family:Arial,sans-serif}body[data-site="korea"] .noBreak{white-space:nowrap}body[data-site="korea"]{word-break:keep-all}body[data-site="korea"] div.footer_finePrint{font-family:Arial,sans-serif}body[data-site="korea"] div.foldContainer.submitSiteAndEmail div.contentContainer{background-color:#313131}body[data-site="korea"] div.foldContainer.submitSiteAndEmail div.safeContainer{padding:30px 0}body[data-site="korea"] div#submitEmailContainer{margin:15px 0 0 0}body[data-site="korea"] div.submitSiteAndEmailContainer>div{box-sizing:border-box;display:inline-block;vertical-align:middle;position:relative;padding:0 15px 0 0;width:35%;color:#fff}body[data-site="korea"] div.submitSiteAndEmailContainer>div:last-child{padding:0 0 0 15px;width:65%}@media only screen and (max-width:799px){body[data-site="korea"] div.submitSiteAndEmailContainer>div,body[data-site="korea"] div.submitSiteAndEmailContainer>div:last-child{display:block;padding:0;width:100%}body[data-site="korea"] div.submitSiteAndEmailContainer>div:last-child,body[data-site="korea"] div.submitSiteAndEmailContainer:last-child{padding:10px 0 0 0}}body[data-site="korea"] div.submitSiteAndEmailContainer input[type="url"],body[data-site="korea"] div.submitSiteAndEmailContainer input[type="email"]{vertical-align:top;box-sizing:border-box;margin:0;padding:10px;max-width:100%;border:1px solid #00b2ec;border-radius:.25em;font-size:1.3em;width:70%}body[data-site="korea"] div.submitSiteAndEmailContainer input[type="url"]:focus,body[data-site="korea"] div.submitSiteAndEmailContainer input[type="email"]:focus,body[data-site="korea"] div.submitSiteAndEmailContainer input[type="button"]:focus{outline:0}body[data-site="korea"] div.submitSiteAndEmailContainer input[type="button"]{vertical-align:top;margin:0 0 0 10px;width:-moz-calc(30% - 10px);width:-webkit-calc(30% - 10px);width:calc(30% - 10px);height:46px;font-size:24px;background-color:#00b2ec;border:0;color:white;border-radius:.25em}body[data-site="korea"] div.submitSiteAndEmailContainer input[type="button"]:active{box-shadow:0 0 5px 2px rgba(0,0,0,0.4) inset}body[data-site="korea"] div.submitSiteAndEmailMessage:not([data-visible="1"]){display:none}body[data-site="korea"] div.submitSiteAndEmailMessage{margin:25px auto 0 auto;padding:15px 20px;width:300px;max-width:100%;background-color:#505050;color:#fff;border-radius:.25em;text-align:center}body[data-site="korea"] div.submitSiteWebInputProgress:not([data-visible="1"]){display:none}body[data-site="korea"] div.submitSiteWebInputProgress{position:absolute;top:-83px;right:32%;opacity:.7;pointer-events:none}@media only screen and (max-width:799px){body[data-site="korea"] div.submitSiteWebInputProgress{top:-69px;right:34%}}body[data-site="korea"] div.sectionBody p img.right_less{float:right;margin-left:30px;max-width:25%}body[data-site="korea"] div.sectionBody p img.circle_white_border{border:7px solid #fff!important;border-radius:50%}body[data-site="korea"] div.sectionBody div.left_more_parent{display:inline-block;vertical-align:middle;position:relative;width:65%;line-height:initial}@media only screen and (max-width:799px){body[data-site="korea"] div.sectionBody div.left_more_parent{width:100%}}body[data-site="korea"] div.sectionBody div.two_column_stats>div{display:inline-block;vertical-align:middle;width:50%;padding:10px 40px;text-align:center}body[data-site="korea"] div.sectionBody span.large_stats{font-size:1.5em;color:#4f6184}body[data-site="korea"] div.sectionBody span.stats_desc{font-size:.8em}body[data-site="korea"] div.three_columns>div{width:33%}body[data-site="korea"] div.four_columns>div{width:25%}body[data-site="korea"] div.column_buttons>div,body[data-site="korea"] div.column_points>div{display:inline-block;position:relative;vertical-align:top;line-height:initial;margin-bottom:45px}@media only screen and (max-width:799px){body[data-site="korea"] div.three_columns,body[data-site="korea"] div.four_columns{text-align:center}body[data-site="korea"] div.three_columns>div,body[data-site="korea"] div.four_columns>div{width:80%;text-align:left}}body[data-site="korea"] div.column_buttons>div>div:first-child{box-sizing:border-box;display:inline-block;vertical-align:top;width:60px;height:60px;background-repeat:no-repeat;background-position:center;background-size:cover;border-radius:50%;border:5px solid #fff;box-shadow:0 1px 5px -1px rgba(0,0,0,0.8)}body[data-site="korea"] div.column_points>div:before{content:"\2713";position:relative;display:inline-block;vertical-align:top;margin:0 15px 0 0;height:20px;width:20px;font-size:12px;font-weight:200;border-radius:50%;text-align:center;line-height:20px}body[data-site="korea"] div.column_points.mainColors>div:before,body[data-site="korea"] div.column_points.mainColors>div:before{color:#222;border:1px solid #222}body[data-site="korea"] div.column_points.altColors>div:before,body[data-site="korea"] div.column_points.altColors>div:before{color:#d2b234;border:1px solid #d2b234}body[data-site="korea"] div.column_buttons>div>div:last-child{box-sizing:border-box;display:inline-block;vertical-align:top;width:calc(100% - 60px);padding:0 15px}body[data-site="korea"] div.column_points>div>div:last-child{box-sizing:border-box;display:inline-block;vertical-align:top;width:calc(100% - 37px);padding:0 15px 0 0}body[data-site="korea"] div.column_buttons.mainColors span.button_title,body[data-site="korea"] div.column_points.mainColors span.point_title{color:#222}body[data-site="korea"] div.column_buttons.altColors span.button_title,body[data-site="korea"] div.column_points.altColors span.point_title{color:#d2b234}body[data-site="korea"] div.column_buttons span.button_desc,body[data-site="korea"] div.column_points span.point_desc{font-size:.8em}body[data-site="korea"] div.featureList>div:before{content:"\2713";position:relative;display:inline-block;vertical-align:middle;margin:0 15px 0 0;height:20px;width:20px;color:#dedede;font-size:12px;font-weight:200;border:1px solid #dedede;border-radius:50%;text-align:center;line-height:20px}body[data-site="korea"] div.right_collapsable{float:right;display:inline-block;vertical-align:top;margin-left:30px;width:40%}body[data-site="korea"] div.center_collapsed{display:none}@media only screen and (max-width:799px){body[data-site="korea"] div.right_collapsable{display:none}body[data-site="korea"] div.center_collapsed{display:inline-block;vertical-align:top;width:100%;padding:35px;margin:15px 0}}body[data-site="korea"] div.clickable{position:relative;text-align:center;cursor:pointer}body[data-site="korea"] div.clickable img{max-width:100%}body[data-site="korea"] div.clickable:hover:before,body[data-site="korea"] div.clickable:hover:after{position:absolute;display:inline-block;vertical-align:middle;background-color:#00b2ec;color:#fff;top:40%;padding:5px 15px;z-index:1;box-shadow:0 1px 5px -1px rgba(0,0,0,0.8);pointer-events:none}body[data-site="korea"] div.clickable:hover:before{content:attr(data-clickable);width:165px;right:calc(50% - 70px)}body[data-site="korea"] div.clickable:hover:after{content:"\25BA";width:23px;left:calc(50% - -71px)}.bar-cssload-wrap{text-align:center;line-height:195px}.bar-cssload-container{display:inline-block}.bar-cssload-dots{display:inline-block;position:relative}.bar-cssload-dots:not(:last-child){margin-right:9px}.bar-cssload-dots:before,.bar-cssload-dots:after{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;position:absolute}.bar-cssload-dots:nth-child(1):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-0.495s;-o-animation-delay:-0.495s;-ms-animation-delay:-0.495s;-webkit-animation-delay:-0.495s;-moz-animation-delay:-0.495s;background-color:#00b1ec}.bar-cssload-dots:nth-child(1):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-0.495s;-o-animation-delay:-0.495s;-ms-animation-delay:-0.495s;-webkit-animation-delay:-0.495s;-moz-animation-delay:-0.495s;background-color:#313131}.bar-cssload-dots:nth-child(2):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-0.99s;-o-animation-delay:-0.99s;-ms-animation-delay:-0.99s;-webkit-animation-delay:-0.99s;-moz-animation-delay:-0.99s;background-color:rgba(0,177,236,0.97)}.bar-cssload-dots:nth-child(2):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-0.99s;-o-animation-delay:-0.99s;-ms-animation-delay:-0.99s;-webkit-animation-delay:-0.99s;-moz-animation-delay:-0.99s;background-color:#313131}.bar-cssload-dots:nth-child(3):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-1.485s;-o-animation-delay:-1.485s;-ms-animation-delay:-1.485s;-webkit-animation-delay:-1.485s;-moz-animation-delay:-1.485s;background-color:#00b1ec}.bar-cssload-dots:nth-child(3):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-1.485s;-o-animation-delay:-1.485s;-ms-animation-delay:-1.485s;-webkit-animation-delay:-1.485s;-moz-animation-delay:-1.485s;background-color:#313131}.bar-cssload-dots:nth-child(4):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-1.98s;-o-animation-delay:-1.98s;-ms-animation-delay:-1.98s;-webkit-animation-delay:-1.98s;-moz-animation-delay:-1.98s;background-color:#00b1ec}.bar-cssload-dots:nth-child(4):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-1.98s;-o-animation-delay:-1.98s;-ms-animation-delay:-1.98s;-webkit-animation-delay:-1.98s;-moz-animation-delay:-1.98s;background-color:rgba(49,49,49,0.98)}.bar-cssload-dots:nth-child(5):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-2.475s;-o-animation-delay:-2.475s;-ms-animation-delay:-2.475s;-webkit-animation-delay:-2.475s;-moz-animation-delay:-2.475s;background-color:#00b1ec}.bar-cssload-dots:nth-child(5):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-2.475s;-o-animation-delay:-2.475s;-ms-animation-delay:-2.475s;-webkit-animation-delay:-2.475s;-moz-animation-delay:-2.475s;background-color:#313131}.bar-cssload-dots:nth-child(6):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-2.97s;-o-animation-delay:-2.97s;-ms-animation-delay:-2.97s;-webkit-animation-delay:-2.97s;-moz-animation-delay:-2.97s;background-color:rgba(0,177,236,0.98)}.bar-cssload-dots:nth-child(6):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-2.97s;-o-animation-delay:-2.97s;-ms-animation-delay:-2.97s;-webkit-animation-delay:-2.97s;-moz-animation-delay:-2.97s;background-color:#313131}.bar-cssload-dots:nth-child(7):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-3.465s;-o-animation-delay:-3.465s;-ms-animation-delay:-3.465s;-webkit-animation-delay:-3.465s;-moz-animation-delay:-3.465s;background-color:#00b1ec}.bar-cssload-dots:nth-child(7):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-3.465s;-o-animation-delay:-3.465s;-ms-animation-delay:-3.465s;-webkit-animation-delay:-3.465s;-moz-animation-delay:-3.465s;background-color:#313131}.bar-cssload-dots:nth-child(8):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-3.96s;-o-animation-delay:-3.96s;-ms-animation-delay:-3.96s;-webkit-animation-delay:-3.96s;-moz-animation-delay:-3.96s;background-color:rgba(0,177,236,0.98)}.bar-cssload-dots:nth-child(8):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-3.96s;-o-animation-delay:-3.96s;-ms-animation-delay:-3.96s;-webkit-animation-delay:-3.96s;-moz-animation-delay:-3.96s;background-color:#313131}.bar-cssload-dots:nth-child(9):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-4.455s;-o-animation-delay:-4.455s;-ms-animation-delay:-4.455s;-webkit-animation-delay:-4.455s;-moz-animation-delay:-4.455s;background-color:#00b1ec}.bar-cssload-dots:nth-child(9):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-4.455s;-o-animation-delay:-4.455s;-ms-animation-delay:-4.455s;-webkit-animation-delay:-4.455s;-moz-animation-delay:-4.455s;background-color:#313131}.bar-cssload-dots:nth-child(10):before{transform:translateY(-200%);-o-transform:translateY(-200%);-ms-transform:translateY(-200%);-webkit-transform:translateY(-200%);-moz-transform:translateY(-200%);animation:bar-cssload-animBefore .55s linear infinite;-o-animation:bar-cssload-animBefore .55s linear infinite;-ms-animation:bar-cssload-animBefore .55s linear infinite;-webkit-animation:bar-cssload-animBefore .55s linear infinite;-moz-animation:bar-cssload-animBefore .55s linear infinite;animation-delay:-4.95s;-o-animation-delay:-4.95s;-ms-animation-delay:-4.95s;-webkit-animation-delay:-4.95s;-moz-animation-delay:-4.95s;background-color:#00b1ec}.bar-cssload-dots:nth-child(10):after{transform:translateY(200%);-o-transform:translateY(200%);-ms-transform:translateY(200%);-webkit-transform:translateY(200%);-moz-transform:translateY(200%);animation:bar-cssload-animAfter .55s linear infinite;-o-animation:bar-cssload-animAfter .55s linear infinite;-ms-animation:bar-cssload-animAfter .55s linear infinite;-webkit-animation:bar-cssload-animAfter .55s linear infinite;-moz-animation:bar-cssload-animAfter .55s linear infinite;animation-delay:-4.95s;-o-animation-delay:-4.95s;-ms-animation-delay:-4.95s;-webkit-animation-delay:-4.95s;-moz-animation-delay:-4.95s;background-color:#313131}@keyframes bar-cssload-animBefore{0%{transform:scale(1) translateY(-200%);z-index:1}25%{transform:scale(1.3) translateY(0);z-index:1}50%{transform:scale(1) translateY(200%);z-index:-1}75%{transform:scale(0.7) translateY(0);z-index:-1}100%{transform:scale(1) translateY(-200%);z-index:-1}}@-o-keyframes bar-cssload-animBefore{0%{-o-transform:scale(1) translateY(-200%);z-index:1}25%{-o-transform:scale(1.3) translateY(0);z-index:1}50%{-o-transform:scale(1) translateY(200%);z-index:-1}75%{-o-transform:scale(0.7) translateY(0);z-index:-1}100%{-o-transform:scale(1) translateY(-200%);z-index:-1}}@-ms-keyframes bar-cssload-animBefore{0%{-ms-transform:scale(1) translateY(-200%);z-index:1}25%{-ms-transform:scale(1.3) translateY(0);z-index:1}50%{-ms-transform:scale(1) translateY(200%);z-index:-1}75%{-ms-transform:scale(0.7) translateY(0);z-index:-1}100%{-ms-transform:scale(1) translateY(-200%);z-index:-1}}@-webkit-keyframes bar-cssload-animBefore{0%{-webkit-transform:scale(1) translateY(-200%);z-index:1}25%{-webkit-transform:scale(1.3) translateY(0);z-index:1}50%{-webkit-transform:scale(1) translateY(200%);z-index:-1}75%{-webkit-transform:scale(0.7) translateY(0);z-index:-1}100%{-webkit-transform:scale(1) translateY(-200%);z-index:-1}}@-moz-keyframes bar-cssload-animBefore{0%{-moz-transform:scale(1) translateY(-200%);z-index:1}25%{-moz-transform:scale(1.3) translateY(0);z-index:1}50%{-moz-transform:scale(1) translateY(200%);z-index:-1}75%{-moz-transform:scale(0.7) translateY(0);z-index:-1}100%{-moz-transform:scale(1) translateY(-200%);z-index:-1}}@keyframes bar-cssload-animAfter{0%{transform:scale(1) translateY(200%);z-index:-1}25%{transform:scale(0.7) translateY(0);z-index:-1}50%{transform:scale(1) translateY(-200%);z-index:1}75%{transform:scale(1.3) translateY(0);z-index:1}100%{transform:scale(1) translateY(200%);z-index:1}}@-o-keyframes bar-cssload-animAfter{0%{-o-transform:scale(1) translateY(200%);z-index:-1}25%{-o-transform:scale(0.7) translateY(0);z-index:-1}50%{-o-transform:scale(1) translateY(-200%);z-index:1}75%{-o-transform:scale(1.3) translateY(0);z-index:1}100%{-o-transform:scale(1) translateY(200%);z-index:1}}@-ms-keyframes bar-cssload-animAfter{0%{-ms-transform:scale(1) translateY(200%);z-index:-1}25%{-ms-transform:scale(0.7) translateY(0);z-index:-1}50%{-ms-transform:scale(1) translateY(-200%);z-index:1}75%{-ms-transform:scale(1.3) translateY(0);z-index:1}100%{-ms-transform:scale(1) translateY(200%);z-index:1}}@-webkit-keyframes bar-cssload-animAfter{0%{-webkit-transform:scale(1) translateY(200%);z-index:-1}25%{-webkit-transform:scale(0.7) translateY(0);z-index:-1}50%{-webkit-transform:scale(1) translateY(-200%);z-index:1}75%{-webkit-transform:scale(1.3) translateY(0);z-index:1}100%{-webkit-transform:scale(1) translateY(200%);z-index:1}}@-moz-keyframes bar-cssload-animAfter{0%{-moz-transform:scale(1) translateY(200%);z-index:-1}25%{-moz-transform:scale(0.7) translateY(0);z-index:-1}50%{-moz-transform:scale(1) translateY(-200%);z-index:1}75%{-moz-transform:scale(1.3) translateY(0);z-index:1}100%{-moz-transform:scale(1) translateY(200%);z-index:1}}img{border:0}li{margin:0 12px 10px 30px}a{color:#00b2ec;text-decoration:none}a:hover{color:inherit}input[type="text"]{box-sizing:border-box;margin:10px 0 10px 0;padding:10px;max-width:100%;border:1px solid #00b2ec;border-radius:.25em;font-size:1.3em}textarea{margin:10px 0 10px 0;padding:10px;max-width:100%;border:1px solid #00b2ec;border-radius:.25em;font-size:1.3em;line-height:1.5em}select{margin:10px 0 10px 0;padding:10px;max-width:100%;border:1px solid #00b2ec;border-radius:.25em;font-size:.9em;height:2.8em}.buttonContainer_center{width:100%;text-align:center}.button{padding:10px 20px 10px 20px;background-color:#00b2ec;border-radius:.15em;text-decoration:none;white-space:nowrap;line-height:4em;color:#fff;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.button:hover{background-color:#888;color:#fff}.button_alt{padding:10px 20px 10px 20px;background-color:#eee;border-radius:.15em;text-decoration:none;white-space:nowrap;line-height:4em;color:#00b2ec;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.button_alt:hover{background-color:#888;color:#fff}.button_alt_green{padding:10px 20px 10px 20px;background-color:#6cc148;border-radius:.15em;text-decoration:none;white-space:nowrap;line-height:4em;color:#fff;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.button_alt_green:hover{background-color:#888;color:#fff}div.colLeft,div.colRight{position:relative;box-sizing:border-box;padding:0;margin:0}@media only screen and (max-width:799px){div.colLeft{width:100%}div.colRight{width:100%}div.colLeft_smaller{width:100%}div.colRight_larger{width:100%}div.colDissappearOnNarrow{display:none}}@media only screen and (min-width:800px){div.colLeft{float:left;width:-moz-calc((100% / 2) - 30px);width:-webkit-calc((100% / 2) - 30px);width:calc((100% / 2) - 30px)}div.colRight{float:right;width:-moz-calc((100% / 2) - 30px);width:-webkit-calc((100% / 2) - 30px);width:calc((100% / 2) - 30px)}div.colLeft_smaller{float:left;width:35%}div.colRight_larger{float:right;width:65%}}div.demoBox{position:relative;box-sizing:border-box;padding:20px;margin:0;min-height:200px;max-height:400px;width:100%;background-color:#eee;color:#222;overflow:auto}div.pricing_all_container_float_right{float:right}div.pricing_container{position:relative;box-sizing:border-box;width:135px;margin:0 0 10px 10px}div.pricing_container_center{margin:0 auto 0 auto}@media only screen and (min-width:800px){div.pricing_container_float_left{float:left}}div.pricing_top{position:relative;box-sizing:border-box;padding:5px;background-color:#00b2ec;border-radius:.25em .25em 0 0;color:#fff;text-align:center}div.pricing_ribbon_wrapper{position:absolute;top:-1px;right:-1px;box-sizing:border-box;width:85px;height:88px;overflow:hidden}p.pricing_ribbon{position:relative;left:6px;top:6px;padding:2px 0 0 0;margin:0;width:120px;color:#fff;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);font-size:12px;font-weight:700;text-align:center;text-shadow:rgba(255,255,255,.5) 0 1px 0;box-shadow:0 0 3px rgba(0,0,0,0.3)}p.pricing_ribbon_green{background-color:#6cc148}p.pricing_ribbon_red{background-color:#c14848}div.pricing_type{margin:0 0 10px 0;font-size:1.25em;font-weight:bold}span.pricing_cost_currency{bottom:6px;font-size:1.25em;position:relative}span.pricing_cost_price{font-size:2.5em}span.pricing_cost_term{color:#c5ebf8;font-size:.85em}div.pricing_bottom{position:relative;box-sizing:border-box;padding:5px;background-color:#eee;border-radius:0 0 .25em .25em;color:#222;text-align:center}span.pricing_qty{color:#00b2ec;font-size:1.25em}span.pricing_qty_per{font-size:.8em}span.pricing_overages{font-size:.8em}div.pricing_qty_unlimited{padding:10px;color:#00b2ec;font-size:1.25em}div.pricing_button{padding:5px 20px 5px 20px;margin:10px 0 10px 0;background-color:#6cc148;border-radius:.15em;text-decoration:none;white-space:nowrap;color:#fff;text-align:center;cursor:pointer}div.pricing_button:hover{background-color:#888;color:#fff}div.foldContainer_defaultBlue{color:#fff}div.foldContainer_defaultBlue div.contentContainer{background-color:#00b2ec}div.sectionHeader_defaultBlue{color:#fff;border-bottom:4px solid #fff}div.foldContainer_defaultWhite{color:#888}div.sectionHeader_defaultWhite{color:#222;border-bottom:4px solid #222}@media only screen and (max-width:799px){div.foldContainer_defaultBlue div.contentContainer,div.foldContainer_defaultWhite div.contentContainer{padding:25px 0 25px 0}}@media only screen and (min-width:800px){div.foldContainer_defaultBlue div.contentContainer,div.foldContainer_defaultWhite div.contentContainer{padding:50px 0 50px 0}}div.foldContainer_defaultWhite_wide div{box-sizing:border-box}div.foldContainer_defaultWhite_wide div.safeContainer{margin:0;width:100%}div.foldContainer_defaultWhite_wide div.sectionHeader{padding:50px 0 0 0;border:0}div.foldContainer_defaultWhite_wide{color:#888}body[data-site="korea"] div.foldContainer_defaultWhite_wide{color:#666}div.foldContainer_pastelBlue_wide div{box-sizing:border-box}div.foldContainer_pastelBlue_wide div.safeContainer{margin:0;padding:0 30px;width:100%}div.foldContainer_pastelBlue_wide div.sectionHeader{padding:50px 0 0 0;border:0;color:#fff}div.foldContainer_pastelBlue_wide{color:#dedede}div.foldContainer_pastelBlue_wide div.contentContainer{background-color:#4f6184}div.foldContainer_black_wide div{box-sizing:border-box}div.foldContainer_black_wide div.safeContainer{margin:0;padding:0 30px;width:100%}div.foldContainer_black_wide div.sectionHeader{padding:50px 0 0 0;border:0;color:#fff}div.foldContainer_black_wide{color:#dedede}div.foldContainer_black_wide div.contentContainer{background-color:#222}div.foldContainer_whiteWithBackground_wide div{box-sizing:border-box}div.foldContainer_whiteWithBackground_wide div.safeContainer{margin:0;padding:0 30px;width:100%}div.foldContainer_whiteWithBackground_wide div.sectionHeader{padding:50px 0 0 0;border:0}div.foldContainer_whiteWithBackground_wide{color:#888}body[data-site="korea"] div.foldContainer_whiteWithBackground_wide{color:#666}div.foldContainer_whiteWithBackground_wide div.contentContainer:before{content:"";position:absolute;width:100%;height:100%;opacity:.1;left:0;top:0;background-size:cover}div.foldContainer_whiteWithBackground_wide.meetingBackground div.contentContainer:before{background-image:url('/main/images/outside_meeting_bg.jpg')}div.foldContainer_topBar{padding:0;overflow:visible;z-index:1}body[data-page="home"] div.foldContainer_topBar{position:absolute;top:0;left:0}div.foldContainer_topBar div.contentContainer{height:60px}div.foldContainer_topBar div.contentContainer{background-color:#222}body[data-page="home"] div.foldContainer_topBar div.contentContainer{background-color:rgba(34,34,34,0.4);box-shadow:0 0 50px -5px rgba(34,34,34,0.5) inset}body[data-site="korea"][data-page="home"] div.foldContainer_topBar div.contentContainer{background-color:rgba(34,34,34,0.8);box-shadow:0 0 50px -5px rgba(34,34,34,0.5) inset}div.topBar_topLogo{position:relative;top:13px;box-sizing:border-box;float:left;padding:0;margin:0}@media only screen and (max-width:799px){div.topBar_topNav{display:none}div.topBar_topHam{position:absolute;right:0;box-sizing:border-box;height:60px;line-height:60px;text-align:right}span.topBar_topHamIcon{color:#fff;font-size:40px}span.topBar_topHamIcon:hover{color:#00b2ec;cursor:pointer}}@media only screen and (min-width:800px){div.topBar_topNav{position:relative;box-sizing:border-box;float:right;height:60px;line-height:60px;color:#fff;font-family:'Roboto Slab';font-size:14px;letter-spacing:.07em}div.topBar_topNav>div,div.topBar_topNav>a,div.topBar_topNav>*{padding:0 15px}body[data-site="korea"] div.div.topBar_topNav,body[data-site="korea"] div.topBar_topNav{font-family:Arial,sans-serif}div.topBar_topHam{display:none}}span.topNav_here{color:#00b2ec;display:none;cursor:default}body[data-page="home"] span[data-page="home"].topNav_here,body[data-page="api"] span[data-page="api"].topNav_here,body[data-page="blog"] span[data-page="blog"].topNav_here,body[data-page="contact"] span[data-page="contact"].topNav_here,body[data-page="word-associations"] span[data-page="word-associations"].topNav_here,body[data-page="sentiment-analysis"] span[data-page="sentiment-analysis"].topNav_here,body[data-page="topic-tagging"] span[data-page="topic-tagging"].topNav_here,body[data-page="text-classification"] span[data-page="text-classification"].topNav_here,body[data-page="text-similarity"] span[data-page="text-similarity"].topNav_here,body[data-page="category-recommendation"] span[data-page="category-recommendation"].topNav_here,body[data-page="lemmatizer"] span[data-page="lemmatizer"].topNav_here,body[data-page="language-scoring"] span[data-page="language-scoring"].topNav_here,body[data-page="visual-context-graph"] span[data-page="visual-context-graph"].topNav_here,body[data-page="word-dictionary"] span[data-page="word-dictionary"].topNav_here,body[data-page="word-quiz"] span[data-page="word-quiz"].topNav_here,body[data-page="keyword-suggestion"] span[data-page="keyword-suggestion"].topNav_here,body[data-page="login"] span[data-page="login"].topNav_here,body[data-page="account"] span[data-page="account"].topNav_here{display:block}body[data-page="home"] a[data-page="home"].topNav_link,body[data-page="api"] a[data-page="api"].topNav_link,body[data-page="blog"] a[data-page="blog"].topNav_link,body[data-page="contact"] a[data-page="contact"].topNav_link,body[data-page="word-associations"] a[data-page="word-associations"].topNav_link,body[data-page="sentiment-analysis"] a[data-page="sentiment-analysis"].topNav_link,body[data-page="topic-tagging"] a[data-page="topic-tagging"].topNav_link,body[data-page="text-classification"] a[data-page="text-classification"].topNav_link,body[data-page="text-similarity"] a[data-page="text-similarity"].topNav_link,body[data-page="category-recommendation"] a[data-page="category-recommendation"].topNav_link,body[data-page="lemmatizer"] a[data-page="lemmatizer"].topNav_link,body[data-page="language-scoring"] a[data-page="language-scoring"].topNav_link,body[data-page="visual-context-graph"] a[data-page="visual-context-graph"].topNav_link,body[data-page="word-dictionary"] a[data-page="word-dictionary"].topNav_link,body[data-page="word-quiz"] a[data-page="word-quiz"].topNav_link,body[data-page="keyword-suggestion"] a[data-page="keyword-suggestion"].topNav_link,body[data-page="login"] a[data-page="login"].topNav_link,body[data-isloggedin="1"] a[data-page="login"].topNav_link,body[data-isloggedin="1"] span[data-page="login"].topNav_here,body:not([data-isloggedin="1"]) a[data-page="logout"].topNav_link,body:not([data-isloggedin="1"]) div[data-page="account"].topBar_topNav,body[data-page="account"] a[data-page="account"].topNav_link{display:none}a.topNav_link{color:inherit;text-decoration:none}a.topNav_link:hover{color:#00b2ec}div.dropDownMenu{position:relative;white-space:nowrap}div.dropDownMenu:focus{outline:0}div.dropDownMenu>div:first-child{cursor:default}div.dropDownMenu>div:first-child,div.dropDownMenu>div:last-child>div>a>div,div.dropDownMenu>div:last-child>div>span>div{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}div.dropDownMenu>div:last-child{display:none;position:absolute;top:100%;left:-25px}div.dropDownMenu>div:last-child>div>a>div,div.dropDownMenu>div:last-child>div>span>div{padding:15px 25px;line-height:20px}div.dropDownTitle>div.dropDownDesc{color:#888;font-family:'Roboto';font-size:.8em}body[data-page="home"] div.dropDownMenu>div:last-child>div>a>div,body[data-page="home"] div.dropDownMenu>div:last-child>div>span>div{background-color:rgba(34,34,34,0.95)}body[data-page="home"] div.dropDownMenu>div:last-child>div>a>div:hover{background-color:rgba(34,34,34,0.9)}div.dropDownMenu>div:last-child>div>a>div,div.dropDownMenu>div:last-child>div>span>div{background-color:rgba(34,34,34,0.95)}div.dropDownMenu>div:last-child>div>a>div:hover{background-color:rgba(0,0,0,0.9)}div.dropDownMenu:hover>div:last-child,div.dropDownMenu:focus>div:last-child{display:block}div.foldContainer_mainBanner_floatingVisual{overflow:visible}div.contentContainer_mainBanner_floatingVisual{background-color:#4e59a4}div.floatingVisual{position:absolute;top:300px;left:0;width:100%;height:320px;background-image:url('/main/images/twinword_main_banner_ideas.png');background-position:center top;background-repeat:no-repeat;background-size:1050px;z-index:1}div.floatingVisual:after{content:"";position:absolute;bottom:0;left:0;height:120px;width:100%;background:-moz-linear-gradient(top,rgba(255,255,255,0) 0,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 90%,rgba(255,255,255,1) 100%);background:-webkit-linear-gradient(top,rgba(255,255,255,0) 0,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 90%,rgba(255,255,255,1) 100%);background:linear-gradient(to bottom,rgba(255,255,255,0) 0,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 90%,rgba(255,255,255,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff',endColorstr='#ffffff',GradientType=0)}div.floatingVisual_cta{position:absolute;top:480px;left:calc(50% - 100px);width:200px;height:50px;line-height:50px;background-color:#00b2ec;color:#fff;text-align:center;font-size:18px;font-family:Arial,sans-serif;text-shadow:0 0 5px rgba(0,0,0,0.25);box-shadow:0 0 5px rgba(0,0,0,0.5);cursor:pointer;z-index:1;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}div.floatingVisual_cta:hover{background-color:#1bc7ff}div.floatingVisual_cta:active{top:481px;box-shadow:0 0 1px rgba(0,0,0,0.5)}div.contentContainer_mainBanner{background-color:#222;background-image:url('/main/images/top_bg_img.jpg');background-position:center center;background-repeat:no-repeat;background-size:cover}body[data-site="korea"] div.contentContainer_mainBanner{background-image:url('/main/images/ko_banner.jpg')}div.safeContainer_mainBanner,div.safeContainer_mainBanner_floatingVisual{height:100%;margin:0!important;width:100%!important}div.mainBanner_bannerOverlay1,div.mainBanner_floatingVisual_bannerOverlay1{box-sizing:border-box;padding:0 12px;text-align:center;width:100%}body[data-site="korea"] div.mainBanner_bannerOverlay1{padding:30px 150px}body[data-site="korea"] div.mainBanner_bannerOverlay1 span.bannerOverlay1_text1{font-family:Tahoma;text-shadow:0 0 20px rgba(0,0,0,1)}div.mainBanner_bannerOverlay2{position:absolute;box-sizing:border-box;margin:0;padding:0}div.mainBanner_bannerOverlay2_textContainer{position:relative;box-sizing:border-box;font-family:'Roboto';color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}@media only screen and (max-width:799px){div.foldContainer_mainBanner,div.foldContainer_mainBanner_floatingVisual{padding:0}div.foldContainer_mainBanner div.contentContainer{height:350px}div.foldContainer_mainBanner_floatingVisual div.contentContainer{height:270px}div.mainBanner_bannerOverlay1,div.mainBanner_floatingVisual_bannerOverlay1{position:absolute;top:200px;margin:0}div.mainBanner_floatingVisual_bannerOverlay1{top:90px}div.floatingVisual{top:200px;height:320px}div.floatingVisual_cta{top:380px}div.floatingVisual_cta:active{top:381px}body[data-site="korea"] div.mainBanner_bannerOverlay1{top:145px;padding:30px 50px}div.mainBanner_bannerOverlay1 span.bannerOverlay1_text1,div.mainBanner_floatingVisual_bannerOverlay1 span.bannerOverlay1_text1{color:#fff;font-family:'Roboto Slab';font-size:30px;font-weight:bold}body[data-site="korea"] div.mainBanner_bannerOverlay1 span.bannerOverlay1_text1{font-family:Arial,sans-serif;font-size:25px}div.mainBanner_bannerOverlay1 span.bannerOverlay1_text2,div.mainBanner_floatingVisual_bannerOverlay1 span.bannerOverlay1_text2{color:#fff;font-family:'Roboto';font-size:30px;font-weight:300}div.mainBanner_bannerOverlay2_start{display:none!important}div.mainBanner_bannerOverlay2_finish{display:block}div.mainBanner_bannerOverlay2{bottom:0;width:100%;min-height:25px}div.mainBanner_bannerOverlay2_textContainer{padding:8px 30px;text-align:center;width:100%;background-color:rgba(0,178,236,0.7)}div.mainBanner_bannerOverlay2 span.bannerOverlay2_text1{font-size:14px}}@media only screen and (max-width:359px){div.foldContainer_mainBanner div.contentContainer{height:250px}div.foldContainer_mainBanner_floatingVisual div.contentContainer{height:220px}div.floatingVisual{top:150px;height:190px;background-size:600px}div.floatingVisual_cta{top:300px;left:calc(50% - 75px);width:150px}div.floatingVisual_cta:active{top:301px}div.mainBanner_bannerOverlay1,div.mainBanner_floatingVisual_bannerOverlay1{top:160px}div.mainBanner_floatingVisual_bannerOverlay1{top:80px}body[data-site="korea"] div.mainBanner_bannerOverlay1{top:145px;padding:15px 12px}div.mainBanner_bannerOverlay1 span.bannerOverlay1_text1,div.mainBanner_floatingVisual_bannerOverlay1 span.bannerOverlay1_text1{font-size:15px}body[data-site="korea"] div.mainBanner_bannerOverlay1 span.bannerOverlay1_text1{font-size:15px}div.mainBanner_bannerOverlay1 span.bannerOverlay1_text2,div.mainBanner_floatingVisual_bannerOverlay1 span.bannerOverlay1_text2{font-size:20px}div.mainBanner_bannerOverlay2_finish{display:none}}@media only screen and (min-width:800px){div.foldContainer_mainBanner,div.foldContainer_mainBanner_floatingVisual{padding:0}div.foldContainer_mainBanner div.contentContainer,div.foldContainer_mainBanner_floatingVisual div.contentContainer{height:600px}div.foldContainer_mainBanner_floatingVisual div.contentContainer{height:500px}div.mainBanner_bannerOverlay1,div.mainBanner_floatingVisual_bannerOverlay1{position:absolute;top:310px;margin:0}div.mainBanner_floatingVisual_bannerOverlay1{top:100px}body[data-site="korea"] div.mainBanner_bannerOverlay1{top:240px;padding:30px 150px}div.mainBanner_bannerOverlay1 span.bannerOverlay1_text1,div.mainBanner_floatingVisual_bannerOverlay1 span.bannerOverlay1_text1{color:#fff;font-family:'Roboto Slab';font-size:60px;font-weight:bold}body[data-site="korea"] div.mainBanner_bannerOverlay1 span.bannerOverlay1_text1{font-family:Arial,sans-serif;font-size:40px}div.mainBanner_bannerOverlay1 span.bannerOverlay1_text2,div.mainBanner_floatingVisual_bannerOverlay1 span.bannerOverlay1_text2{color:#fff;font-family:'Roboto';font-size:60px;font-weight:300}div.mainBanner_bannerOverlay2_start{left:100%;width:100%}div.mainBanner_bannerOverlay2_finish{left:55%;width:45%}div.mainBanner_bannerOverlay2{bottom:20px;min-height:30px}div.mainBanner_bannerOverlay2_textContainer{top:0;float:left;padding:8px 30px 8px 20px;text-align:left;width:100%;max-width:420px;background-color:rgba(0,178,236,1);border-radius:25em}div.mainBanner_bannerOverlay2 span.bannerOverlay2_text1{font-family:'Roboto';font-size:18px}}div.mainBanner_bannerOverlay2 a.bannerOverlay2_link{text-decoration:none;color:inherit}div.mainBanner_bannerOverlay2 a.bannerOverlay2_link:hover{color:#eee}div.contentContainer_subBanner_floatingVisual{background-color:#fff}div.contentContainer_subBanner{background-color:#00b2ec;background-image:url('/main/images/bg_api.jpg');background-position:center center;background-repeat:no-repeat;background-size:cover}div.safeContainer_subBanner,div.safeContainer_subBanner_floatingVisual{height:100%;margin:0!important;width:100%!important}div.subBanner_bannerOverlay1{box-sizing:border-box;padding:0 12px;text-align:left}div.subBanner_bannerOverlay2{position:absolute;box-sizing:border-box;margin:0;padding:0}div.subBanner_bannerOverlay1 div.bannerOverlay1_text2:hover{background-color:rgba(255,255,255,1);color:#00b2ec}div.subBanner_bannerOverlay1 div.bannerOverlay1_text2:active{background-color:rgba(255,255,255,0.7);color:#00b2ec}div.subBanner_bannerOverlay2_text1{position:relative;box-sizing:border-box;font-family:'Roboto';color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}div.subBanner_topLogo{position:relative;box-sizing:border-box;padding:0;margin:0 0 10px 0}div.subBanner_topLogo img{max-width:100%}@media only screen and (max-width:799px){div.foldContainer_subBanner_floatingVisual{padding:0}div.foldContainer_subBanner_floatingVisual div.contentContainer{height:280px}div.subBanner_bannerOverlay1{position:relative;padding:20px 50px;margin:0}div.subBanner_bannerOverlay1 span.bannerOverlay1_text1{color:#fff;font-family:'Roboto';font-size:13px;text-shadow:0 0 5px rgba(34,34,34,0.5)}div.subBanner_bannerOverlay1 div.bannerOverlay1_text2{position:relative;display:inline-block;padding:15px 35px;margin:20px 0 0 0;font-family:'Roboto';font-size:14px;color:#fff;border:1px solid #FFF;border-radius:.25em;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}div.subBanner_bannerOverlay2{bottom:20px;right:50px}div.subBanner_bannerOverlay2_text1{top:0;float:left;padding:8px 30px 8px 20px;text-align:left;width:100%;max-width:420px}div.subBanner_bannerOverlay2 span.bannerOverlay2_text1{color:#fff;font-family:'Roboto Slab';font-size:16px;font-weight:bold}}@media only screen and (max-width:359px){div.foldContainer_subBanner_floatingVisual div.contentContainer{height:160px}div.subBanner_bannerOverlay2{left:50px;right:initial}div.subBanner_bannerOverlay2 span.bannerOverlay2_text1{font-size:14px}}@media only screen and (min-width:800px){div.foldContainer_subBanner_floatingVisual{padding:0}div.foldContainer_subBanner_floatingVisual div.contentContainer{height:200px}div.subBanner_bannerOverlay1{position:absolute;top:60px;left:70px;margin:0;max-width:300px}div.subBanner_bannerOverlay1 span.bannerOverlay1_text1{color:#fff;font-family:'Roboto';font-size:13px}div.subBanner_bannerOverlay1 div.bannerOverlay1_text2{position:relative;display:inline-block;padding:15px 35px;margin:20px 0 0 0;font-family:'Roboto';font-size:14px;color:#fff;border:1px solid #FFF;border-radius:.25em;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}div.subBanner_bannerOverlay2{bottom:30px;right:30px}div.subBanner_bannerOverlay2_text1{top:0;float:left;padding:8px 30px 8px 20px;text-align:left;width:100%;max-width:420px}div.subBanner_bannerOverlay2 span.bannerOverlay2_text1{color:#fff;font-family:'Roboto Slab';font-size:30px;font-weight:bold}}div.subBanner_bannerOverlay2 a.bannerOverlay2_link{text-decoration:none;color:inherit}div.subBanner_bannerOverlay2 a.bannerOverlay2_link:hover{color:#eee}div.foldContainer_featureBoxes{margin-top:50px}div.foldContainer_featureBoxes div.safeContainer{margin:0;width:100%}div.featureBoxes_allContainer{position:relative}div.featureBox_container{box-sizing:border-box;position:relative;display:inline-block;vertical-align:top;margin-top:25px;text-align:center;background-color:#4e59a4;color:#fff;text-decoration:none}div.featureBox_container:before{content:"";position:absolute;top:-10px;left:-moz-calc(50% - 12px);left:-webkit-calc(50% - 12px);left:calc(50% - 12px);width:24px;height:24px;background-color:#4e59a4;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);z-index:0}div.featureBox_featureTitle{font-family:'Roboto Slab';font-weight:bold;white-space:nowrap}div.featureBox_featureTitle sup{font-size:.5em;font-weight:normal}div.featureBox_featureDesc{font-family:'Roboto';font-weight:300}@media only screen and (max-width:519px){div.featureBox_container{padding:20px 30px 20px 30px;width:100%;min-height:100px}img.featureBox_featureIconImage{height:55px}div.featureBox_featureInfo{margin-top:0}div.featureBox_featureTitle{font-size:16px}div.featureBox_featureDesc{margin-top:5px;font-size:13px}}@media only screen and (min-width:520px) and (max-width:799px){div.featureBoxes_allContainer div.featureBox_container:not(:first-child):not(:nth-child(3)){margin-left:12px}div.featureBox_container{padding:20px 30px 20px 30px;width:-moz-calc(50% - 6);width:-webkit-calc(50% - 6);width:calc(50% - 6px);min-height:135px}img.featureBox_featureIconImage{height:85px}div.featureBox_featureInfo{margin-top:0}div.featureBox_featureTitle{font-size:20px}div.featureBox_featureDesc{margin-top:10px;font-size:13px}}@media only screen and (min-width:800px){div.featureBoxes_allContainer div.featureBox_container:not(:first-child){margin-left:12px}div.featureBox_container{padding:30px 30px 20px 30px;width:-moz-calc(25% - 9px);width:-webkit-calc(25% - 9px);width:calc(25% - 9px);min-height:155px}img.featureBox_featureIconImage{height:105px}div.featureBox_featureInfo{margin-top:0}div.featureBox_featureTitle{font-size:14px}div.featureBox_featureDesc{margin-top:15px;font-size:13px}}@media only screen and (min-width:1000px){img.featureBox_featureIconImage{height:115px}div.featureBox_featureTitle{font-size:20px}}div.servicesAd{margin-top:25px;text-align:center;font-family:'Roboto';font-weight:normal;font-size:18px;padding:25px;background-color:#fff;color:#4e59a4;box-shadow:0 2px 5px rgba(0,0,0,0.2)}div.foldContainer_feeds div{box-sizing:border-box}div.foldContainer_feeds div.safeContainer{margin:0;width:100%}div.foldContainer_feeds div.sectionHeader{padding:50px 0 0 0}div.feeds_allContainer{position:relative}div.feed_container{position:relative;display:inline-block;vertical-align:top;margin-top:25px;padding:20px;text-align:center;background-color:#f9f9f9;border:1px solid #dbdbdb;text-decoration:none}div.feeds_allContainer a:hover div.feed_container,div.feeds_allContainer a:active div.feed_container{background-color:#fff}div.feed_imgContainer{position:relative;display:inline-block;vertical-align:top;background-position:center top;background-repeat:no-repeat;background-size:cover}div.feed_infoContainer{position:relative;display:inline-block;vertical-align:top;margin-left:12px;text-align:left}div.feed_title{font-family:'Roboto Slab';font-weight:bold;white-space:nowrap;color:#222;overflow:hidden;text-overflow:ellipsis;font-size:14px}div.feed_date{margin-top:6px;font-family:'Roboto';font-weight:normal;color:#888;font-size:14px}div.feed_preview{margin-top:15px;height:120px;font-family:'Roboto';font-weight:300;color:#888;font-size:14px;line-height:2em;overflow:hidden}@media only screen and (max-width:519px){div.feed_imgContainer{width:100px;height:100px}div.feed_infoContainer{width:-moz-calc(100% - 112px);width:-webkit-calc(100% - 112px);width:calc(100% - 112px)}}@media only screen and (min-width:520px){div.feed_imgContainer{width:180px;height:180px}div.feed_infoContainer{width:-moz-calc(100% - 212px);width:-webkit-calc(100% - 212px);width:calc(100% - 212px)}}@media only screen and (max-width:799px){div.feed_container{width:100%}}@media only screen and (min-width:800px){div.feeds_allContainer a:not(:first-child) div.feed_container{margin-left:12px}div.feed_container{width:-moz-calc(50% - 6px);width:-webkit-calc(50% - 6px);width:calc(50% - 6px)}}div.foldContainer_apps div{box-sizing:border-box}div.foldContainer_apps div.safeContainer{margin:0;width:100%}div.foldContainer_apps div.sectionHeader{padding:50px 0 0 0}div.apps_featuredApp{position:relative;margin:30px 0 0 0;padding:30px 30px 0 30px;border:1px solid #dbdbdb;background-color:#f9f9f9}div.apps_featuredAppTitle,div.apps_featuredAppDesc{margin:0 0 15px 0;font-size:1.2em;font-family:'Roboto';text-align:center;color:#999}div.apps_featuredAppBanner{display:inline-block;box-sizing:border-box;position:relative;width:100%;height:375px;background-image:url('images/ideas_screenshot.gif');background-position:center top;background-repeat:no-repeat;background-size:100%}div.apps_featuredAppBanner:after{position:absolute;content:"";width:100%;height:100%;background:-moz-linear-gradient(top,rgba(249,249,249,0) 0,rgba(249,249,249,0) 79%,rgba(249,249,249,1) 100%);background:-webkit-linear-gradient(top,rgba(249,249,249,0) 0,rgba(249,249,249,0) 79%,rgba(249,249,249,1) 100%);background:linear-gradient(to bottom,rgba(249,249,249,0) 0,rgba(249,249,249,0) 79%,rgba(249,249,249,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00f9f9f9',endColorstr='#f9f9f9',GradientType=0)}@media only screen and (max-width:799px){div.apps_featuredAppBanner{height:300px}}@media only screen and (max-width:499px){div.apps_featuredAppBanner{height:200px}}div.apps_allContainer{position:relative;white-space:nowrap;overflow:hidden}div.apps_allContainer_prev,div.apps_allContainer_next{position:absolute;top:-moz-calc(50% - 6px);top:-webkit-calc(50% - 6px);top:calc(50% - 30px);width:20px;height:40px;line-height:40px;font-family:'Roboto';font-weight:bold;font-size:13px;text-align:center;color:#dbdbdb;border:1px solid #dbdbdb;background-color:#f9f9f9;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}div.apps_allContainer_prev:hover,div.apps_allContainer_prev:active,div.apps_allContainer_next:hover,div.apps_allContainer_next:active{background-color:#fff}div.apps_allContainer_prev{left:0;border-radius:0 2em 2em 0}div.apps_allContainer_next{right:0;border-radius:2em 0 0 2em}div.apps_appContainer{position:relative;display:inline-block;vertical-align:top;margin-top:25px;text-align:left;background-color:#fff;border:1px solid #dbdbdb;text-decoration:none;white-space:normal}div.apps_allContainer div.apps_appContainer:not(:first-child){margin-left:12px}div.apps_appImage{position:relative;border-bottom:1px solid #dbdbdb;background-position:center center;background-repeat:no-repeat;background-size:cover;width:100%;height:170px}div.apps_appIcon{position:absolute;left:18px;top:16px;background-position:center center;background-repeat:no-repeat;background-size:contain;width:40px;height:40px}div.apps_appLogo{position:relative;margin:20px 0 20px 25px;height:30px;overflow:visible}div.apps_appType{position:relative;margin:0 0 5px 25px;font-family:'Roboto';font-size:18px;color:#343434;height:22px;overflow:visible}div.apps_appDesc{position:relative;margin:0 25px 20px 25px;font-family:'Roboto';font-size:13px;color:#656565;height:45px;overflow:visible}div.apps_appButton{position:relative;display:inline-block;vertical-align:top;margin:0 0 20px 25px;padding:12px 20px;min-width:150px;font-family:'Roboto';font-size:14px;border-radius:.15em;text-align:center}div.apps_appContainer_mind div.apps_appButton{color:#68b330;border:1px solid #68b330}div.apps_appContainer_mind div.apps_appButton:hover,div.apps_appContainer_mind div.apps_appButton:active{color:#fff;background-color:#68b330}div.apps_appContainer_finder div.apps_appButton{color:#2a4fd2;border:1px solid #2a4fd2}div.apps_appContainer_finder div.apps_appButton:hover,div.apps_appContainer_finder div.apps_appButton:active{color:#fff;background-color:#2a4fd2}div.apps_appContainer_writer div.apps_appButton{color:#f9684a;border:1px solid #f9684a}div.apps_appContainer_writer div.apps_appButton:hover,div.apps_appContainer_writer div.apps_appButton:active{color:#fff;background-color:#f9684a}div.apps_appContainer_ideas div.apps_appButton{color:#4e59a4;border:1px solid #4e59a4}div.apps_appContainer_ideas div.apps_appButton:hover,div.apps_appContainer_ideas div.apps_appButton:active{color:#fff;background-color:#4e59a4}div.apps_appContainer_graph div.apps_appButton{color:#8e43be;border:1px solid #8e43be}div.apps_appContainer_graph div.apps_appButton:hover,div.apps_appContainer_graph div.apps_appButton:active{color:#fff;background-color:#8e43be}div.apps_appContainer_exam div.apps_appButton{color:#2e9bec;border:1px solid #2e9bec}div.apps_appContainer_exam div.apps_appButton:hover,div.apps_appContainer_exam div.apps_appButton:active{color:#fff;background-color:#2e9bec}@media only screen and (max-width:471px){div.apps_appContainer{width:100%}}@media only screen and (min-width:472px) and (max-width:713px){div.apps_appContainer{width:-moz-calc(50% - 6px);width:-webkit-calc(50% - 6px);width:calc(50% - 6px)}}@media only screen and (min-width:714px) and (max-width:955px){div.apps_appContainer{width:-moz-calc(33% - 8px);width:-webkit-calc(33% - 8px);width:calc(33% - 8px)}}@media only screen and (min-width:956px){div.apps_appContainer{width:-moz-calc(25% - 9px);width:-webkit-calc(25% - 9px);width:calc(25% - 9px)}}div.foldContainer_customers div{box-sizing:border-box}div.foldContainer_customers div.safeContainer{margin:0;width:100%}div.foldContainer_customers div.sectionHeader{padding:50px 0 0 0}div.foldContainer_customers{color:#888}div.sectionDesc_customers{padding-bottom:10px}div.customers_allContainer{position:relative;box-sizing:border-box;padding:0;margin:0;width:100%;text-align:left}div.customers_customer{position:relative;display:inline-block;vertical-align:top;box-sizing:border-box;margin-bottom:12px;height:138px;border:1px solid #dbdbdb;background-position:center center;background-repeat:no-repeat;background-size:150px;background-color:#fff;font-family:'Roboto';font-size:30px;line-height:138px;text-align:center;color:#dbdbdb}@media only screen and (max-width:471px){div.customers_customer{width:100%}}@media only screen and (min-width:472px) and (max-width:713px){div.customers_customer{margin-left:12px}div.customers_customer:nth-child(1),div.customers_customer:nth-child(3),div.customers_customer:nth-child(5),div.customers_customer:nth-child(7){margin-left:0}div.customers_customer{width:-moz-calc(50% - 6px);width:-webkit-calc(50% - 6px);width:calc(50% - 6px)}}@media only screen and (min-width:714px) and (max-width:955px){div.customers_customer{margin-left:12px}div.customers_customer:nth-child(1),div.customers_customer:nth-child(4),div.customers_customer:nth-child(7){margin-left:0}div.customers_customer{width:-moz-calc(33% - 8px);width:-webkit-calc(33% - 8px);width:calc(33% - 8px)}}@media only screen and (min-width:956px){div.customers_customer{margin-left:12px}div.customers_customer:nth-child(1),div.customers_customer:nth-child(5){margin-left:0}div.customers_customer{width:-moz-calc(25% - 9px);width:-webkit-calc(25% - 9px);width:calc(25% - 9px)}}div.foldContainer_footer div.contentContainer{background-color:#222}div.footer_allLinksContainer{position:relative;box-sizing:border-box}div.footer_linksContainer{position:relative;float:left;box-sizing:border-box;padding:0 70px 0 0;margin:0 0 40px 0}div.links_heading{position:relative;box-sizing:border-box;padding:0;margin:0 0 20px 0;font-family:'Roboto Slab';font-size:15px;font-weight:bold;color:#00b2ec}div.links_list{position:relative;box-sizing:border-box;padding:0;margin:0;font-family:'Roboto';font-size:13px;font-weight:normal;line-height:1.6em;color:#fff}a.footer_link{color:inherit;text-decoration:none}a.footer_link:hover{color:#00b2ec}@media only screen and (max-width:799px){div.foldContainer_footer{margin:20px 0 0 0}div.foldContainer_footer div.contentContainer{padding:50px 0 115px 0}div.footer_allLinksContainer{width:100%}div.footer_icoContainer{position:relative;box-sizing:border-box;text-align:left;width:100%}img.ico_image{position:relative;padding:0;margin:0 10px 10px 0}div.finePrint_left{position:relative;box-sizing:border-box;padding:0;margin:0 0 20px 0;text-align:left}div.finePrint_right{position:relative;box-sizing:border-box;padding:0;margin:0;text-align:left}}@media only screen and (min-width:800px){div.foldContainer_footer{margin:60px 0 0 0}div.foldContainer_footer div.contentContainer{padding:50px 0 115px 0}div.footer_allLinksContainer{float:left;width:-moz-calc(100% - 236px);width:-webkit-calc(100% - 236px);width:calc(100% - 236px)}div.footer_icoContainer{position:relative;float:right;box-sizing:border-box;text-align:center;width:236px}img.ico_image{position:relative;padding:0;margin:0 0 10px 10px}div.finePrint_left{position:relative;float:left;box-sizing:border-box;padding:0;margin:0;text-align:left;width:-moz-calc(100% * 600 / 940);width:-webkit-calc(100% * 600 / 940);width:calc(100% * 600 / 940)}div.finePrint_right{position:relative;float:right;box-sizing:border-box;padding:0;margin:0;text-align:right;width:-moz-calc(100% * 290 / 940);width:-webkit-calc(100% * 290 / 940);width:calc(100% * 290 / 940)}}div.footer_finePrint{position:relative;box-sizing:border-box;padding:20px 0 0 0;margin:22px 0 0 0;width:100%;border-top:1px solid #555;font-family:'Roboto';font-size:14px;font-weight:normal;color:#666}img.bottom_logo{position:relative;padding:0;margin:45px 0 0 0}div.foldContainer_APIsBanner div.contentContainer{background-color:#222;background-image:url('/main/images/api_banner.jpg');background-repeat:no-repeat;background-position:center bottom;background-size:cover;text-align:center}span.APIsBanner_title{font-family:'Roboto Slab';font-weight:normal;color:#fff}span.APIsBanner_subtitle{font-family:'Roboto';font-weight:normal;color:#ccc}@media only screen and (max-width:479px){div.foldContainer_APIsBanner{line-height:20px}div.foldContainer_APIsBanner div.contentContainer{padding-top:20px;height:150px}span.APIsBanner_title{font-size:28px}span.APIsBanner_subtitle{font-size:14px}}@media only screen and (min-width:480px) and (max-width:799px){div.foldContainer_APIsBanner{line-height:35px}div.foldContainer_APIsBanner div.contentContainer{padding-top:40px;height:250px}span.APIsBanner_title{font-size:40px}span.APIsBanner_subtitle{font-size:24px}}@media only screen and (min-width:800px){div.foldContainer_APIsBanner{line-height:50px}div.foldContainer_APIsBanner div.contentContainer{padding-top:70px;height:357px}span.APIsBanner_title{font-size:60px}span.APIsBanner_subtitle{font-size:32px}}div.foldContainer_APIs{color:#fff}div.foldContainer_APIs div.contentContainer{background-color:#222}div.sectionHeader_APIs{color:#00b2ec;border-bottom:4px solid #00b2ec}@media only screen and (max-width:799px){div.foldContainer_APIs div.contentContainer{padding:50px 0 0 0}div.APIs_APIContainer{position:relative;box-sizing:border-box;padding:0;margin-bottom:50px;width:100%}div.APIs_APIIcon{position:relative;float:left;box-sizing:border-box;padding:0;margin:0;height:88px;width:88px;text-align:center}img.APIs_APIIconImage{position:relative;width:75%}div.APIs_APIInfo{position:relative;box-sizing:border-box;float:right;padding:0 15px 0 5px;margin:0;width:-moz-calc(100% - 88px);width:-webkit-calc(100% - 88px);width:calc(100% - 88px)}}@media only screen and (min-width:800px){div.foldContainer_APIs div.contentContainer{padding:70px 0 20px 0}div.APIs_APIContainer{position:relative;box-sizing:border-box;padding:0;margin-bottom:50px;width:-moz-calc((100% - 100px) / 2);width:-webkit-calc((100% - 100px) / 2);width:calc((100% - 100px) / 2)}div.APIs_APIContainer_left{float:left}div.APIs_APIContainer_right{float:right}div.APIs_APIIcon{position:relative;float:left;box-sizing:border-box;padding:0;margin:0;height:117px;width:117px;text-align:center}img.APIs_APIIconImage{position:relative}div.APIs_APIInfo{position:relative;float:right;box-sizing:border-box;padding:5px 30px 0 0;margin:0;width:-moz-calc(100% - 147px);width:-webkit-calc(100% - 147px);width:calc(100% - 147px)}}div.APIs_APITitle{position:relative;box-sizing:border-box;padding:0 0 10px 0;margin:0;font-family:'Roboto Slab';font-size:20px;font-weight:bold}span.APIs_APITitleAccent{font-weight:normal;color:#888}div.APIs_APIDesc{position:relative;box-sizing:border-box;padding:0 0 10px 0;margin:0;line-height:1.4em;font-family:'Roboto';font-size:14px;font-weight:normal}div.APIs_APILink{position:absolute;box-sizing:border-box;padding:0;margin:0;font-family:'Roboto';font-size:14px;font-weight:normal}a.APIs_link{color:#00b2ec;text-decoration:none}a.APIs_link:hover{color:inherit}div.sectionBody_API{padding:15px 20px 5px 20px;background-color:#f9f9f9;margin:0 0 10px 0;border-radius:.3em}span.APIHeaderTitle{font-family:'Roboto Slab';font-size:20px;font-weight:bold}span.APIHeaderSubtitle{font-family:'Roboto';font-size:15px;font-weight:normal;font-style:italic;line-height:1em}p.APIHeaderDesc{font-size:13px;line-height:1.4em}div.mnm_overlay{position:fixed;top:0;left:0;box-sizing:border-box;padding:0;margin:0;width:100%;height:100%;background-color:rgba(0,0,0,0.95);z-index:1000;font-family:'Roboto Slab';font-size:14px;letter-spacing:.07em;color:#fff;overflow:auto}div.mnm_header{position:relative;box-sizing:border-box;padding:0 30px 0 0;margin:0;height:90px;width:100%;line-height:90px;text-align:right}span.mnm_hamIcon{color:#fff;font-size:40px}span.mnm_hamIcon:hover{color:#00b2ec;cursor:pointer}div.mnm_container{position:relative;box-sizing:border-box;padding:5%;margin:0;width:100%;z-index:1001}div.mnm_spacer{position:relative;box-sizing:border-box;height:1px;margin:20px 0 20px 0;border-bottom:1px solid #fff}div.d3viewport{position:relative;box-sizing:border-box;padding:0;margin:0;width:100%;height:100%;overflow:hidden}@media only screen and (max-width:799px){path{fill:none;stroke:#ddd;stroke-width:1.0px}svg.wordgraph circle{cursor:pointer}text{font-family:'Roboto';font-size:10px!important;cursor:pointer}text:hover{font-size:16px!important}}@media only screen and (min-width:800px){path{fill:none;stroke:#ddd;stroke-width:1.0px}svg.wordgraph circle{cursor:pointer}text{font-family:'Roboto';font-size:13px!important;cursor:pointer}text:hover{font-size:16px!important}}div[data-doc-type="legal"] p[data-group-type="heading"]{font-size:1.25em;color:#00b2ec}div[data-doc-type="legal"] p[data-group-type="footnote"]{font-style:italic;color:#00b2ec;text-align:right}span.api_account_label,span.api_account_value{font-family:Arial,sans-serif;font-size:1.2em}span.api_account_value{font-weight:bold}pre.api_key_box{position:relative;box-sizing:border-box;padding:20px;margin:0;width:100%;background-color:#eee;overflow:auto}    </style>
+
+
+    <link href="./English-Diffuculty-API_files/css" rel="stylesheet" type="text/css">
+    <link href="./English-Diffuculty-API_files/css(1)" rel="stylesheet" type="text/css">
+
+    
+    <!-- Open Graph data -->
+    
+    <meta property="og:title" content="Natural Language Processing APIs - Twinword API">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.twinword.com/api">
+    <meta property="og:image" content="https://www.twinword.com/images/bundle_banner.png">
+    <meta property="og:description" content="APIs built on NLP technology for SaaS and AI solutions developers. Web demos and documentation for sentiment analysis, text analysis, keyword generator...">
+    <meta property="og:site_name" content="Twinword">
+
+    <!-- Facebook Admin IDs -->
+    <meta property="fb:admins" content="100010642446302">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@twinwordinc">
+    <meta name="twitter:title" content="Natural Language Processing APIs - Twinword API">
+    <meta name="twitter:description" content="APIs built on NLP technology for SaaS and AI solutions developers. Web demos and documentation for sentiment analysis, text analysis, keyword generator...">
+    <meta name="twitter:creator" content="@twinwordinc">
+
+    <!-- Twitter Summary card images must be at least 120x120px -->
+    <meta name="twitter:image" content="https://www.twinword.com/images/bundle_banner.png">
+
+    <!-- Facebook Custom Audience Pixel -->
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1620656541545267');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1620656541545267&ev=PageView&noscript=1" alt="" 
+/></noscript>
+<!-- End Facebook Pixel Code -->
+      <script type="application/ld+json">
+      { "@context" : "http://schema.org",
+        "@type" : "Organization",
+        "legalName" : "Twinword Inc.",
+         "address": {"@type": "PostalAddress",
+                      "addressLocality": "San Jose, USA",
+                      "postalCode": "95134",
+                      "streetAddress": "3003 North Street Suite 221"},
+         "location": {"@type": "PostalAddress",
+                      "addressLocality": "San Jose, USA",
+                      "postalCode": "95134",
+                      "streetAddress": "3003 North Street Suite 221"},
+        "url" : "https://www.twinword.com/",
+        "description" : "APIs built on NLP technology for SaaS and AI solutions developers. Web demos and documentation for sentiment analysis, text analysis, keyword generator...",
+        "contactPoint" : [{"@type" : "ContactPoint",
+                          "email" : "help@twinword.com",
+                          "url" : "https://www.twinword.com",
+                          "contactType" : "customer service"}],
+        "logo" : "https://www.twinword.com/images/touch/icon-128x128.png",
+        "sameAs" : [ "https://www.facebook.com/twinword",
+                  "https://twitter.com/twinwordinc",
+                  "https://plus.google.com/+twinwordinc",
+                  "https://www.youtube.com/c/twinwordinc",
+                  "https://www.linkedin.com/company/twinword",
+                  "https://www.flickr.com/photos/twinword",
+                  "https://vimeo.com/twinword"]
+      }
+      </script>
+
+      <script type="application/ld+json">
+      {
+        "@context" : "http://schema.org",
+        "@type" : "WebSite",
+        "name" : "Twinword",
+        "url" : "https://www.twinword.com/",
+        "potentialAction" : {"@type" : "SearchAction",
+                              "target" : "https://www.twinword.com/graph/?entry={search_term}",
+                              "query-input" : "required name=search_term"}
+      }
+      </script>
+
+
+</head>
+
+<body data-page="language-scoring" data-isloggedin="0" style=""><div class="mnm_overlay" style="display: none;"><div class="mnm_header"><span class="mnm_hamIcon">☰</span></div><div class="mnm_container"><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="1">
+                                <a href="https://www.twinword.com/api/index.php" class="topNav_link" data-page="api">API</a>
+                                <span class="topNav_here" data-page="api">API</span>
+                            </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="2">
+                            <a href="https://www.twinword.com/api/awsmarketplace/account/" class="topNav_link" data-page="account">My Account</a>
+                            <span class="topNav_here" data-page="account">My Account</span>
+                        </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="3">
+                            <a href="https://www.twinword.com/api/login/" class="topNav_link" data-page="login">Log In</a>
+                            <span class="topNav_here" data-page="login">Log In</span>
+                            <a href="https://www.twinword.com/api/logout/" class="topNav_link" data-page="logout">Log Out</a>
+                        </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="4">
+                                    <a href="https://www.twinword.com/api/word-associations.php" class="topNav_link" data-page="word-associations"><div class="dropDownTitle">Word Associations API<div class="dropDownDesc">What's another word for...?</div></div></a>
+                                    <span class="topNav_here" data-page="word-associations"><div class="dropDownTitle">Word Associations API<div class="dropDownDesc">What's another word for...?</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="5">
+                                    <a href="https://www.twinword.com/api/sentiment-analysis.php" class="topNav_link" data-page="sentiment-analysis"><div class="dropDownTitle">Sentiment Analysis API<div class="dropDownDesc">Is this comment positive or negative?</div></div></a>
+                                    <span class="topNav_here" data-page="sentiment-analysis"><div class="dropDownTitle">Sentiment Analysis API<div class="dropDownDesc">Is this comment positive or negative?</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="6">
+                                    <a href="https://www.twinword.com/api/topic-tagging.php" class="topNav_link" data-page="topic-tagging"><div class="dropDownTitle">Topic Tagging API<div class="dropDownDesc">What are the topics and keywords?</div></div></a>
+                                    <span class="topNav_here" data-page="topic-tagging"><div class="dropDownTitle">Topic Tagging API<div class="dropDownDesc">What are the topics and keywords?</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="7">
+                                    <a href="https://www.twinword.com/api/text-classification.php" class="topNav_link" data-page="text-classification"><div class="dropDownTitle">Text Classification API<div class="dropDownDesc">Which categories are relevant?</div></div></a>
+                                    <span class="topNav_here" data-page="text-classification"><div class="dropDownTitle">Text Classification API<div class="dropDownDesc">Which categories are relevant?</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="8">
+                                    <a href="https://www.twinword.com/api/text-similarity.php" class="topNav_link" data-page="text-similarity"><div class="dropDownTitle">Text Similarity API<div class="dropDownDesc">How similar are these two text...?</div></div></a>
+                                    <span class="topNav_here" data-page="text-similarity"><div class="dropDownTitle">Text Similarity API<div class="dropDownDesc">How similar are these two text...?</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="9">
+                                    <a href="https://www.twinword.com/api/category-recommendation.php" class="topNav_link" data-page="category-recommendation"><div class="dropDownTitle">Category Recommendation API<div class="dropDownDesc">What are some other related categories?</div></div></a>
+                                    <span class="topNav_here" data-page="category-recommendation"><div class="dropDownTitle">Category Recommendation API<div class="dropDownDesc">What are some other related categories?</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="10">
+                                    <a href="https://www.twinword.com/api/lemmatizer.php" class="topNav_link" data-page="lemmatizer"><div class="dropDownTitle">Lemmatizer API<div class="dropDownDesc">"Dogs" to "dog", "abilities" to "ability"...</div></div></a>
+                                    <span class="topNav_here" data-page="lemmatizer"><div class="dropDownTitle">Lemmatizer API<div class="dropDownDesc">"Dogs" to "dog", "abilities" to "ability"...</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="11">
+                                    <a href="https://www.twinword.com/api/language-scoring.php" class="topNav_link" data-page="language-scoring"><div class="dropDownTitle">Language Scoring API<div class="dropDownDesc">What's the difficulty level of this article?</div></div></a>
+                                    <span class="topNav_here" data-page="language-scoring"><div class="dropDownTitle">Language Scoring API<div class="dropDownDesc">What's the difficulty level of this article?</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="12">
+                                    <a href="https://www.twinword.com/api/word-dictionary.php" class="topNav_link" data-page="word-dictionary"><div class="dropDownTitle">Word Dictionary API<div class="dropDownDesc">A dictionary and so much more!</div></div></a>
+                                    <span class="topNav_here" data-page="word-dictionary"><div class="dropDownTitle">Word Dictionary API<div class="dropDownDesc">A dictionary and so much more!</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="13">
+                                    <a href="https://www.twinword.com/api/visual-context-graph.php" class="topNav_link" data-page="visual-context-graph"><div class="dropDownTitle">Visual Context Graph API<div class="dropDownDesc">Build a visual graph of connected words.</div></div></a>
+                                    <span class="topNav_here" data-page="visual-context-graph"><div class="dropDownTitle">Visual Context Graph API<div class="dropDownDesc">Build a visual graph of connected words.</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="14">
+                                    <a href="https://www.twinword.com/api/word-quiz.php" class="topNav_link" data-page="word-quiz"><div class="dropDownTitle">Word Quiz API<div class="dropDownDesc">Vocabulary test for SAT, GMAT, and more...</div></div></a>
+                                    <span class="topNav_here" data-page="word-quiz"><div class="dropDownTitle">Word Quiz API<div class="dropDownDesc">Vocabulary test for SAT, GMAT, and more...</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="15">
+                                    <a href="https://www.twinword.com/api/keyword-suggestion.php" class="topNav_link mnm_link" data-mnm="19" data-page="keyword-suggestion"><div class="dropDownTitle">Keyword Suggestion API<div class="dropDownDesc">Find related keywords...</div></div></a>
+                                    <span class="topNav_here" data-page="keyword-suggestion"><div class="dropDownTitle">Keyword Suggestion API<div class="dropDownDesc">Find related keywords...</div></div></span>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="16">
+                            <a href="https://www.twinword.com/blog/" target="_blank" class="topNav_link" data-page="blog">Blog</a>
+                            <span class="topNav_here" data-page="blog">Blog</span>
+                        </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="17">
+                                    <a href="https://www.twinword.com/ideas/" class="topNav_link"><div class="dropDownTitle">Twinword Ideas<div class="dropDownDesc">Keyword Research</div></div></a>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="18">
+                                    <a href="https://www.twinword.com/finder/" class="topNav_link"><div class="dropDownTitle">Twinword Finder<div class="dropDownDesc">Advanced Ctrl+F</div></div></a>
+                                </div><div class="mnm_spacer"></div><a href="https://www.twinword.com/api/keyword-suggestion.php" class="topNav_link mnm_link" data-mnm="19" data-page="keyword-suggestion"><div class="dropDownTitle">Keyword Suggestion API<div class="dropDownDesc">Find related keywords...</div></div></a><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="20">
+                                    <a href="https://www.twinword.com/exam/" class="topNav_link"><div class="dropDownTitle">Twinword Exam<div class="dropDownDesc">Vocabulary Prep</div></div></a>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="21">
+                                    <a href="https://www.twinword.com/mind/" class="topNav_link"><div class="dropDownTitle">Twinword Mind<div class="dropDownDesc">Psychology Test</div></div></a>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="22">
+                                    <a href="https://www.twinword.com/graph/" class="topNav_link"><div class="dropDownTitle">Twinword Graph<div class="dropDownDesc">Visualize Words</div></div></a>
+                                </div><div class="mnm_spacer"></div><div class="mnm_link" data-mnm="23">
+                            <a href="mailto:help@twinword.com?subject=Twinword%20API%20-%20Contact%20Us" class="topNav_link" data-page="contact">Contact</a>
+                            <span class="topNav_here" data-page="contact">Contact</span>
+                        </div><div class="mnm_spacer"></div></div></div>
+	<div class="pageContainer">
+
+		        <script type="text/javascript">
+                    document.body.setAttribute("data-isloggedin", "0");
+                </script>
+        <div class="foldContainer foldContainer_topBar">
+            <div class="contentContainer">
+                <div class="safeContainer">
+                    <div class="topBar_topLogo">
+                        <a href="https://www.twinword.com/api/"><img src="./English-Diffuculty-API_files/top_logo_api.png" alt="Twinword API Logo"></a>
+                    </div>
+                    <!--
+                    <div class="topBar_topNav" style="width: 76px">
+                        <div class="mnm_link" data-mnm="24">
+                            <a href="/" class="topNav_link" data-page="region_us"><img src="/main/images/23px-Flag_of_the_United_States.svg.png" height="12px"></a> <a href="https://www.twinword.co.kr" class="topNav_link" data-page="region_kr"><img src="/main/images/23px-Flag_of_South_Korea.svg.png" height="12px"></a>
+                        </div>
+                    </div>
+                    -->
+                    <div class="topBar_topNav">
+                        <div class="" data-mnm="3">
+                            <a href="https://www.twinword.com/api/login/" class="topNav_link" data-page="login">Log In</a>
+                            <span class="topNav_here" data-page="login">Log In</span>
+                            <a href="https://www.twinword.com/api/logout/" class="topNav_link" data-page="logout">Log Out</a>
+                        </div>
+                    </div>
+                    <div class="topBar_topNav" data-page="account">
+                        <div class="" data-mnm="2">
+                            <a href="https://www.twinword.com/api/awsmarketplace/account/" class="topNav_link" data-page="account">My Account</a>
+                            <span class="topNav_here" data-page="account">My Account</span>
+                        </div>
+                    </div>
+                    <div class="topBar_topNav">
+                        <div class="" data-mnm="23">
+                            <a href="mailto:help@twinword.com?subject=Twinword%20API%20-%20Contact%20Us" class="topNav_link" data-page="contact">Contact</a>
+                            <span class="topNav_here" data-page="contact">Contact</span>
+                        </div>
+                    </div>
+                    <div class="topBar_topNav">
+                        <div class="" data-mnm="16">
+                            <a href="https://www.twinword.com/blog/" target="_blank" class="topNav_link" data-page="blog">Blog</a>
+                            <span class="topNav_here" data-page="blog">Blog</span>
+                        </div>
+                    </div>
+                    <div class="topBar_topNav">
+                        <div class="dropDownMenu" tabindex="-1">
+                            <div>Products</div>
+                            <div>
+                                <div class="" data-mnm="17">
+                                    <a href="https://www.twinword.com/ideas/" class="topNav_link"><div class="dropDownTitle">Twinword Ideas<div class="dropDownDesc">Keyword Research</div></div></a>
+                                </div>
+                                <div class="" data-mnm="18">
+                                    <a href="https://www.twinword.com/finder/" class="topNav_link"><div class="dropDownTitle">Twinword Finder<div class="dropDownDesc">Advanced Ctrl+F</div></div></a>
+                                </div>
+                                <div class="" data-mnm="19">
+                                    <a href="https://www.twinword.com/writer/" class="topNav_link"><div class="dropDownTitle">Twinword Writer<div class="dropDownDesc">Instant Synonyms</div></div></a>
+                                </div>
+                                <div class="" data-mnm="20">
+                                    <a href="https://www.twinword.com/exam/" class="topNav_link"><div class="dropDownTitle">Twinword Exam<div class="dropDownDesc">Vocabulary Prep</div></div></a>
+                                </div>
+                                <div class="" data-mnm="21">
+                                    <a href="https://www.twinword.com/mind/" class="topNav_link"><div class="dropDownTitle">Twinword Mind<div class="dropDownDesc">Psychology Test</div></div></a>
+                                </div>
+                                <div class="" data-mnm="22">
+                                    <a href="https://www.twinword.com/graph/" class="topNav_link"><div class="dropDownTitle">Twinword Graph<div class="dropDownDesc">Visualize Words</div></div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="topBar_topNav">
+                        <div class="dropDownMenu" tabindex="-1">
+                            <div class="" data-mnm="1">
+                                <a href="https://www.twinword.com/api/index.php" class="topNav_link" data-page="api">API</a>
+                                <span class="topNav_here" data-page="api">API</span>
+                            </div>
+                            <div>
+                                <div class="" data-mnm="4">
+                                    <a href="https://www.twinword.com/api/word-associations.php" class="topNav_link" data-page="word-associations"><div class="dropDownTitle">Word Associations API<div class="dropDownDesc">What's another word for...?</div></div></a>
+                                    <span class="topNav_here" data-page="word-associations"><div class="dropDownTitle">Word Associations API<div class="dropDownDesc">What's another word for...?</div></div></span>
+                                </div>
+                                <div class="" data-mnm="5">
+                                    <a href="https://www.twinword.com/api/sentiment-analysis.php" class="topNav_link" data-page="sentiment-analysis"><div class="dropDownTitle">Sentiment Analysis API<div class="dropDownDesc">Is this comment positive or negative?</div></div></a>
+                                    <span class="topNav_here" data-page="sentiment-analysis"><div class="dropDownTitle">Sentiment Analysis API<div class="dropDownDesc">Is this comment positive or negative?</div></div></span>
+                                </div>
+                                <div class="" data-mnm="6">
+                                    <a href="https://www.twinword.com/api/topic-tagging.php" class="topNav_link" data-page="topic-tagging"><div class="dropDownTitle">Topic Tagging API<div class="dropDownDesc">What are the topics and keywords?</div></div></a>
+                                    <span class="topNav_here" data-page="topic-tagging"><div class="dropDownTitle">Topic Tagging API<div class="dropDownDesc">What are the topics and keywords?</div></div></span>
+                                </div>
+                                <div class="" data-mnm="7">
+                                    <a href="https://www.twinword.com/api/text-classification.php" class="topNav_link" data-page="text-classification"><div class="dropDownTitle">Text Classification API<div class="dropDownDesc">Which categories are relevant?</div></div></a>
+                                    <span class="topNav_here" data-page="text-classification"><div class="dropDownTitle">Text Classification API<div class="dropDownDesc">Which categories are relevant?</div></div></span>
+                                </div>
+                                <div class="" data-mnm="8">
+                                    <a href="https://www.twinword.com/api/text-similarity.php" class="topNav_link" data-page="text-similarity"><div class="dropDownTitle">Text Similarity API<div class="dropDownDesc">How similar are these two text...?</div></div></a>
+                                    <span class="topNav_here" data-page="text-similarity"><div class="dropDownTitle">Text Similarity API<div class="dropDownDesc">How similar are these two text...?</div></div></span>
+                                </div>
+                                <div class="" data-mnm="9">
+                                    <a href="https://www.twinword.com/api/category-recommendation.php" class="topNav_link" data-page="category-recommendation"><div class="dropDownTitle">Category Recommendation API<div class="dropDownDesc">What are some other related categories?</div></div></a>
+                                    <span class="topNav_here" data-page="category-recommendation"><div class="dropDownTitle">Category Recommendation API<div class="dropDownDesc">What are some other related categories?</div></div></span>
+                                </div>
+                                <div class="" data-mnm="10">
+                                    <a href="https://www.twinword.com/api/lemmatizer.php" class="topNav_link" data-page="lemmatizer"><div class="dropDownTitle">Lemmatizer API<div class="dropDownDesc">"Dogs" to "dog", "abilities" to "ability"...</div></div></a>
+                                    <span class="topNav_here" data-page="lemmatizer"><div class="dropDownTitle">Lemmatizer API<div class="dropDownDesc">"Dogs" to "dog", "abilities" to "ability"...</div></div></span>
+                                </div>
+                                <div class="" data-mnm="11">
+                                    <a href="https://www.twinword.com/api/language-scoring.php" class="topNav_link" data-page="language-scoring"><div class="dropDownTitle">Language Scoring API<div class="dropDownDesc">What's the difficulty level of this article?</div></div></a>
+                                    <span class="topNav_here" data-page="language-scoring"><div class="dropDownTitle">Language Scoring API<div class="dropDownDesc">What's the difficulty level of this article?</div></div></span>
+                                </div>
+                                <div class="" data-mnm="12">
+                                    <a href="https://www.twinword.com/api/word-dictionary.php" class="topNav_link" data-page="word-dictionary"><div class="dropDownTitle">Word Dictionary API<div class="dropDownDesc">A dictionary and so much more!</div></div></a>
+                                    <span class="topNav_here" data-page="word-dictionary"><div class="dropDownTitle">Word Dictionary API<div class="dropDownDesc">A dictionary and so much more!</div></div></span>
+                                </div>
+                                <div class="" data-mnm="13">
+                                    <a href="https://www.twinword.com/api/visual-context-graph.php" class="topNav_link" data-page="visual-context-graph"><div class="dropDownTitle">Visual Context Graph API<div class="dropDownDesc">Build a visual graph of connected words.</div></div></a>
+                                    <span class="topNav_here" data-page="visual-context-graph"><div class="dropDownTitle">Visual Context Graph API<div class="dropDownDesc">Build a visual graph of connected words.</div></div></span>
+                                </div>
+                                <div class="" data-mnm="14">
+                                    <a href="https://www.twinword.com/api/word-quiz.php" class="topNav_link" data-page="word-quiz"><div class="dropDownTitle">Word Quiz API<div class="dropDownDesc">Vocabulary test for SAT, GMAT, and more...</div></div></a>
+                                    <span class="topNav_here" data-page="word-quiz"><div class="dropDownTitle">Word Quiz API<div class="dropDownDesc">Vocabulary test for SAT, GMAT, and more...</div></div></span>
+                                </div>
+                                <div class="" data-mnm="15">
+                                    <a href="https://www.twinword.com/api/keyword-suggestion.php" class="topNav_link" data-mnm="19" data-page="keyword-suggestion"><div class="dropDownTitle">Keyword Suggestion API<div class="dropDownDesc">Find related keywords...</div></div></a>
+                                    <span class="topNav_here" data-page="keyword-suggestion"><div class="dropDownTitle">Keyword Suggestion API<div class="dropDownDesc">Find related keywords...</div></div></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="topBar_topNav">
+                        <div class="mnm_link" data-mnm="0">
+                            <a href="/index.php" class="topNav_link" data-page="home">Home</a>
+                            <span class="topNav_here" data-page="home">Home</span>
+                        </div>
+                    </div>
+                    -->
+                    <div class="topBar_topHam">
+                        <a href="https://www.twinword.com/api/language-scoring.php#top" class="topNav_link"><span class="topBar_topHamIcon mnm_ham">☰</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="foldContainer foldContainer_defaultBlue">
+			<!-- CONTENT -->
+			<div class="contentContainer">
+				<div class="safeContainer">
+					<span class="sectionHeaderTitle">Language Scoring</span>
+					<br>
+					<span class="sectionHeaderSubtitle">Evaluate the difficulty level of a word, sentence, or paragraph.</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="foldContainer foldContainer_defaultWhite">
+			<!-- CONTENT -->
+			<div class="contentContainer">
+				<div class="safeContainer">
+					<div class="sectionHeader sectionHeader_defaultWhite">
+						<span class="sectionHeaderTitle">Free Tool &amp; API Demo</span>
+					</div>
+					<div class="sectionBody">
+						<div class="colLeft">
+							<p>
+								<span class="sectionHeaderTitle">Text</span>
+								<br>
+								Input a some text to evaluate its difficulty level:
+								<br>
+								<textarea id="demoInput1" data-demo="demo1" class="demoInput" style="width: 100%; min-height: 200px;"></textarea>
+							</p>
+							<p>
+								<span id="demoButton1" data-demo="demo1" class="demoButton button">Evaluate</span>
+							</p>
+						</div>
+						<div class="colRight">
+							<p>
+								Results:
+							</p>
+							<div id="demoBox1" class="demoBox"><pre>{
+  "ten_degree": 6,
+  "value": 0.18788740723541,
+  "version": "5.0.0",
+  "author": "twinword inc.",
+  "email": "help@twinword.com",
+  "result_code": "200",
+  "result_msg": "Success"
+}</pre></div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					<div class="sectionBody">
+						<div class="colLeft">
+							<p>
+								<span class="sectionHeaderTitle">Word</span>
+								<br>
+								Input a word to evaluate its difficulty level:
+								<br>
+								<input id="demoInput2" data-demo="demo2" class="demoInput" type="text">
+							</p>
+							<p>
+								<span id="demoButton2" data-demo="demo2" class="demoButton button">Evaluate</span>
+							</p>
+						</div>
+						<div class="colRight">
+							<p>
+								Results:
+							</p>
+							<div id="demoBox2" class="demoBox"><pre>{
+  "entry": "sound",
+  "request": "sound",
+  "response": "sound",
+  "ten_degree": 1,
+  "value": 0.027934136461676,
+  "version": "5.0.0",
+  "author": "twinword inc.",
+  "email": "help@twinword.com",
+  "result_code": "200",
+  "result_msg": "Success"
+}</pre></div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					<div class="sectionHeader sectionHeader_defaultWhite">
+						<span class="sectionHeaderTitle">API Pricing</span>
+					</div>
+					<div class="sectionBody">
+						<div class="colLeft_smaller" style="text-align: left;">
+							<span class="sectionHeaderSubtitle">PAY AS YOU GO.</span>
+							<br>
+							No long-term contracts.
+							<br>
+							<br>
+						</div>
+						<div class="colRight_larger">
+							<div class="pricing_all_container_float_right">
+								<div class="pricing_container pricing_container_float_left">
+									<div class="pricing_top">
+										<div class="pricing_type">BASIC</div>
+										<span class="pricing_cost_currency">$</span><span class="pricing_cost_price">0</span>
+										<br>
+										<span class="pricing_cost_term">MONTHLY</span>
+									</div>
+									<div class="pricing_bottom">
+										<span class="pricing_qty">10,000</span> <span class="pricing_qty_per">/ month</span>
+										<br>
+										<span class="pricing_overages">$0.003 PER EXTRA</span>
+									</div>
+									<div class="pricing_button" onclick="window.open(&#39;https://market.mashape.com/twinword/language-scoring/pricing&#39;);">
+										Details
+									</div>
+								</div>
+								<div class="pricing_container pricing_container_float_left">
+									<div class="pricing_top">
+										<div class="pricing_ribbon_wrapper"><p class="pricing_ribbon pricing_ribbon_green">BEST</p></div>
+										<div class="pricing_type">PRO</div>
+										<span class="pricing_cost_currency">$</span><span class="pricing_cost_price">19</span>
+										<br>
+										<span class="pricing_cost_term">MONTHLY</span>
+									</div>
+									<div class="pricing_bottom">
+										<span class="pricing_qty">125,000</span> <span class="pricing_qty_per">/ month</span>
+										<br>
+										<span class="pricing_overages">$0.001 PER EXTRA</span>
+									</div>
+									<div class="pricing_button" onclick="window.open(&#39;https://market.mashape.com/twinword/language-scoring/pricing&#39;);">
+										Details
+									</div>
+								</div>
+								<div class="pricing_container pricing_container_float_left">
+									<div class="pricing_top">
+										<div class="pricing_type">ULTRA</div>
+										<span class="pricing_cost_currency">$</span><span class="pricing_cost_price">99</span>
+										<br>
+										<span class="pricing_cost_term">MONTHLY</span>
+									</div>
+									<div class="pricing_bottom">
+										<span class="pricing_qty">750,000</span> <span class="pricing_qty_per">/ month</span>
+										<br>
+										<span class="pricing_overages">$0.001 PER EXTRA</span>
+									</div>
+									<div class="pricing_button" onclick="window.open(&#39;https://market.mashape.com/twinword/language-scoring/pricing&#39;);">
+										Details
+									</div>
+								</div>
+								<br>
+								<br>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					<div class="sectionHeader sectionHeader_defaultWhite">
+						<span id="Consume-API" class="sectionHeaderTitle">Consume API</span>
+					</div>
+					<div class="sectionBody">
+						<div class="colLeft">
+							<p>
+								<img src="./English-Diffuculty-API_files/logo_mashape.png" alt="Mashape logo">
+								<br>
+								You can try out this API at Mashape, an online API marketplace.
+							</p>
+						</div>
+						<div class="colRight">
+							<p style="text-align: right;">
+								<a class="button" href="https://market.mashape.com/twinword/language-scoring" target="_blank">
+									Try Out Endpoint
+								</a>
+								&nbsp;
+								<a class="button_alt" href="https://market.mashape.com/twinword/language-scoring" target="_blank">
+									See Documentation
+								</a>
+							</p>
+						</div>
+						<div style="clear: both;"></div>
+						<div class="colLeft">
+							<p>
+								<img src="./English-Diffuculty-API_files/logo_awsmarketplace.png" alt="Amazon AWS Marketplace logo">
+								<br>
+								Consume this API directly with us and pay on Amazon AWS Marketplace.
+							</p>
+						</div>
+						<div class="colRight">
+							<p style="text-align: right;">
+								<a class="button" href="http://aws.amazon.com/marketplace/pp/B072187HXK" target="_blank">
+									Subscribe on AWS Marketplace
+								</a>
+							</p>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a name="footer"></a>
+				<div class="foldContainer foldContainer_footer">
+			<!-- FOOTER -->
+			<div class="contentContainer">
+				<div class="safeContainer">
+					<div class="footer_allLinksContainer">
+						<div class="footer_linksContainer">
+							<div class="links_heading">
+								Products
+							</div>
+							<div class="links_list">
+								<a href="https://www.twinword.com/ideas/" class="footer_link">Twinword Ideas</a>
+								<br>
+								<a href="https://www.twinword.com/finder/" class="footer_link">Twinword Finder</a>
+								<br>
+								<a href="https://www.twinword.com/writer/" class="footer_link">Twinword Writer</a>
+								<br>
+								<a href="https://www.twinword.com/exam/" class="footer_link">Twinword Exam</a>
+								<br>
+								<a href="https://www.twinword.com/mind/" class="footer_link">Twinword Mind</a>
+								<br>
+								<a href="https://www.twinword.com/graph/" class="footer_link">Twinword Graph</a>
+								<br>
+								<a href="https://www.twinword.com/api/" class="footer_link">Twinword API</a>
+							</div>
+						</div>
+						<div class="footer_linksContainer">
+							<div class="links_heading">
+								API
+							</div>
+							<div class="links_list">
+								<a href="https://www.twinword.com/api/" class="footer_link">Complete API List</a>
+								<br>
+								<a href="https://www.twinword.com/api/word-associations.php" class="footer_link">Word Associations Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/sentiment-analysis.php" class="footer_link">Sentiment Analysis Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/topic-tagging.php" class="footer_link">Topic Tagging Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/text-classification.php" class="footer_link">Text Classification Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/text-similarity.php" class="footer_link">Text Similarity Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/category-recommendation.php" class="footer_link">Category Recommendation Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/lemmatizer.php" class="footer_link">Lemmatizer Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/language-scoring.php" class="footer_link">Language Scoring Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/word-dictionary.php" class="footer_link">Word Dictionary Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/visual-context-graph.php" class="footer_link">Visual Context Graph Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/word-quiz.php" class="footer_link">Word Quiz Demo</a>
+								<br>
+								<a href="https://www.twinword.com/api/keyword-suggestion.php" class="footer_link">Keyword Suggestion Demo</a>
+							</div>
+						</div>
+						<div class="footer_linksContainer">
+							<div class="links_heading">
+								Company
+							</div>
+							<div class="links_list">
+								<a href="https://www.twinword.com/" class="footer_link">Home</a>
+								<br>
+								<a href="https://www.twinword.com/about-us.php" class="footer_link">About Us</a>
+								<br>
+								<a href="https://www.twinword.com/blog/tag/press-release/" target="_blank" class="footer_link">Press</a>
+								<br>
+								<a href="https://www.twinword.com/blog/" target="_blank" class="footer_link">Blog</a>
+								<br>
+								<a href="https://www.twinword.com/jobs.php" class="footer_link">Jobs</a>
+								<br>
+								<a href="https://www.twinword.com/location.php" class="footer_link">Location</a>
+								<br>
+								<a href="https://www.twinword.com/terms.php" class="footer_link">Terms</a>
+								<br>
+								<a href="https://www.twinword.com/privacy.php" class="footer_link">Privacy</a>
+								<!--
+								<br />
+								<a href="https://twinwordinc.growsumo.com/app/page" target="_blank" class="footer_link">Partners</a>
+								-->
+								<br>
+								<a href="mailto:help@twinword.com?subject=Twinword%20API%20-%20Contact" class="footer_link">Contact</a>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					<div class="footer_icoContainer">
+						<a href="https://www.facebook.com/twinword" target="_blank"><img src="./English-Diffuculty-API_files/ico_facebook.png" class="ico_image" alt="Facebook Icon"></a>
+						<a href="https://www.twitter.com/twinwordinc" target="_blank"><img src="./English-Diffuculty-API_files/ico_twitter.png" class="ico_image" alt="Twitter Icon"></a>
+						<a href="mailto:help@twinword.com" target="_blank"><img src="./English-Diffuculty-API_files/ico_mail.png" class="ico_image" alt="Email Icon"></a>
+						<a href="https://www.twinword.com/blog/" target="_blank"><img src="./English-Diffuculty-API_files/ico_blog.png" class="ico_image" alt="Blog Icon"></a>
+					</div>
+					<div style="clear: both;"></div>
+					<div class="footer_finePrint">
+						<div class="finePrint_left">
+							We provide text analysis APIs that understand human text.
+						</div>
+						<div class="finePrint_right">
+							© Twinword Inc. or its affiliates.
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					<a href="https://www.twinword.com/"><img src="./English-Diffuculty-API_files/bottom_logo.png" class="bottom_logo" alt="Twinword Logo"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- LOAD SCRIPTS -->
+	<script type="text/javascript" src="./English-Diffuculty-API_files/jquery.min.js"></script>
+	<!-- ALL SCRIPTS -->
+	<script type="text/javascript" src="./English-Diffuculty-API_files/scripts.php"></script>
+	<script type="text/javascript">
+		var demoInProgress =
+		{
+			"demo1": false,
+			"demo2": false
+		}
+		function demo(id, url, dataToSend, check, demoBox)
+		{
+			if (check() && !demoInProgress[id])
+		    {
+		        demoInProgress[id] = true;
+		        $(demoBox).html('Retrieving...');
+
+		        demo_call(url, dataToSend,
+		        {
+		        	success: function(data)
+		        	{
+		        		$(demoBox).html('<pre>'+JSON.stringify(data, undefined, 2)+'</pre>');
+		        	},
+		        	error: function()
+		        	{
+		        		$(demoBox).html('Oops, there was an error.');
+		        	},
+		        	complete: function()
+		        	{
+		        		demoInProgress[id] = false;
+		        	}
+		        });
+		    }
+		}
+
+		var urls =
+		{
+			"demo1":"/api/v5/score/text/",
+			"demo2":"/api/v5/score/word/"
+		}
+		var dataToSends =
+		{
+			demo1: function(){return {text: $('#demoInput1').val()};},
+			demo2: function(){return {entry: $('#demoInput2').val()};}
+		}
+		var checks =
+		{
+			demo1: function(){var value = $('#demoInput1').val(); return typeof value == "string" && value.trim().length > 0;},
+			demo2: function(){var value = $('#demoInput2').val(); return typeof value == "string" && value.trim().length > 0;}
+		}
+		var demoBoxes =
+		{
+			"demo1":"#demoBox1",
+			"demo2":"#demoBox2"
+		}
+
+		//listeners
+		$('.demoInput').on('keyup.demo', function(e)
+		{
+			if (e.keyCode == 13)
+			{
+				var id = $(this).data('demo');
+				demo(id, urls[id], dataToSends[id](), checks[id], demoBoxes[id]);
+			}
+		});
+		$('.demoButton').on('click.demo', function()
+		{
+			var id = $(this).data('demo');
+			demo(id, urls[id], dataToSends[id](), checks[id], demoBoxes[id]);
+		});
+		//start
+		$('#demoInput1').val('The hippocampus is a major component of the brains of humans and other vertebrates. It belongs to the limbic system and plays important roles in the consolidation of information from short-term memory to long-term memory and spatial navigation. Humans and other mammals have two hippocampi, one in each side of the brain. The hippocampus is a part of the cerebral cortex; and in primates it is located in the medial temporal lobe, underneath the cortical surface. It contains two main interlocking parts: Ammon\'s horn and the dentate gyrus.');
+		$('#demoInput2').val('sound');
+		//demo('demo1', urls['demo1'], dataToSends['demo1'](), checks['demo1'], demoBoxes['demo1']);
+		$(demoBoxes['demo1']).html('<pre>'+JSON.stringify({"ten_degree":6,"value":0.18788740723541,"version":"5.0.0","author":"twinword inc.","email":"help@twinword.com","result_code":"200","result_msg":"Success"}, undefined, 2)+'</pre>');
+		//demo('demo2', urls['demo2'], dataToSends['demo2'](), checks['demo2'], demoBoxes['demo2']);
+		$(demoBoxes['demo2']).html('<pre>'+JSON.stringify({"entry":"sound","request":"sound","response":"sound","ten_degree":1,"value":0.027934136461676,"version":"5.0.0","author":"twinword inc.","email":"help@twinword.com","result_code":"200","result_msg":"Success"}, undefined, 2)+'</pre>');
+	</script>
+
+
+</body></html>

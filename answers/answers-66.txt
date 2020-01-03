@@ -1,0 +1,59 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id
+66,0,169519380.272969,Describe how you know if it is hot or cold outside?,// Provide answer below (ex. sensory information, visual cues)
+
+,11
+66,0,169527361.742162,Fill in the blanks below,Sometimes when I feel sick, I like to take my temperature. I know that if the ____ reads above 98.6 degrees, I might have a fever.hhh,19
+66,0,169534368.529556,Fill in the blanks below,In preparation for a big family dinner, Danny's job was to peel the onions. It took him a long time, because he had to peel one ____ at a time.hhhhhhhh,16
+66,0,169544376.228416,Fill in the blanks below,If I had the choice between two piles of money, I would choose the one that is ____. This way, I could have more money. I would use it to pay for things like student loans, food, and ___.hhhhhhhhhhh,3
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+66,0,283892084.62909,Fill in the blanks below,Because he had decided not to glorify himself through the sales of his new product, the inventor anonymously ______ all profits to charity
+ HELLOOO I AM HERE 
+.,11,4967.357996506403
+66,0,283899922.512944,Fill in the blanks below,Designed as a gathering place, the new student lounge was appropriately appointed with tables, chairs, and even sofas where ______ could assemble comfortably
+ HELLOOO I AM HERE 
+.,19,2819.24684079934
+66,0,283910425.597916,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.,16,5488.110276482516
+66,1,283933937.259409,What advice would you give to someone who stole something but now feels guilty?,
+ HELLOOO I AM HERE 
+,11,4967.357996506403
+66,1,283941772.828769,Some people believe that university students should be required to attend classes. Others believe that going to classes should be optional for students. Which point of view do you agree with? Use specific reasons and details to explain your answer.,
+ HELLOOO I AM HERE 
+,19,2819.24684079934
+66,1,283952281.139305,"When people succeed in life, it is because of hard work. Being lucky has nothing to do with success in life."
+
+ Do you agree or disagree with the quotation abo ve? Use specific reasons and examples to explain your position.,
+ HELLOOO I AM HERE 
+,16,5488.110276482516
+66,2,283965452.31127,Given an integer age, write a logical expression such that adults is incremented by 1 if age is between 18 and 64,if (/* YOUR CODE HERE */) 
+ HELLOOO I AM HERE 
+{
+	adults += 1;
+}
+,11,4967.357996506403
+66,2,283973288.583518,Complete the function definition for the function not_equal() that returns true if the two integer parameters are not equal, and false otherwise,bool not_equal(int val_1, int val_2) 
+ HELLOOO I AM HERE 
+{
+	if (/* YOUR CODE HERE */) {
+		return true;
+	} else {
+		return false;
+	}
+}
+,19,2819.24684079934
+66,2,283983794.286195,Complete the function definition so that the function returnLargest() returns the larger of its two parameters, x and y,int returnLargest(int x, int y) 
+ HELLOOO I AM HERE 
+{
+	// TODO
+},16,5488.110276482516
+66,3,283997087.417524,Declare a two dimensional array of chars called my_letters that has a height of 5 and width of 8.,
+ HELLOOO I AM HERE 
+,11,4967.357996506403
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+66,3,284004927.164778,Objects of type Michigan_Student require a name (string) and major (string) upon creation. Define a Michigan_Student, student_1, named John Doe who is majoring in Environment.,
+ HELLOOO I AM HERE 
+,19,2819.24684079934
+66,3,284015435.01644,Declare an array named my_arr of 5 integer elements and initialize the elements to the values 2, 4, ..., 10,
+ HELLOOO I AM HERE 
+,16,5488.110276482516

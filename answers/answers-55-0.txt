@@ -1,0 +1,7 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+55,0,121511609.215598,Fill in the blank below,According to the ancient Greek philosopher Plato, only philosophy can provide genuine understanding because it scrutinizes assumptions that other areas of study merely ____(answer)____ for granted.,14,5000,30000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time

@@ -1,0 +1,7 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+21,3,1334339852.855687,Implement a function secondGreatest that accepts a vector of integers and returns the second greatest element in the vector,,16,5000,6000
+21,3,1334350873.374757,Given two variables that have been declared and initialized, string s and map<char, int=""> num_letter, use num_letter to store the number of times a given character is in the string s</char,>,,13,5000,6000
+21,3,1334361890.355904,Given a string, s, and an integer, x, update s such that its characters are shifted by x. Ex. s = "cd", x = 1. Loop results in s = "de",,8,5000,6000
+21,3,1334372904.327445,Implement a function is_sorted that accepts a vector of integer values and returns true if it is non-decreasing, and false otherwise,,7,5000,6000
+21,3,1334383920.652557,Given a 2D array my_board with 3 rows and 3 columns, write nested for loops to print its contents, row by row, to standard out,,3,5000,6000
+21,3,1334394939.900455,Given an integer value, x, with three digits (ex. 378), store each digit in separate integer variables called ones_place, tens_place, and hundreds_place,,9,5000,6000

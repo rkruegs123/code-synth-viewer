@@ -1,0 +1,94 @@
+var stimuli = [
+     /* CATEGORY A */
+	 [
+		{
+			"prompt": "Fill in the blanks below",
+			"text": "The wall and floor decorations created by Indian housewives are usually short-lived, remaining hours, days, or at most, weeks before being worn off by human activity or weather and ______ by new designs."
+		},
+		{
+			"prompt": "Fill in the blanks below",
+			"text": "The progress of the disease is subtle ; it _____ stealthily without any symptoms in the early stages."
+		},
+		{
+			"prompt": "Fill in the blanks below",
+			"text": "In their day to day decision making, many senior managers do not _____ the rational model favored by orthodox management experts, but rather rely on intuitive processes that often appear irrational and rebellious."
+		},
+		{
+			"prompt": "Fill in the blanks below",
+			"text": "Architects define a physical structure as a set of materials ______ in such a way that these materials can resist the downward pull of gravity."
+		},
+		{
+			"prompt": "Fill in the blanks below",
+			"text": "Just when the senator's opponent had captured the lead in popularity polls, public opinion -------; as a result, the incumbent senator regained her front-runner position."
+		}
+	],
+    /* CATEGORY B */
+	[
+		{
+			"prompt": "Describe how you know if it is hot or cold outside",
+			"text": ""
+		},
+		{
+			"prompt": "Describe the steps you take when you get dressed in the morning.",
+			"text": ""
+		},
+		{
+			"prompt": "You are driving a car and approaching a roundabout (rotary). Explain the rules you must abide by.",
+			"text": ""
+		},
+		{
+			"prompt": "Your best friend wants you to make them a peanut butter and jelly sandwich - how would you go about doing this?",
+			"text": ""
+		},
+		{
+			"prompt": "Describe the process of swapping an old, used mattress for a new one",
+			"text": ""
+		}
+	],
+    /* CATEGORY X */
+	[
+		{
+			"prompt": "Add a private variable to the class Player to store their average points per game, as a double called average_points_per_game.",
+			"text": "Class Player {\npublic:\n\tstring name;\n\tint number;\nprivate:\n\n};"
+		},
+		{
+			"prompt": "Complete the condition in the if statement to check if the random integer x is even or odd",
+			"text": "if (/* YOUR CODE HERE */) {\n\tcout << \"Number is even!\" << endl;\n} else {\n\tcout << \"Number is odd!\" << endl;\n}"
+		},
+		{
+			"prompt": "Complete the code to swap the values of integers x and y",
+			"text": "int x = 15;\nint y = 20;\nint temp;\ntemp = x;\n/* YOUR CODE HERE */\ny = temp;\n"
+		},
+		{
+			"prompt": "Complete the function definition for the function equals() that returns true if the two integer parameters are equal, and false otherwise",
+			"text": "bool equals(int val_1, int val_2) {\n\tif (/* YOUR CODE HERE */) {\n\t\treturn /* YOUR CODE HERE */\n\t} else {\n\t\treturn /* YOUR CODE HERE */\n\t}\n}\n"
+		},
+		{
+			"prompt": "Complete the function definition so that the function returnLargest() returns the larger of its two parameters, x and y",
+			"text": "int returnLargest(int x, int y) {\n\t// TODO\n}"
+		}
+	],
+    /* CATEGORY Y */
+	[
+		{
+			"prompt": "Write a function declaration for a function getBirthday that takes in a string name as a parameter and returns an integer",
+			"text": ""
+		},
+		{
+			"prompt": "Write the definition of a function times_two that takes in an integer x as a parameter and returns the value times two",
+			"text": ""
+		},
+		{
+			"prompt": "Write an if/else statement that assigns true to the variable adult if the variable age is greater than 18; otherwise assign false to adult",
+			"text": ""
+		},
+		{
+			"prompt": "Write a for loop that prints the values 1 through 10",
+			"text": ""
+		},
+		{
+			"prompt": "Write a program that declares a string variable name and read a value into it from standard in.",
+			"text": ""
+		}
+	]
+];

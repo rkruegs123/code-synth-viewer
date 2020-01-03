@@ -1,0 +1,42 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+30,1,489919039.763877,Some people believe that university students should be required to attend classes. Others believe that going to classes should be optional for students. Which point of view do you agree with, and why?,,0,5000,6000
+30,1,489930058.649652,What would happen if everyone lived in space? (e.g., What type of houses would they live in? What type of clothing would they wear?),,8,5000,6000
+30,1,489941073.518313,Should a city try to preserve its old, historic buildings or destroy them and replace them with modern buildings? Explain.,,1,5000,6000
+30,1,489952086.032628,Some people prefer to plan activities for their free time very carefully. Others choose not to make any plans at all for their free time. Compare the benefits of planning free-time activities with the benefits of not making plans.,,6,5000,6000
+30,1,489963100.037925,Some universities require students to take classes in many subjects. Other universities require students to specialize in one subject. Which is better? Explain.,,3,5000,6000
+30,1,489974115.682095,Do you agree or disagree with the following statement? The best way to travel is in a group led by a tour guide. Explain.,,2,5000,6000
+30,1,489985126.621867,Some people prefer to spend time with one or two close friends. Others choose to spend time with a large number of friends. Compare the advantages of each choice.,,5,5000,6000
+30,1,489996144.522682,Some people enjoy change, and they look forward to new experiences. Others like their lives to stay the same, and they do not change their usual habits. Compare these two approaches to life.,,7,5000,6000
+30,1,490007154.866185,Is it more important to be able to work with a group of people on a team or to work independently? Explain.,,4,5000,6000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+30,1,490308275.982538,Some people believe that university students should be required to attend classes. Others believe that going to classes should be optional for students. Which point of view do you agree with, and why?,,0,5000,6000
+30,1,490319291.926217,What would happen if everyone lived in space? (e.g., What type of houses would they live in? What type of clothing would they wear?),,8,5000,6000
+30,1,490330304.635537,Should a city try to preserve its old, historic buildings or destroy them and replace them with modern buildings? Explain.,,1,5000,6000
+30,1,490341317.080351,Some people prefer to plan activities for their free time very carefully. Others choose not to make any plans at all for their free time. Compare the benefits of planning free-time activities with the benefits of not making plans.,,6,5000,6000
+30,1,490352328.163395,Some universities require students to take classes in many subjects. Other universities require students to specialize in one subject. Which is better? Explain.,,3,5000,6000
+30,1,490363343.85169,Do you agree or disagree with the following statement? The best way to travel is in a group led by a tour guide. Explain.,,2,5000,6000
+30,1,490374359.495333,Some people prefer to spend time with one or two close friends. Others choose to spend time with a large number of friends. Compare the advantages of each choice.,,5,5000,6000
+30,1,490385375.170175,Some people enjoy change, and they look forward to new experiences. Others like their lives to stay the same, and they do not change their usual habits. Compare these two approaches to life.,,7,5000,6000
+30,1,490396385.432451,Is it more important to be able to work with a group of people on a team or to work independently? Explain.,,4,5000,6000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+30,1,490421578.429569,Some people believe that university students should be required to attend classes. Others believe that going to classes should be optional for students. Which point of view do you agree with, and why?,,0,5000,6000
+30,1,490432594.283457,What would happen if everyone lived in space? (e.g., What type of houses would they live in? What type of clothing would they wear?),,8,5000,6000
+30,1,490443610.040897,Should a city try to preserve its old, historic buildings or destroy them and replace them with modern buildings? Explain.,,1,5000,6000
+30,1,490454624.813917,Some people prefer to plan activities for their free time very carefully. Others choose not to make any plans at all for their free time. Compare the benefits of planning free-time activities with the benefits of not making plans.,,6,5000,6000
+30,1,490465634.885218,Some universities require students to take classes in many subjects. Other universities require students to specialize in one subject. Which is better? Explain.,,3,5000,6000
+30,1,490476643.70657,Do you agree or disagree with the following statement? The best way to travel is in a group led by a tour guide. Explain.,,2,5000,6000
+30,1,490487659.36294,Some people prefer to spend time with one or two close friends. Others choose to spend time with a large number of friends. Compare the advantages of each choice.,,5,5000,6000
+30,1,490498675.262102,Some people enjoy change, and they look forward to new experiences. Others like their lives to stay the same, and they do not change their usual habits. Compare these two approaches to life.,,7,5000,6000
+30,1,490509691.197401,Is it more important to be able to work with a group of people on a team or to work independently? Explain.,,4,5000,6000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+30,1,491372557.742035,Some people believe that university students should be required to attend classes. Others believe that going to classes should be optional for students. Which point of view do you agree with, and why?,,0,5000,6000
+30,1,491383594.901439,What would happen if everyone lived in space? (e.g., What type of houses would they live in? What type of clothing would they wear?),,8,5000,6000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+30,1,491512768.080903,Some people believe that university students should be required to attend classes. Others believe that going to classes should be optional for students. Which point of view do you agree with, and why?,,0,13304.999713366338,6000
+30,1,491524766.590323,What would happen if everyone lived in space? (e.g., What type of houses would they live in? What type of clothing would they wear?),,8,5964.900042774958,6000
+30,1,491536731.531166,Should a city try to preserve its old, historic buildings or destroy them and replace them with modern buildings? Explain.,,1,5937.691143369853,6000
+30,1,491548266.841212,Some people prefer to plan activities for their free time very carefully. Others choose not to make any plans at all for their free time. Compare the benefits of planning free-time activities with the benefits of not making plans.,,6,5485.503944130477,6000
+30,1,491559027.278336,Some universities require students to take classes in many subjects. Other universities require students to specialize in one subject. Which is better? Explain.,,3,4719.471031205602,6000

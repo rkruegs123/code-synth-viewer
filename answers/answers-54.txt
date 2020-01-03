@@ -1,0 +1,67 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+54,0,483668105.013606,Fill in the blanks below,The refugee's poor grasp of English is hardly an insurmountable problem; she can attend ______ and improve within a matter of months
+ HELLOOO I AM HERE 
+.
+
+i answered 0/1,16,2808.562009527617
+54,0,483675894.60508,Fill in the blanks below,Brachiopods, clamlike bivalves of prehistoric times, were one of the most diversified forms of life on the Earth: more than 30,000 species have been ______ from the fossil records
+ HELLOOO I AM HERE 
+.
+
+i answered 0/2,13,2778.793136196447
+54,0,483686551.423269,Fill in the blanks below,Because Elaine's father was a field entomologist who trekked over the continent studying insect infestations, and insisted on _____ his young family with him, Elaine and her brother had a nomadic childhood
+ HELLOOO I AM HERE 
+ 
+ 
+ o answered 0/3
+.,6,5646.976736378715
+54,1,483727292.024821,"When people succeed in life, it is because of hard work. Being lucky has nothing to do with success in life."
+
+ Do you agree or disagree with the quotation abo ve? Use specific reasons and examples to explain your position.,
+ HELLOOO I AM HERE 
+
+i answered 1/1,16,2808.562009527617
+54,1,483735083.16279,Some universities require students to take classes in many subjects. Other universities require students to specialize in one subject. Which is better? Use specific reasons and examples to support your answer.,
+ HELLOOO I AM HERE 
+
+i answred 1/2,13,2778.793136196447
+54,1,483745742.356244,What would happen if everyone lived in space? What type of houses would they live in? What type of clothing would they wear? What type of food would they eat? How would they travel?,
+ HELLOOO I AM HERE 
+
+i answered 1/3,6,5646.976736378715
+54,2,483772632.395495,Complete the function definition so that the function returnLargest() returns the larger of its two parameters, x and y,int returnLargest(int x, int y) 
+ HELLOOO I AM HERE 
+{
+	// TODO
+}
+
+i answered 2/2,16,2808.562009527617
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+54,2,483780428.214188,Given a char variable c that has already been declared, write a logical expression such that the code repeatedly reads in a value from standard input into c until a 'y' or 'n' has been entered,while (/* YOUR CODE HERE */) 
+ HELLOOO I AM HERE 
+{
+	 cin >> c;
+}
+
+i actually answered 2/2
+,13,2778.793136196447
+54,2,483791090.183372,Complete the following definition of printDottedLine() to print "..." to standard out,void printDottedLine() 
+ HELLOOO I AM HERE 
+{
+	/* YOUR CODE HERE */
+}
+
+i answered 2/3,6,5646.976736378715
+54,3,483830321.677966,Declare an array named my_arr of 5 integer elements and initialize the elements to the values 2, 4, ..., 10,
+ HELLOOO I AM HERE 
+
+i answered ,16,2808.562009527617
+54,3,483838116.36754,Given a dictionary, university_locations, provide a mapping from "The University of Michigan" (a string) to "Ann Arbor" (a string),
+ HELLOOO I AM HERE 
+
+i answered 3/2,13,2778.793136196447
+54,3,483848772.933751,Assume boolean variables isFreshman and isSophomore are declared and initialized. Write an if statement that prints "You are an underclassman!" if either are true.,
+ HELLOOO I AM HERE 
+
+i answered 3/3,6,5646.976736378715
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay

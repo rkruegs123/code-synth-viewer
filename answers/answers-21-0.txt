@@ -1,0 +1,33 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+21,0,1333573801.060202,Fill in the blank below,Once his integrity had been challenged, the mayoral candidate was quick both to dismiss these attacks and to ________ counterattacks.,16,5000,3000
+21,0,1333584818.367184,Fill in the blank below,Using detailed observations made by ancient astronomers in China, Korea, and Japan to complement data ________ by modern instruments, scientists can establish precisely when a particular star exploded.,13,5000,6000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+21,0,1333635788.267906,Fill in the blank below,Once his integrity had been challenged, the mayoral candidate was quick both to dismiss these attacks and to ____niic____ counterattacks.,16,5000,3000
+21,0,1333646809.553808,Fill in the blank below,Using detailed observations made by ancient astronomers in China, Korea, and Japan to complement data ____here we go____ by modern instruments, scientists can establish precisely when a particular star exploded.,13,5000,6000
+21,0,1333654821.990617,Fill in the blank below,New York fashion designer Anna Sui creates eclectic ____hellloooo____ that represent an amalgam of playful, 1970's funky style fused with an edgy, urban sensibility.,8,5000,3000
+21,0,1333665844.501826,Fill in the blank below,In addition to evaluating ____niiiicce____ of resumes and references, some employers want to supplement the hiring process by employing graphologists to study applicants' handwriting for character analysis.,7,5000,6000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+21,0,1334060465.557752,Fill in the blank below,Once his integrity had been challenged, the mayoral candidate was quick both to dismiss these attacks and to ________ counterattacks.,16,5000,6000
+21,0,1334071482.992953,Fill in the blank below,Using detailed observations made by ancient astronomers in China, Korea, and Japan to complement data ________ by modern instruments, scientists can establish precisely when a particular star exploded.,13,5000,6000
+21,0,1334082500.863138,Fill in the blank below,New York fashion designer Anna Sui creates eclectic ________ that represent an amalgam of playful, 1970's funky style fused with an edgy, urban sensibility.,8,5000,6000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+21,0,1334218251.676565,Fill in the blank below,Once his integrity had been challenged, the mayoral candidate was quick both to dismiss these attacks and to ________ counterattacks.,16,5000,3000
+21,0,1334226274.033031,Fill in the blank below,Using detailed observations made by ancient astronomers in China, Korea, and Japan to complement data ________ by modern instruments, scientists can establish precisely when a particular star exploded.,13,5000,3000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+21,0,1335738319.923308,Fill in the blank below,Once his integrity had been challenged, the mayoral candidate was quick both to dismiss these attacks and to ________ counterattacks.,16,5000,3000
+21,0,1335746346.432103,Fill in the blank below,Using detailed observations made by ancient astronomers in China, Korea, and Japan to complement data ________ by modern instruments, scientists can establish precisely when a particular star exploded.,13,5000,3000
+21,0,1335754367.368741,Fill in the blank below,New York fashion designer Anna Sui creates eclectic ________ that represent an amalgam of playful, 1970's funky style fused with an edgy, urban sensibility.,8,5000,3000
+21,0,1335762381.452411,Fill in the blank below,In addition to evaluating ________ of resumes and references, some employers want to supplement the hiring process by employing graphologists to study applicants' handwriting for character analysis.,7,5000,3000
+21,0,1335770397.50445,Fill in the blank below,In frigid regions a ________ of ice under the soil surface prevents water from sinking deep into the soil, and so the water floods the land, helping to create bog and swamp conditions.,3,5000,3000
+21,0,1335778410.237115,Fill in the blank below,The magician's adroitness astonished us; her deft performance proved the old saying that the ________ is quicker than the eye.,9,5000,3000
+21,0,1335786424.635072,Fill in the blank below,Angered that the book arrived in the mail in such a shabby condition, Elliot insisted that the bookseller ________ it with a new copy.,19,5000,3000
+21,0,1335794444.461273,Fill in the blank below,The lectures on quantum physics were invariably dull; the lecturer ________ his ill-prepared material in a manner guaranteed to send even the most ardent student to sleep.,10,5000,3000
+21,0,1335802474.919242,Fill in the blank below,According to the ancient Greek philosopher Plato, only philosophy can provide genuine understanding because it scrutinizes assumptions that other areas of study merely ________ for granted.,14,5000,3000
+21,0,1335810489.101095,Fill in the blank below,Over the years the anthropologist's opinions had ossified: he refused to tolerate new ideas and nothing could ________ his mind.,15,5000,3000
+21,0,1335818505.262001,Fill in the blank below,The progress of the disease is subtle; it ________ stealthily without any symptoms in the early stages.,12,5000,3000
+21,0,1335826526.334076,Fill in the blank below,Because he had decided not to glorify himself through the sales of his new product, the inventor anonymously ________ all profits to charity.,18,5000,3000
+21,0,1335834545.096751,Fill in the blank below,Elinor tried to counteract her negative feelings, but only ________ in intensifying them.,11,5000,3000
+21,0,1335842563.792201,Fill in the blank below,Brian was so fond of his dog that their brief ________ left him not just saddened, but in a state of sorrow.,5,5000,3000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+21,0,1335850580.879383,Fill in the blank below,The architect advised ________ down the old structure, since he did not consider it sufficiently robust to withstand the heavy winds of the tropical storm the peninsula was expecting.,17,5000,3000
+21,0,1335858596.787623,Fill in the blank below,Since the foreign correspondent was accustomed to completing his ________ under tumultuous conditions, the commotion of the subway at rush hour presented no impediment to his creativity.,6,5000,3000

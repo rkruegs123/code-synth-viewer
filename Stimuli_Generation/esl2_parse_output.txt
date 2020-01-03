@@ -1,0 +1,134 @@
+MATCH:
+present
+ What is the best birthday present you ever received?
+
+MATCH:
+present
+ What is the best birthday present you could receive?
+
+MATCH:
+clothing
+ What would happen if everyone lived in space? What type of houses would they live in? What type of clothing would they wear? What type of food would they eat? How would they travel?
+
+MATCH:
+clothing
+ What would happen if everyone lived in space? What type of houses would they live in? What type of clothing would they wear? What type of food would they eat? How would they travel?
+
+MATCH:
+change
+ What would happen if you grew taller than trees? How would this change your life?
+
+MATCH:
+change
+ What would happen if there were no cars, buses, trains, boats, or planes? How would this change your life?
+
+MATCH:
+ordered
+ What would you do if you ordered an ice cream cone and you forgot to bring money?
+
+MATCH:
+present
+ What would you do if you got a present you didn't like?
+
+MATCH:
+take
+ If you could only take 3 people with you on a trip around the world, who would you take and why?
+
+MATCH:
+take
+ If you could only take 3 people with you on a trip around the world, who would you take and why?
+
+MATCH:
+give
+ If you could give any gift in the world, what would you give and to whom?
+
+MATCH:
+give
+ If you could give any gift in the world, what would you give and to whom?
+
+MATCH:
+give
+ If you could give any gift in the world, what would you give and to whom?
+
+MATCH:
+give
+ If you could give any gift in the world, what would you give and to whom?
+
+MATCH:
+choose
+ If you could participate in an Olympic event, which one would you choose and why?
+
+
+MATCH:
+away
+ If your friend told you of a secret plan to run away from home, what would you do and why?
+
+
+MATCH:
+each
+ What do you think your friends say to each other when you're not around?
+
+MATCH:
+take
+ What do you think about people who take advantage of others?
+
+MATCH:
+take
+ What does "You can't take it with you" mean?
+
+MATCH:
+follow
+ What are some rules you have to follow at home?
+
+MATCH:
+give
+ What advice would you give a new student?
+
+MATCH:
+give
+ What advice would you give a new student?
+
+MATCH:
+give
+ What advice would you give to someone who stole something but now feels guilty?
+
+MATCH:
+give
+ What advice would you give to someone who stole something but now feels guilty?
+
+MATCH:
+bed
+ How do you feel when you are in bed with the lights out?
+
+MATCH:
+change
+ How would you change the world to make it better?
+
+MATCH:
+give
+ I wish Icould give
+
+MATCH:
+give
+ I wish Icould give
+
+MATCH:
+picks
+ When someone picks on someone else, how do you feel? What do you do?
+
+MATCH:
+follow
+ Why do you think the rules you must follow are good or bad?
+
+MATCH:
+take
+ Why do you think some people take advantage of others?
+
+MATCH:
+order
+ Do you think it is necessary to have alcohol at a party in order to have a good time?
+
+MATCH:
+dress
+ Should there be a dress code in places such as school, restaurants, and places of business? Why or why not?
+

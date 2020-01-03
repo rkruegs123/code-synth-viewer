@@ -1,0 +1,16 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id
+65,0,169262464.775192,Describe how you know if it is hot or cold outside?,// Provide answer below (ex. sensory information, visual cues)
+
+,11
+65,0,169275446.972286,Fill in the blanks below,Sometimes when I feel sick, I like to take my temperature. I know that if the ____ reads above 98.6 degrees, I might have a fever.,12
+65,0,169288460.731809,Fill in the blanks below,Atop a mountain lives a very special oracle. Whenever I have to know if a number is prime or not, I hike to the ___ of the mountain, tell the oracle the number, and she returns the correct answer.
+
+,7
+65,0,169295463.467811,Fill in the blanks below,A game of chess has many attributes. There are two ___ competing against each other, and two different colors of pieces. There is also a timer that is running while moves are made.
+
+aaaa,9
+65,0,169310467.55965,Fill in the blanks below,Over the past semester, Jenny picked up painting as a new hobby. However, she only had the primary colors, red, blue, and yellow, on her palette. When she was painting a landscape with many trees, she had to mix blue and yellow to make ____. 
+
+ffffffffff,19
+65,0,169317471.97564,Fill in the blanks below,In preparation for a big family dinner, Danny's job was to peel the onions. It took him a long time, because he had to peel one ____ at a time.,20
+65,0,169330476.108603,Fill in the blanks below,For my mother's birthday, I got her a new microwave. I wanted to surprise her with my gift. While she was out of the house, I _____ the old microwave with the new one.rrrrrrrrrr,10

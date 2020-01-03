@@ -1,0 +1,10 @@
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay
+69,0,287669644.262909,Fill in the blanks below,The wall and floor decorations created by Indian housewives are usually short-lived, remaining hours, days, or at most, weeks before being worn off by human activity or weather and ______ by new designs
+ HELLOOO I AM HERE 
+.,1,4021.589109820789
+69,0,287702007.713601,Fill in the blanks below,Muriel was so fond of her dog that their brief ______ left her not just saddened, but in a state of sorrow
+ HELLOOO I AM HERE 
+.,18,2344.61881161547
+69,0,287735030.66827,Fill in the blanks below,In addition to evaluating _______ of resumes and references, some employers want to supplement the hiring process by employing graphologists to study applicants' handwriting for character analysis
+ HELLOOO I AM HERE 
+.,20,3007.2143825751805
