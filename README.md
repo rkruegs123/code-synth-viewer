@@ -65,6 +65,34 @@ End with an example of getting some data out of the system or using it for a lit
 
 This software is made public to make possible both (1) the reproduction and validation of our results and experimental protocol, as well as (2) the adaptation of this software for similar studies of software engineering activities with medical imaging. The following instructions provide details on how one can adapt this software for the needs of similar studies.
 
+### Stimuli
+
+#### Contents
+
+You can run experiments with your own custom stimuli. The stimuli are stored in JSON format, and are loaded in ```presenter.html``` with ```<script type="text/javascript" src="stimuli.json"></script>```. You can replace this with your own JSON file.
+
+Each run of the software runs one "category" of stimuli. Each category of stimuli is represented as a list in JSON format. For example, we used 4 categories of stimuli and therefore our stimuli JSON file consists of 4 lists.
+
+Each element on the list is a stimulus, represented by a dictionary. Each stimulus has several required properties:
+* prompt: The text to display as the stimulus prompt
+* text: The text to appear in the body of the text editor.
+* line/character: The position at which the cursor in the editor should start. For example, for our questions that required filling in a blank, we included a series of underscores ('\_') in the text section and denoted the line and character as the middle of these underscores.
+
+#### Code
+
+Once changing the stimuli that are loaded (e.g., changing stimuli.json, creating a new JSON file), there are several changes required to the code itself.
+
+The first change involves the server-side logic to establish the number of stimuli. The existing logic can be found in ```server.js``` and is centered around the variable ```NUM_STIMULI```. The existing logic can be interpreted in the context of our study -- FITB categories (i.e., categories 0 and 2) had 17 stimuli each whereas LR categories (i.e., categories 1 and 3) had 9 stimuli each. You can freely configure the number of categories as well as the number of stimuli in each category, but you must be sure to update the logic in ```server.js``` to support your changes. In case you have trouble finding it, the current logic is marked under the comment "Set number of stimuli according to category."
+
+Adapting this software for one's own purposes likely also involves adjusting the time duration of stimuli presentation. This is discussed in the following section, along with other timing-related possibilities for configuration. 
+
+
+### Timing
+
+### Text Editor
+
+## Output
+
 ## Built With
 
 * [CodeMirror](http://www.codemirror.net) - The code editor in the browser
