@@ -141,6 +141,8 @@ Keystroke files are saved in the ```keystrokes``` directory and named in the fol
 
 ```keystrokes/keystrokes-<participant id>-<category>.txt```
 
+For example, the keystrokes file for participant 99's completion of category 0 would be saved in ```keystrokes/keystrokes-99-0.txt```.
+
 
 
 ## Built With
