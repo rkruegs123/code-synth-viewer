@@ -8,7 +8,7 @@ The software used for conducting experiments as described in "Neurological Divid
 
 ## Getting Started
 
-General usage for CodeSynthViewer involvesa node back-end and a web-based front-end, most easily viewed locally in a web browser. General usage requires the following steps:
+General usage for CodeSynthViewer involves a node back-end and a web-based front-end, most easily viewed locally in a web browser. General usage requires the following steps:
 
 1. Start the backend, specifying the participant ID (used for a random number generator seed as well as for naming output files/directories) and the category (unique to the user's experimental design). Both are positive integers.
 2. Open the interface in a web browser
@@ -73,7 +73,7 @@ You can run experiments with your own custom stimuli. The stimuli are stored in 
 
 Each run of the software runs one "category" of stimuli. Each category of stimuli is represented as a list in JSON format. For example, we used 4 categories of stimuli and therefore our stimuli JSON file consists of 4 lists.
 
-Each element on the list is a stimulus, represented by a dictionary. Each stimulus has several required properties:
+Each element of a list is a stimulus, represented by a dictionary. Each stimulus has several required properties:
 * prompt: The text to display as the stimulus prompt
 * text: The text to appear in the body of the text editor.
 * line/character: The position at which the cursor in the editor should start. For example, for our questions that required filling in a blank, we included a series of underscores ('\_') in the text section and denoted the line and character as the middle of these underscores.
@@ -98,6 +98,12 @@ In addition to the time-per-stimulus, various other timing aspects of the softwa
 * First Stimulus Buffer: In our experiment, we wanted a buffer of 10s at the beginning of the experiment upon pressing the start key. In other words, pressing the start key prompoted a 10s countdown to the experiment. You can adjust this countdown by changing the value of ```first_stim_buffer``` in ```presenter.html``` (or set it to 0 for no buffer).
 
 ### Text Editor
+
+A key benefit of our software for studying software enginering tasks with medical imaging is that, unlike popular software for psychology studies (e.g., ePrime), it supports text editing. Furthermore, the text editing capabilities include syntax highlighting -- a particularly useful feature for studies involving programming! When adapting the software for your own needs, you can customize the syntax highlighting of the text-editor on a per-category basis.
+
+Again, we can understand how to adjust syntax highlighting in the context of our own experiment. In our experiment, categories 0-1 involved prose writing whereas categories 2-3 involved writing C++ code. Therefore, we wanted plain text (no syntax highlighting) for categories 0-1 and C++ syntax highlighting for categories 2-3. The logic to choose the syntax highlighting based on the category is handled in the key function of ```presenter.html```: ```displayNextStimulus()```. When the server returns details of the next stimulus, it includes the category of that stimulus (```data.category```). We can then check the category, and set the syntax highlighting of our text editor (i.e., CodeMirror) object accordingly via the ```setOption``` method. For example, we check the category type of the stimulus with ```if (data.category == Categories.ProseWritingFITB || data.category == Categories.ProseWritingLR)``` (we use an enum in this case) and set the appropriate syntax highlighting with ```editor.setOption("mode", "text/plain")``` or ```editor.setOption("mode", "text/x-c++src")```. While we check for the category and set this syntax highlighting for each stimulus, our experiment did not require us to change syntax highlighting for stimuli within the same category. Therefore, the software does not currently support within-category changes to syntax highlighting. However, this design permits such a change by adding logic to the category included in the server-side ```nextstim``` API.
+
+Customizing the syntax highlighting of the text editor on a per-category basis can be easily adjusted by changing the logic described in ```presenter.html```. For a complete list of the programming languages supported by the text editor and the corresponding keywords to use a given language, see [here](https://codemirror.net/mode/).
 
 ### Start Key
 
