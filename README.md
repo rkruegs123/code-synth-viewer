@@ -156,7 +156,15 @@ Participant output is also saved in a stimulus-by-stimulus fashion. Answer outpu
 * previous-delay: The duration that the fixation cross was shown to the participant prior to the stimulus. In other words, the rest time before the stimulus.
 * stimulus_time: The duration that the stimulus was shown for in ms (e..g, in our study this was either 30000 or 60000)
 
+The following is a minimal example of an answers file. The participant ID is 101 and the category ID is 0 (FITB Prose):
 
+```
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+101,0,57706473.599629,Fill in the blank below,New York fashion designer Anna Sui creates eclectic ____designs____ that represent an amalgam of playful, 1970's funky style fused with an edgy, urban sensibility.,8,12648.480850758842,30000
+101,0,57741527.124666,Fill in the blank below,Since the foreign correspondent was accustomed to completing his ____work____ under tumultuous conditions, the commotion of the subway at rush hour presented no impediment to his creativity.,6,5042.64261732144,30000
+101,0,57775842.91456,Fill in the blank below,Over the years the anthropologist's opinions had ossified: he refused to tolerate new ideas and nothing could ____change____ his mind.,13,4303.942733144843,30000
+participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+```
 
 ## Built With
 
