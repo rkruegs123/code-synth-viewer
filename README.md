@@ -137,6 +137,12 @@ new stimulus
 
 In the above example, the participant pressed three keys before the first stimulus was shown, and two keys in response to the first stimulus.
 
+Keystroke files are saved in the ```keystrokes``` directory and named in the following format:
+
+```keystrokes/keystrokes-<participant id>-<category>.txt```
+
+
+
 ## Built With
 
 * [CodeMirror](http://www.codemirror.net) - The code editor in the browser
