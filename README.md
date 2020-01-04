@@ -119,7 +119,7 @@ To reiterate, a key benefit of our software is the ability to capture text outpu
 
 Once the experiment has started (i.e., the start key has been pressed), all keys pressed by the participant are recorded until the experiment is finished. Keystroke information is recorded in the following format:
 
-* Pairs of ```(current time in ms, keycode)```. The recorded time is arbitrary and is relative only to the start of the server.
+* Pairs of ```(current time in ms, keycode)```. The recorded time is arbitrary and is relative only to the start of the server
 * Stimulus demarcation (i.e., "new stimulus")
 
 All items are separated by newlines. The following is a minimal example of a keystrokes file:
@@ -142,6 +142,19 @@ Keystroke files are saved in the ```keystrokes``` directory and named in the fol
 ```keystrokes/keystrokes-<participant id>-<category>.txt```
 
 For example, the keystrokes file for participant 99's completion of category 0 would be saved in ```keystrokes/keystrokes-99-0.txt```.
+
+### Answers
+
+Participant output is also saved in a stimulus-by-stimulus fashion. Answer output is saved in CSV format with the following columns, where each row includes information for a single stimulus:
+
+* participant-id: The ID of the participant completing the expeirment
+* category: The category that the participant is completing
+* timestamp: The current time in ms. The recorded time is arbitrary and is relative only to the start of the server
+* prompt: The prompt displayed at the top of the screen. For example, for the FITB questions in our study, the prompt read "Fill in the blank below". For the LR questions in our study, the prompt was variable.
+* answer: The participant's typed response, including any text that began in the text box. For example, for the FITB questions in our study, this column would include the entire completed sentence with the participantss answer inserted in the blank. For the LR questions in our study, this would include the participant's entire typed response.
+* stimulus-id: The numerical ID of the stimulus. This corresponds to the index of the stimulus in its associated JSON list.
+* previous-delay: The duration that the fixation cross was shown to the participant prior to the stimulus. In other words, the rest time before the stimulus.
+* stimulus_time: The duration that the stimulus was shown for in ms (e..g, in our study this was either 30000 or 60000)
 
 
 
