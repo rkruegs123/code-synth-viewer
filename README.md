@@ -126,7 +126,16 @@ All items are separated by newlines. The following is a minimal example of a key
 
 ```
 58596205.678034, 16
-58596235.879504, 224```
+58596235.879504, 224
+58596567.035268, 82
+new stimulus
+58665814.399911, 16
+58665821.830611, 224
+new stimulus
+...
+```
+
+In the above example, the participant pressed three keys before the first stimulus was shown, and two keys in response to the first stimulus.
 
 ## Built With
 
