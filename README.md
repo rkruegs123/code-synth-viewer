@@ -113,6 +113,19 @@ In our experiment, we used the equals sign ("=") as our start key. However, this
 
 ## Output
 
+To reiterate, a key benefit of our software is the ability to capture text output (e.g., via an MRI-safe QWERTY keyboard) from experiment participants in medical imaging studies. Our software captures participant responses at two levels of granularity: (1) all keystrokes typed by the participant, and (2) question/answer-style recording. Again, experiments are conducted on a per-category level -- a single experiment is the presentation of a set of stimuli (i.e., a category of stimuli) to a participant. This is reflected in the two required command-arguments (i.e., participant ID and category number). For each experiment (i.e., a pair of participant ID and category number), two files are generated -- a keystrokes file, and an answer file.
+
+### Keystrokes
+
+Once the experiment has started (i.e., the start key has been pressed), all keys pressed by the participant are recorded until the experiment is finished. Keystroke information is recorded in the following format:
+
+* Pairs of ```(current time in ms, keycode)```. The recorded time is arbitrary and is relative only to the start of the server.
+* Stimulus demarcation (i.e., "new stimulus")
+
+All items are separated by newlines. The following is a minimal example of a keystrokes file:
+
+```58596205.678034, 16\n58596235.879504, 224\n```
+
 ## Built With
 
 * [CodeMirror](http://www.codemirror.net) - The code editor in the browser
