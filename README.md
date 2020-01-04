@@ -124,7 +124,9 @@ Once the experiment has started (i.e., the start key has been pressed), all keys
 
 All items are separated by newlines. The following is a minimal example of a keystrokes file:
 
-```58596205.678034, 16\n58596235.879504, 224\n```
+```
+58596205.678034, 16
+58596235.879504, 224```
 
 ## Built With
 
