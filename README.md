@@ -107,6 +107,10 @@ Customizing the syntax highlighting of the text editor on a per-category basis c
 
 ### Start Key
 
+The software waits for a key press from a designated start key to start the experiment. Upon receiving signal from said start key, the experiment begins: a fixation cross is shown for the alotted buffer time, and the participant is then presented with the first rest/stimulus pair (i.e., start key pressed &rarr; first stimulus buffer &rarr; first rest &rarr; first stimulus &rarr; second rest &rarr; ...).
+
+In our experiment, we used the equals sign ("=") as our start key. However, this can be easily configured. The start key is determined in ```presenter.html``` under the comment reading "If start key detected, start the experiment. Triggers first call to displayNextStimulus." Note that various browsers may use different keycodes for the same key. For example, 61 is the keycode for "=" in Firefox but the keycode for "=" for all other browsers is 187. For a full list of keycodes, [this](https://keycode.info/) is a useful website.
+
 ## Output
 
 ## Built With
