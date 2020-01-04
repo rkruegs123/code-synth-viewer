@@ -164,7 +164,14 @@ participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimu
 101,0,57741527.124666,Fill in the blank below,Since the foreign correspondent was accustomed to completing his ____work____ under tumultuous conditions, the commotion of the subway at rush hour presented no impediment to his creativity.,6,5042.64261732144,30000
 101,0,57775842.91456,Fill in the blank below,Over the years the anthropologist's opinions had ossified: he refused to tolerate new ideas and nothing could ____change____ his mind.,13,4303.942733144843,30000
 participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
+...
 ```
+
+Answer files are saved in the ```answers``` directory and named in the following format:
+
+```answers/answers-<participant id>-<category>.txt```
+
+For example, the answers file corresponding to the above example (participant 101's completion of category 0) would be saved in ```answers/answers-101-0.txt```.
 
 ## Built With
 
