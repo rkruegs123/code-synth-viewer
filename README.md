@@ -33,7 +33,7 @@ Note that we used four different categories of stimuli in our study. Each experi
 2. Code, FITB
 3. Code, LR
 
-The stimuli can be found in ```stim_final.json``` and are defined in this order.
+The stimuli can be found in ```stimuli.json``` and are defined in this order.
 
 ### Prerequisites
 
