@@ -81,7 +81,6 @@ Each element of a list is a stimulus, represented by a dictionary. Each stimulus
 A minimal example with two categories, each including two stimuli, follows:
 
 ```
-
 var stimuli = [
 	 [
 		{
@@ -112,7 +111,6 @@ var stimuli = [
 		}
 	]
 ]
-
 ```
 
 
