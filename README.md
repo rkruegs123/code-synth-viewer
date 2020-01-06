@@ -82,34 +82,34 @@ A minimal example with two categories, each including two stimuli, follows:
 
 ```
 var stimuli = [
-	 [
-		{
-			"prompt": "Fill in the blank below",
-			"text": "To reach Simonville, the traveller needs to drive with extreme caution along the windy curves of the ________ road that climbs steeply to the summit.",
-			"line": 0,
-			"character": 105 
-		},
-		{
-			"prompt": "Fill in the blank below",
-			"text": "The admiral rescinded her ________ to attack when she saw the white flag raised by the enemy sailors; she was relieved that she could bring an end to the hostilities.",
-			"line": 0,
-			"character": 30
-		}
-	],
-	[
-		{
-			"prompt": "Using two statements, complete the definition of the function swapints that is passed two int variables. The function returns nothing but exchanges the values of the two variables.",
-			"text": "void swapints(int &a, int &b){\n\tint temp = a;\n\t/* YOUR CODE HERE */\n\t\n}\n",
-			"line": 3,
-			"character": 1
-		},
-		{
-			"prompt": "Write a function addOne that adds 1 to its integer reference parameter. The function returns nothing.",
-			"text": "void addOne (int& x) {\n\t/* YOUR CODE HERE */\n\t\n}\n",
-			"line": 2,
-			"character": 1
-		}
-	]
+  [
+    {
+      "prompt": "Fill in the blank below",
+      "text": "To reach Simonville, the traveller needs to drive with extreme caution along the windy curves of the ________ road that climbs steeply to the summit.",
+      "line": 0,
+      "character": 105 
+    },
+    {
+      "prompt": "Fill in the blank below",
+      "text": "The admiral rescinded her ________ to attack when she saw the white flag raised by the enemy sailors; she was relieved that she could bring an end to the hostilities.",
+      "line": 0,
+      "character": 30
+    }
+  ],
+  [
+    {
+      "prompt": "Using two statements, complete the definition of the function swapints that is passed two int variables. The function returns nothing but exchanges the values of the two variables.",
+      "text": "void swapints(int &a, int &b){\n\tint temp = a;\n\t/* YOUR CODE HERE */\n\t\n}\n",
+      "line": 3,
+      "character": 1
+    },
+    {
+      "prompt": "Write a function addOne that adds 1 to its integer reference parameter. The function returns nothing.",
+      "text": "void addOne (int& x) {\n\t/* YOUR CODE HERE */\n\t\n}\n",
+      "line": 2,
+      "character": 1
+    }
+  ]
 ]
 ```
 
