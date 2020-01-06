@@ -131,7 +131,7 @@ As before, the current code can be understood in the context of our own study. P
 
 In addition to the time-per-stimulus, various other timing aspects of the software can be adjusted:
 * Average Rest Time: Between each stimulus, a fixation cross is shown to the participant for a variable amount of time. While the exact amount of time is variable, you can set an average amount of time per rest period by changing the value of ```avg_rest_time``` in ```presenter.html```. The current value is set to 5s (5000 ms).
-* First Stimulus Buffer: In our experiment, we wanted a buffer of 10s at the beginning of the experiment upon pressing the start key. In other words, pressing the start key prompoted a 10s countdown to the experiment. You can adjust this countdown by changing the value of ```first_stim_buffer``` in ```presenter.html``` (or set it to 0 for no buffer).
+* First Stimulus Buffer: In our experiment, we wanted a buffer of 10s at the beginning of the experiment upon pressing the start key to allow the MRI field to settle. In other words, pressing the start key prompoted a 10s countdown to the experiment. You can adjust this countdown by changing the value of ```first_stim_buffer``` in ```presenter.html``` (or set it to 0 for no buffer).
 
 ### Text Editor
 
@@ -143,7 +143,7 @@ Customizing the syntax highlighting of the text editor on a per-category basis c
 
 ### Start Key
 
-The software waits for a key press from a designated start key to start the experiment. Upon receiving signal from said start key, the experiment begins: a fixation cross is shown for the alotted buffer time, and the participant is then presented with the first rest/stimulus pair (i.e., start key pressed &rarr; first stimulus buffer &rarr; first rest &rarr; first stimulus &rarr; second rest &rarr; ...).
+The software waits for a key press from a designated start key to start the experiment (to help synchronize with the medical imaging scan). Upon receiving signal from said start key, the experiment begins: a fixation cross is shown for the alotted buffer time, and the participant is then presented with the first rest/stimulus pair (i.e., start key pressed &rarr; first stimulus buffer &rarr; first rest &rarr; first stimulus &rarr; second rest &rarr; ...).
 
 In our experiment, we used the equals sign ("=") as our start key. However, this can be easily configured. The start key is determined in ```presenter.html``` under the comment reading "If start key detected, start the experiment. Triggers first call to displayNextStimulus." Note that various browsers may use different keycodes for the same key. For example, 61 is the keycode for "=" in Firefox but the keycode for "=" for all other browsers is 187. For a full list of keycodes, [this](https://keycode.info/) is a useful website.
 
@@ -212,7 +212,7 @@ For example, the answers file corresponding to the above example (participant 10
 ## Built With
 
 * [CodeMirror](http://www.codemirror.net) - The code editor in the browser
-* [Node](https://www.nodejs.org) - Dependency Management
+* [Node](https://www.nodejs.org) - Javascript for Backend Server
 
 ## Authors
 
