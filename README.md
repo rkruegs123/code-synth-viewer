@@ -8,13 +8,13 @@ The software used for conducting experiments as described in "Neurological Divid
 
 ## Getting Started
 
-General usage for CodeSynthViewer involves a node back-end and a web-based front-end, most easily viewed locally in a web browser. General usage requires the following steps:
+General usage for CodeSynthViewer involves a node back-end and a locally-hosted web-based front-end. General usage requires the following steps:
 
-1. Start the backend, specifying the participant ID (used for a random number generator seed as well as for naming output files/directories) and the category (unique to the user's experimental design). Both are positive integers.
+1. Start the **Backend Server**, specifying the participant ID (used for a random number generator seed as well as for naming output files/directories) and the category (unique to the user's experimental design). Both are positive integers.
 2. Open the interface in a web browser
 3. Hit the designated key to start the experiment. We used the "=" sign for our purposes, but this can be easily configured.
 
-To start the server, use
+To start the Backend Server, use
 
 ``node server.js [PARTICIPANT-ID] [CATEGORY]``
 
