@@ -39,7 +39,9 @@ Note that we used four different categories of stimuli in our study. Each experi
 
 The stimuli can be found in ```stimuli.json``` and are defined in this order.
 
-![image](img/resting.png)
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![image](img/resting.png)  |  ![image](img/active.png)
 
 ### Prerequisites 
 
