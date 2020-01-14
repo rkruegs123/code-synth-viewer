@@ -4,7 +4,15 @@ The software used for conducting experiments as described in "Neurological Divid
 
 ## TODO Before Submission
 
-* fix all the node stuff. Just look up ryan-fmri. Why do we need the node_modules directory? Do we? Ask Kevin about this.
+* pictures of correct behavior
+* MIT license
+* get everyone's github ID's for submission
+* shorten text examples
+* give a plug to codemirror
+* be conistent with Backend Server and Presenter
+* in final submission, make clear that it is meant to be used for a general human study. this has nothing to do with the medical imaging part -- this is only for the behavioral side of the experiment.
+* put in link to the de-identified data
+
 
 ## Getting Started
 
@@ -35,31 +43,15 @@ Note that we used four different categories of stimuli in our study. Each experi
 
 The stimuli can be found in ```stimuli.json``` and are defined in this order.
 
-### Prerequisites
+### Prerequisites 
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+The Backend Server relies on Node. The following packages must be installed in your Node installation:
+* http
+* path
+* request
+* express
+* fs
+* shuffle-seed
 
 ## Configurability
 
