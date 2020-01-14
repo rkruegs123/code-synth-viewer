@@ -5,7 +5,6 @@ The software used for conducting experiments as described in "Neurological Divid
 ## TODO Before Submission
 
 * pictures of correct behavior
-* MIT license
 * get everyone's github ID's for submission
 * in final submission, make clear that it is meant to be used for a general human study. this has nothing to do with the medical imaging part -- this is only for the behavioral side of the experiment.
 * put in link to the de-identified data
@@ -40,6 +39,8 @@ Note that we used four different categories of stimuli in our study. Each experi
 
 The stimuli can be found in ```stimuli.json``` and are defined in this order.
 
+![image](img/resting.png)
+
 ### Prerequisites 
 
 The Backend Server is built with [Node.js](https://nodejs.org/en/) and requires the following packages:
@@ -49,6 +50,8 @@ The Backend Server is built with [Node.js](https://nodejs.org/en/) and requires 
 * express
 * fs
 * shuffle-seed
+
+The above packages should be installed using the [Node Package Manager](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) in the ```code-synth-viewer``` directory (e.g., ```cd path/to/code-synth-viewer; npm install shuffle-seed```). This will create a directory ```node_modules``` in ```code-synth-viewer```. 
 
 ## Configurability
 
