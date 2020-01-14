@@ -4,7 +4,6 @@ The software used for conducting experiments as described in "Neurological Divid
 
 ## TODO Before Submission
 
-* pictures of correct behavior
 * get everyone's github ID's for submission
 * in final submission, make clear that it is meant to be used for a general human study. this has nothing to do with the medical imaging part -- this is only for the behavioral side of the experiment.
 * put in link to the de-identified data
@@ -22,7 +21,11 @@ To start the Backend Server, use
 
 ``node server.js [PARTICIPANT-ID] [CATEGORY]``
 
-Then, open ``presenter.html`` in a web-browser. Lastly, press the designated start key.
+Then, open ``presenter.html`` in a web-browser. Lastly, press the designated start key. Below are sample images of expected behavior:
+
+Rest Period             |  Active Stimulus
+:-------------------------:|:-------------------------:
+![image](img/resting.png)  |  ![image](img/active.png)
 
 To replicate our experiments with a random ordering (e.g., random participant ID = 99), use the following commands:
 
@@ -38,10 +41,6 @@ Note that we used four different categories of stimuli in our study. Each experi
 3. Code, LR
 
 The stimuli can be found in ```stimuli.json``` and are defined in this order.
-
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![image](img/resting.png)  |  ![image](img/active.png)
 
 ### Prerequisites 
 
