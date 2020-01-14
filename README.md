@@ -2,13 +2,6 @@
 
 The software used for conducting experiments as described in "Neurological Divide: An fMRI Study of Prose and Code Writing" at [ICSE 2020](https://conf.researchr.org/home/icse-2020). This repository permits both the reproduction of our usage of this software, as well as the adaptation of this software for similar uses.
 
-## TODO Before Submission
-
-* get everyone's github ID's for submission
-* in final submission, make clear that it is meant to be used for a general human study. this has nothing to do with the medical imaging part -- this is only for the behavioral side of the experiment.
-* put in link to the de-identified data
-
-
 ## Getting Started
 
 General usage for CodeSynthViewer involves a [Node.js](https://nodejs.org/en/) back-end and a locally-hosted web-based front-end. General usage requires the following steps:
