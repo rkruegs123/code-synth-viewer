@@ -1,3 +1,0 @@
-participant-id,category,timestamp,prompt,answer,stimulus-id
-participant-id,category,timestamp,prompt,answer,stimulus-id
-participant-id,category,timestamp,prompt,answer,stimulus-id

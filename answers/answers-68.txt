@@ -1,5 +1,0 @@
-participant-id,category,timestamp,prompt,answer,stimulus-id
-68,0,169989517.916855,Describe how you know if it is hot or cold outside?,// Provide answer below (ex. sensory information, visual cues)
-
-,2
-68,0,169999513.059652,Fill in the blanks below,Yesterday, I went out to dinner and was exceptionally tired. I ordered a large meal, thinking that it may give me energy, but eating only made me more tired. To counter my low energy, I ordered a big cup of coffee to go with my dessert. When the server brought out my coffee, I asked for ____ to put in the coffee. I think it tastes better with this.aaaaaaaaaa,1

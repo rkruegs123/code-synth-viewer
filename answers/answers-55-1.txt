@@ -1,7 +1,0 @@
-participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
-participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
-participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
-55,1,123813031.465412,Some items (such as clothes or furniture) can be made by hand or by machine. Which do you prefer - items made by hand or items made by machine, and why?,,14,5000,60000
-participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
-participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
-participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time

@@ -248,7 +248,7 @@ For example, the answers file corresponding to the above example (participant 10
 ## Built With
 
 * [CodeMirror](http://www.codemirror.net) - The code editor in the browser
-* [Node](https://www.nodejs.org) - Javascript for Backend Server
+* [Node.js](https://www.nodejs.org) - Javascript for Backend Server
 
 ## Authors
 

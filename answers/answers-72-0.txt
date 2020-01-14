@@ -1,3 +1,0 @@
-participant-id,category,timestamp,prompt,answer,stimulus-id,previous-delay,stimulus_time
-72,0,1373290696.674035,Fill in the blank below,Using detailed observations made by ancient astronomers in China, Korea, and Japan to complement data ____yaaahhhh____ by modern instruments, scientists can establish precisely when a particular star exploded.,13,5000,30000
-72,0,1373325725.423869,Fill in the blank below,Because he had decided not to glorify himself through the sales of his new product, the inventor anonymously ____blah blah____ all profits to charity.,18,5000,30000
