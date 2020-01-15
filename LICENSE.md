@@ -1,3 +1,5 @@
+# CodeSynthViewer -- License
+
 CodeSynthLibrary
 Copyright © 2020 University of Michigan
 
