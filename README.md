@@ -1,6 +1,6 @@
 # CodeSynthViewer -- ICSE 2020
 
-The software used for conducting experiments as described in "Neurological Divide: An fMRI Study of Prose and Code Writing" at [ICSE 2020](https://conf.researchr.org/home/icse-2020). This repository permits both the reproduction of our usage of this software, as well as the adaptation of this software for similar uses.
+The software used for conducting experiments as described in "Neurological Divide: An fMRI Study of Prose and Code Writing" at [ICSE 2020](https://conf.researchr.org/home/icse-2020). This repository permits both (1) the reproduction and validation of our results and experimental protocol, as well as (2) the adaptation of this software for similar human studies of software engineering activities (with or without medical imaging). For reproduction of the conclusions drawn from the data collected in our study, we make available [all participant keystroke and answer data](https://dijkstra.eecs.umich.edu/fmri/icse20-data), as well as the de-identified medical imaging data (contact [Dr. Westley Weimer](weimerw@umich.edu)).
 
 ## Getting Started
 
