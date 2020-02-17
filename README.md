@@ -45,7 +45,7 @@ The Backend Server is built with [Node.js](https://nodejs.org/en/) and requires 
 * fs
 * shuffle-seed
 
-Once you have nodejs installed (you can verify this by running ```node -v```), navigate to the ```code-synth-viewer``` (e.g., ```cd path/to/code-synth-viewer```) and create a package.json file by running ```node init```. You can then install the above packages using the [Node Package Manager](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) in the ```code-synth-viewer``` directory (e.g., ```npm install shuffle-seed```). This will create a directory ```node_modules``` in ```code-synth-viewer```. 
+Once you have nodejs installed (you can verify this by running ```node -v```), navigate to the ```code-synth-viewer``` directory (e.g., ```cd path/to/code-synth-viewer```) and create a package.json file by running ```node init```. You can then install the above packages using the [Node Package Manager](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) in the ```code-synth-viewer``` directory (e.g., ```npm install shuffle-seed```). This will create a directory ```node_modules``` in ```code-synth-viewer```. 
 
 ## Configurability
 
