@@ -116,7 +116,7 @@
           // key code corresponds to "=" -- 61 on Firefox, 187 otherwise
 
           // If start key detected, start the experiment. Triggers first call to displayNextStimulus
-          if (event.keyCode == 187) {
+          if (event.keyCode == 48) { // default is 187
             console.log("Start key detected")
             var the_url ="http://localhost:3000/start";
             $.ajax(
